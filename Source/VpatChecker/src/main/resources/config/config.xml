@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config>
+	<patternFolder>
+		<patFolder>/home/baheuxbi/Documents/repo/project/VpatChecker/src/main/resources/patterns/</patFolder>
+	</patternFolder>
+	<testsFolder>
+		<testFolder>/home/baheuxbi/Documents/repo/project/VpatChecker/src/main/resources/tests/</testFolder>
+	</testsFolder>
+	<outputFolders>
+		<outputFolder>/home/baheuxbi/Documents/repo/project/VpatChecker/temp/reports</outputFolder>
+	</outputFolders>
+</config>

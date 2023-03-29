@@ -1,0 +1,1909 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<TestPaths component="ABSTRACT_SM" exported="false">
+    <StaticContext APIVersion="27"/>
+    <TestPath>
+        <state name="START">
+            <transition name="APP_STARTED"/>
+        </state>
+        <state name="SEND_MESSAGE">
+            <transition name="SEND_MESSAGE_CLICKED">
+                <contexts>
+                    <context origin="INTERNET_CONNECTIVITY">high_latency</context>
+                </contexts>
+            </transition>
+            <dataflows>
+                <dataflow name="internet" type="Source"/>
+            </dataflows>
+        </state>
+        <state name="SENDER">
+            <transition name="WRONG"/>
+            <dataflows>
+                <dataflow name="enter_value" type="Input"/>
+            </dataflows>
+        </state>
+        <state name="DISPLAY_WARNING">
+            <transition name="BACK_BUTTON_PRESSED"/>
+            <dataflows>
+                <dataflow name="log.t" type="Sink">
+                    <parameters>
+                        <parameter origin="source">internet</parameter>
+                        <parameter origin="source">enter_value</parameter>
+                    </parameters>
+                </dataflow>
+            </dataflows>
+        </state>
+        <state name="SEND_MESSAGE">
+            <transition name="SEND_MESSAGE_CLICKED"/>
+            <dataflows>
+                <dataflow name="internet" type="Source"/>
+            </dataflows>
+        </state>
+        <state name="SENDER">
+            <transition name="GOOD_MESSAGE"/>
+            <dataflows>
+                <dataflow name="enter_value" type="Input"/>
+            </dataflows>
+        </state>
+        <state name="SHOW_ANSWER">
+            <transition name="TERMINATE_BUTTON_CLICKED"/>
+        </state>
+        <state name="EXIT"/>
+    </TestPath>
+    <TestPath>
+        <state name="START">
+            <transition name="APP_STARTED"/>
+        </state>
+        <state name="SEND_MESSAGE">
+            <transition name="SEND_MESSAGE_CLICKED">
+                <contexts>
+                    <context origin="INTERNET_CONNECTIVITY">offline</context>
+                </contexts>
+            </transition>
+            <dataflows>
+                <dataflow name="internet" type="Source"/>
+            </dataflows>
+        </state>
+        <state name="SENDER">
+            <transition name="WRONG"/>
+            <dataflows>
+                <dataflow name="enter_value" type="Input"/>
+            </dataflows>
+        </state>
+        <state name="DISPLAY_WARNING">
+            <transition name="BACK_BUTTON_PRESSED"/>
+            <dataflows>
+                <dataflow name="log.t" type="Sink">
+                    <parameters>
+                        <parameter origin="source">internet</parameter>
+                        <parameter origin="source">enter_value</parameter>
+                    </parameters>
+                </dataflow>
+            </dataflows>
+        </state>
+        <state name="SEND_MESSAGE">
+            <transition name="SEND_MESSAGE_CLICKED"/>
+            <dataflows>
+                <dataflow name="internet" type="Source"/>
+            </dataflows>
+        </state>
+        <state name="SENDER">
+            <transition name="GOOD_MESSAGE"/>
+            <dataflows>
+                <dataflow name="enter_value" type="Input"/>
+            </dataflows>
+        </state>
+        <state name="SHOW_ANSWER">
+            <transition name="SUCCESS"/>
+        </state>
+        <state name="HANDLE_SUCCESS">
+            <transition name="TIME_ELAPSED"/>
+        </state>
+        <state name="HANDLE_TIMEOUT">
+            <transition name="END_TIMEOUT"/>
+        </state>
+        <state name="HANDLE">
+            <transition name="END_HANDLE"/>
+        </state>
+        <state name="EXIT"/>
+    </TestPath>
+    <TestPath>
+        <state name="START">
+            <transition name="APP_STARTED"/>
+        </state>
+        <state name="SEND_MESSAGE">
+            <transition name="SEND_MESSAGE_CLICKED">
+                <contexts>
+                    <context origin="INTERNET_CONNECTIVITY">offline</context>
+                </contexts>
+            </transition>
+            <dataflows>
+                <dataflow name="internet" type="Source"/>
+            </dataflows>
+        </state>
+        <state name="SENDER">
+            <transition name="WRONG"/>
+            <dataflows>
+                <dataflow name="enter_value" type="Input"/>
+            </dataflows>
+        </state>
+        <state name="DISPLAY_WARNING">
+            <transition name="BACK_BUTTON_PRESSED"/>
+            <dataflows>
+                <dataflow name="log.t" type="Sink">
+                    <parameters>
+                        <parameter origin="source">internet</parameter>
+                        <parameter origin="source">enter_value</parameter>
+                    </parameters>
+                </dataflow>
+            </dataflows>
+        </state>
+        <state name="SEND_MESSAGE">
+            <transition name="SEND_MESSAGE_CLICKED"/>
+            <dataflows>
+                <dataflow name="internet" type="Source"/>
+            </dataflows>
+        </state>
+        <state name="SENDER">
+            <transition name="GOOD_MESSAGE"/>
+            <dataflows>
+                <dataflow name="enter_value" type="Input"/>
+            </dataflows>
+        </state>
+        <state name="SHOW_ANSWER">
+            <transition name="SUCCESS"/>
+        </state>
+        <state name="HANDLE_SUCCESS">
+            <transition name="TIME_ELAPSED"/>
+        </state>
+        <state name="HANDLE_TIMEOUT">
+            <transition name="END_TIMEOUT"/>
+        </state>
+        <state name="HANDLE">
+            <transition name="END_HANDLE"/>
+        </state>
+        <state name="EXIT"/>
+    </TestPath>
+    <TestPath>
+        <state name="START">
+            <transition name="APP_STARTED"/>
+        </state>
+        <state name="SEND_MESSAGE">
+            <transition name="SEND_MESSAGE_CLICKED">
+                <contexts>
+                    <context origin="INTERNET_CONNECTIVITY">_4g</context>
+                </contexts>
+            </transition>
+            <dataflows>
+                <dataflow name="internet" type="Source"/>
+            </dataflows>
+        </state>
+        <state name="SENDER">
+            <transition name="WRONG"/>
+            <dataflows>
+                <dataflow name="enter_value" type="Input"/>
+            </dataflows>
+        </state>
+        <state name="DISPLAY_WARNING">
+            <transition name="BACK_BUTTON_PRESSED"/>
+            <dataflows>
+                <dataflow name="log.t" type="Sink">
+                    <parameters>
+                        <parameter origin="source">internet</parameter>
+                        <parameter origin="source">enter_value</parameter>
+                    </parameters>
+                </dataflow>
+            </dataflows>
+        </state>
+        <state name="SEND_MESSAGE">
+            <transition name="SEND_MESSAGE_CLICKED"/>
+            <dataflows>
+                <dataflow name="internet" type="Source"/>
+            </dataflows>
+        </state>
+        <state name="SENDER">
+            <transition name="GOOD_MESSAGE"/>
+            <dataflows>
+                <dataflow name="enter_value" type="Input"/>
+            </dataflows>
+        </state>
+        <state name="SHOW_ANSWER">
+            <transition name="SUCCESS"/>
+        </state>
+        <state name="HANDLE_SUCCESS">
+            <transition name="TIME_ELAPSED"/>
+        </state>
+        <state name="HANDLE_TIMEOUT">
+            <transition name="END_TIMEOUT"/>
+        </state>
+        <state name="HANDLE">
+            <transition name="END_HANDLE"/>
+        </state>
+        <state name="EXIT"/>
+    </TestPath>
+    <TestPath>
+        <state name="START">
+            <transition name="APP_STARTED"/>
+        </state>
+        <state name="SEND_MESSAGE">
+            <transition name="SEND_MESSAGE_CLICKED">
+                <contexts>
+                    <context origin="INTERNET_CONNECTIVITY">wifi</context>
+                </contexts>
+            </transition>
+            <dataflows>
+                <dataflow name="internet" type="Source"/>
+            </dataflows>
+        </state>
+        <state name="SENDER">
+            <transition name="WRONG"/>
+            <dataflows>
+                <dataflow name="enter_value" type="Input"/>
+            </dataflows>
+        </state>
+        <state name="DISPLAY_WARNING">
+            <transition name="BACK_BUTTON_PRESSED"/>
+            <dataflows>
+                <dataflow name="log.t" type="Sink">
+                    <parameters>
+                        <parameter origin="source">internet</parameter>
+                        <parameter origin="source">enter_value</parameter>
+                    </parameters>
+                </dataflow>
+            </dataflows>
+        </state>
+        <state name="SEND_MESSAGE">
+            <transition name="SEND_MESSAGE_CLICKED"/>
+            <dataflows>
+                <dataflow name="internet" type="Source"/>
+            </dataflows>
+        </state>
+        <state name="SENDER">
+            <transition name="GOOD_MESSAGE"/>
+            <dataflows>
+                <dataflow name="enter_value" type="Input"/>
+            </dataflows>
+        </state>
+        <state name="SHOW_ANSWER">
+            <transition name="SUCCESS"/>
+        </state>
+        <state name="HANDLE_SUCCESS">
+            <transition name="TIME_ELAPSED"/>
+        </state>
+        <state name="HANDLE_TIMEOUT">
+            <transition name="END_TIMEOUT"/>
+        </state>
+        <state name="HANDLE">
+            <transition name="END_HANDLE"/>
+        </state>
+        <state name="EXIT"/>
+    </TestPath>
+    <TestPath>
+        <state name="START">
+            <transition name="APP_STARTED"/>
+        </state>
+        <state name="SEND_MESSAGE">
+            <transition name="SEND_MESSAGE_CLICKED">
+                <contexts>
+                    <context origin="INTERNET_CONNECTIVITY">offline</context>
+                </contexts>
+            </transition>
+            <dataflows>
+                <dataflow name="internet" type="Source"/>
+            </dataflows>
+        </state>
+        <state name="SENDER">
+            <transition name="WRONG"/>
+            <dataflows>
+                <dataflow name="enter_value" type="Input"/>
+            </dataflows>
+        </state>
+        <state name="DISPLAY_WARNING">
+            <transition name="BACK_BUTTON_PRESSED"/>
+            <dataflows>
+                <dataflow name="log.t" type="Sink">
+                    <parameters>
+                        <parameter origin="source">internet</parameter>
+                        <parameter origin="source">enter_value</parameter>
+                    </parameters>
+                </dataflow>
+            </dataflows>
+        </state>
+        <state name="SEND_MESSAGE">
+            <transition name="SEND_MESSAGE_CLICKED"/>
+            <dataflows>
+                <dataflow name="internet" type="Source"/>
+            </dataflows>
+        </state>
+        <state name="SENDER">
+            <transition name="GOOD_MESSAGE"/>
+            <dataflows>
+                <dataflow name="enter_value" type="Input"/>
+            </dataflows>
+        </state>
+        <state name="SHOW_ANSWER">
+            <transition name="SUCCESS"/>
+        </state>
+        <state name="HANDLE_SUCCESS">
+            <transition name="MESSAGE_PRINTED"/>
+        </state>
+        <state name="HANDLE">
+            <transition name="END_HANDLE"/>
+        </state>
+        <state name="EXIT"/>
+    </TestPath>
+    <TestPath>
+        <state name="START">
+            <transition name="APP_STARTED"/>
+        </state>
+        <state name="SEND_MESSAGE">
+            <transition name="NONE">
+                <contexts>
+                    <context origin="INTERNET_CONNECTIVITY">slow3G</context>
+                </contexts>
+                <situations>
+                    <situation origin="DEFAULT_ORIGIN">INTERNET_SLOW</situation>
+                </situations>
+            </transition>
+            <dataflows>
+                <dataflow name="internet" type="Source"/>
+            </dataflows>
+        </state>
+        <state name="HANDLE_SLOW_INTERNET">
+            <transition name="NONE"/>
+            <dataflows>
+                <dataflow name="log.d" type="Sink">
+                    <parameters>
+                        <parameter origin="source">internet</parameter>
+                    </parameters>
+                </dataflow>
+            </dataflows>
+        </state>
+        <state name="SENDER">
+            <transition name="WRONG"/>
+            <dataflows>
+                <dataflow name="enter_value" type="Input"/>
+            </dataflows>
+        </state>
+        <state name="DISPLAY_WARNING">
+            <transition name="BACK_BUTTON_PRESSED"/>
+            <dataflows>
+                <dataflow name="log.t" type="Sink">
+                    <parameters>
+                        <parameter origin="source">internet</parameter>
+                        <parameter origin="source">enter_value</parameter>
+                    </parameters>
+                </dataflow>
+            </dataflows>
+        </state>
+        <state name="SEND_MESSAGE">
+            <transition name="SEND_MESSAGE_CLICKED"/>
+            <dataflows>
+                <dataflow name="internet" type="Source"/>
+            </dataflows>
+        </state>
+        <state name="SENDER">
+            <transition name="GOOD_MESSAGE"/>
+            <dataflows>
+                <dataflow name="enter_value" type="Input"/>
+            </dataflows>
+        </state>
+        <state name="SHOW_ANSWER">
+            <transition name="TERMINATE_BUTTON_CLICKED"/>
+        </state>
+        <state name="EXIT"/>
+    </TestPath>
+    <TestPath>
+        <state name="START">
+            <transition name="APP_STARTED"/>
+        </state>
+        <state name="SEND_MESSAGE">
+            <transition name="SEND_MESSAGE_CLICKED">
+                <contexts>
+                    <context origin="INTERNET_CONNECTIVITY">fast3G</context>
+                </contexts>
+            </transition>
+            <dataflows>
+                <dataflow name="internet" type="Source"/>
+            </dataflows>
+        </state>
+        <state name="SENDER">
+            <transition name="WRONG"/>
+            <dataflows>
+                <dataflow name="enter_value" type="Input"/>
+            </dataflows>
+        </state>
+        <state name="DISPLAY_WARNING">
+            <transition name="BACK_BUTTON_PRESSED"/>
+            <dataflows>
+                <dataflow name="log.t" type="Sink">
+                    <parameters>
+                        <parameter origin="source">internet</parameter>
+                        <parameter origin="source">enter_value</parameter>
+                    </parameters>
+                </dataflow>
+            </dataflows>
+        </state>
+        <state name="SEND_MESSAGE">
+            <transition name="SEND_MESSAGE_CLICKED"/>
+            <dataflows>
+                <dataflow name="internet" type="Source"/>
+            </dataflows>
+        </state>
+        <state name="SENDER">
+            <transition name="GOOD_MESSAGE"/>
+            <dataflows>
+                <dataflow name="enter_value" type="Input"/>
+            </dataflows>
+        </state>
+        <state name="SHOW_ANSWER">
+            <transition name="SUCCESS"/>
+        </state>
+        <state name="HANDLE_SUCCESS">
+            <transition name="TIME_ELAPSED"/>
+        </state>
+        <state name="HANDLE_TIMEOUT">
+            <transition name="END_TIMEOUT"/>
+        </state>
+        <state name="HANDLE">
+            <transition name="END_HANDLE"/>
+        </state>
+        <state name="EXIT"/>
+    </TestPath>
+    <TestPath>
+        <state name="START">
+            <transition name="APP_STARTED"/>
+        </state>
+        <state name="SEND_MESSAGE">
+            <transition name="SEND_MESSAGE_CLICKED">
+                <contexts>
+                    <context origin="INTERNET_CONNECTIVITY">fast3G</context>
+                </contexts>
+            </transition>
+            <dataflows>
+                <dataflow name="internet" type="Source"/>
+            </dataflows>
+        </state>
+        <state name="SENDER">
+            <transition name="WRONG"/>
+            <dataflows>
+                <dataflow name="enter_value" type="Input"/>
+            </dataflows>
+        </state>
+        <state name="DISPLAY_WARNING">
+            <transition name="BACK_BUTTON_PRESSED"/>
+            <dataflows>
+                <dataflow name="log.t" type="Sink">
+                    <parameters>
+                        <parameter origin="source">internet</parameter>
+                        <parameter origin="source">enter_value</parameter>
+                    </parameters>
+                </dataflow>
+            </dataflows>
+        </state>
+        <state name="SEND_MESSAGE">
+            <transition name="SEND_MESSAGE_CLICKED"/>
+            <dataflows>
+                <dataflow name="internet" type="Source"/>
+            </dataflows>
+        </state>
+        <state name="SENDER">
+            <transition name="GOOD_MESSAGE"/>
+            <dataflows>
+                <dataflow name="enter_value" type="Input"/>
+            </dataflows>
+        </state>
+        <state name="SHOW_ANSWER">
+            <transition name="SUCCESS"/>
+        </state>
+        <state name="HANDLE_SUCCESS">
+            <transition name="TIME_ELAPSED"/>
+        </state>
+        <state name="HANDLE_TIMEOUT">
+            <transition name="END_TIMEOUT"/>
+        </state>
+        <state name="HANDLE">
+            <transition name="END_HANDLE"/>
+        </state>
+        <state name="EXIT"/>
+    </TestPath>
+    <TestPath>
+        <state name="START">
+            <transition name="APP_STARTED"/>
+        </state>
+        <state name="SEND_MESSAGE">
+            <transition name="SEND_MESSAGE_CLICKED">
+                <contexts>
+                    <context origin="INTERNET_CONNECTIVITY">fast3G</context>
+                </contexts>
+            </transition>
+            <dataflows>
+                <dataflow name="internet" type="Source"/>
+            </dataflows>
+        </state>
+        <state name="SENDER">
+            <transition name="WRONG"/>
+            <dataflows>
+                <dataflow name="enter_value" type="Input"/>
+            </dataflows>
+        </state>
+        <state name="DISPLAY_WARNING">
+            <transition name="BACK_BUTTON_PRESSED"/>
+            <dataflows>
+                <dataflow name="log.t" type="Sink">
+                    <parameters>
+                        <parameter origin="source">internet</parameter>
+                        <parameter origin="source">enter_value</parameter>
+                    </parameters>
+                </dataflow>
+            </dataflows>
+        </state>
+        <state name="SEND_MESSAGE">
+            <transition name="SEND_MESSAGE_CLICKED"/>
+            <dataflows>
+                <dataflow name="internet" type="Source"/>
+            </dataflows>
+        </state>
+        <state name="SENDER">
+            <transition name="GOOD_MESSAGE"/>
+            <dataflows>
+                <dataflow name="enter_value" type="Input"/>
+            </dataflows>
+        </state>
+        <state name="SHOW_ANSWER">
+            <transition name="SUCCESS"/>
+        </state>
+        <state name="HANDLE_SUCCESS">
+            <transition name="MESSAGE_PRINTED"/>
+        </state>
+        <state name="HANDLE">
+            <transition name="END_HANDLE"/>
+        </state>
+        <state name="EXIT"/>
+    </TestPath>
+    <TestPath>
+        <state name="START">
+            <transition name="APP_STARTED"/>
+        </state>
+        <state name="SEND_MESSAGE">
+            <transition name="SEND_MESSAGE_CLICKED">
+                <contexts>
+                    <context origin="INTERNET_CONNECTIVITY">_4g</context>
+                </contexts>
+            </transition>
+            <dataflows>
+                <dataflow name="internet" type="Source"/>
+            </dataflows>
+        </state>
+        <state name="SENDER">
+            <transition name="WRONG"/>
+            <dataflows>
+                <dataflow name="enter_value" type="Input"/>
+            </dataflows>
+        </state>
+        <state name="DISPLAY_WARNING">
+            <transition name="BACK_BUTTON_PRESSED"/>
+            <dataflows>
+                <dataflow name="log.t" type="Sink">
+                    <parameters>
+                        <parameter origin="source">internet</parameter>
+                        <parameter origin="source">enter_value</parameter>
+                    </parameters>
+                </dataflow>
+            </dataflows>
+        </state>
+        <state name="SEND_MESSAGE">
+            <transition name="SEND_MESSAGE_CLICKED"/>
+            <dataflows>
+                <dataflow name="internet" type="Source"/>
+            </dataflows>
+        </state>
+        <state name="SENDER">
+            <transition name="GOOD_MESSAGE"/>
+            <dataflows>
+                <dataflow name="enter_value" type="Input"/>
+            </dataflows>
+        </state>
+        <state name="SHOW_ANSWER">
+            <transition name="TERMINATE_BUTTON_CLICKED"/>
+        </state>
+        <state name="EXIT"/>
+    </TestPath>
+    <TestPath>
+        <state name="START">
+            <transition name="APP_STARTED"/>
+        </state>
+        <state name="SEND_MESSAGE">
+            <transition name="NONE">
+                <contexts>
+                    <context origin="INTERNET_CONNECTIVITY">slow3G</context>
+                </contexts>
+                <situations>
+                    <situation origin="DEFAULT_ORIGIN">INTERNET_SLOW</situation>
+                </situations>
+            </transition>
+            <dataflows>
+                <dataflow name="internet" type="Source"/>
+            </dataflows>
+        </state>
+        <state name="HANDLE_SLOW_INTERNET">
+            <transition name="NONE"/>
+            <dataflows>
+                <dataflow name="log.d" type="Sink">
+                    <parameters>
+                        <parameter origin="source">internet</parameter>
+                    </parameters>
+                </dataflow>
+            </dataflows>
+        </state>
+        <state name="SENDER">
+            <transition name="WRONG"/>
+            <dataflows>
+                <dataflow name="enter_value" type="Input"/>
+            </dataflows>
+        </state>
+        <state name="DISPLAY_WARNING">
+            <transition name="BACK_BUTTON_PRESSED"/>
+            <dataflows>
+                <dataflow name="log.t" type="Sink">
+                    <parameters>
+                        <parameter origin="source">internet</parameter>
+                        <parameter origin="source">enter_value</parameter>
+                    </parameters>
+                </dataflow>
+            </dataflows>
+        </state>
+        <state name="SEND_MESSAGE">
+            <transition name="SEND_MESSAGE_CLICKED"/>
+            <dataflows>
+                <dataflow name="internet" type="Source"/>
+            </dataflows>
+        </state>
+        <state name="SENDER">
+            <transition name="GOOD_MESSAGE"/>
+            <dataflows>
+                <dataflow name="enter_value" type="Input"/>
+            </dataflows>
+        </state>
+        <state name="SHOW_ANSWER">
+            <transition name="SUCCESS"/>
+        </state>
+        <state name="HANDLE_SUCCESS">
+            <transition name="TIME_ELAPSED"/>
+        </state>
+        <state name="HANDLE_TIMEOUT">
+            <transition name="END_TIMEOUT"/>
+        </state>
+        <state name="HANDLE">
+            <transition name="END_HANDLE"/>
+        </state>
+        <state name="EXIT"/>
+    </TestPath>
+    <TestPath>
+        <state name="START">
+            <transition name="APP_STARTED"/>
+        </state>
+        <state name="SEND_MESSAGE">
+            <transition name="SEND_MESSAGE_CLICKED">
+                <contexts>
+                    <context origin="INTERNET_CONNECTIVITY">high_latency</context>
+                </contexts>
+            </transition>
+            <dataflows>
+                <dataflow name="internet" type="Source"/>
+            </dataflows>
+        </state>
+        <state name="SENDER">
+            <transition name="WRONG"/>
+            <dataflows>
+                <dataflow name="enter_value" type="Input"/>
+            </dataflows>
+        </state>
+        <state name="DISPLAY_WARNING">
+            <transition name="BACK_BUTTON_PRESSED"/>
+            <dataflows>
+                <dataflow name="log.t" type="Sink">
+                    <parameters>
+                        <parameter origin="source">internet</parameter>
+                        <parameter origin="source">enter_value</parameter>
+                    </parameters>
+                </dataflow>
+            </dataflows>
+        </state>
+        <state name="SEND_MESSAGE">
+            <transition name="SEND_MESSAGE_CLICKED"/>
+            <dataflows>
+                <dataflow name="internet" type="Source"/>
+            </dataflows>
+        </state>
+        <state name="SENDER">
+            <transition name="GOOD_MESSAGE"/>
+            <dataflows>
+                <dataflow name="enter_value" type="Input"/>
+            </dataflows>
+        </state>
+        <state name="SHOW_ANSWER">
+            <transition name="SUCCESS"/>
+        </state>
+        <state name="HANDLE_SUCCESS">
+            <transition name="TIME_ELAPSED"/>
+        </state>
+        <state name="HANDLE_TIMEOUT">
+            <transition name="END_TIMEOUT"/>
+        </state>
+        <state name="HANDLE">
+            <transition name="END_HANDLE"/>
+        </state>
+        <state name="EXIT"/>
+    </TestPath>
+    <TestPath>
+        <state name="START">
+            <transition name="APP_STARTED"/>
+        </state>
+        <state name="SEND_MESSAGE">
+            <transition name="SEND_MESSAGE_CLICKED">
+                <contexts>
+                    <context origin="INTERNET_CONNECTIVITY">offline</context>
+                </contexts>
+            </transition>
+            <dataflows>
+                <dataflow name="internet" type="Source"/>
+            </dataflows>
+        </state>
+        <state name="SENDER">
+            <transition name="WRONG"/>
+            <dataflows>
+                <dataflow name="enter_value" type="Input"/>
+            </dataflows>
+        </state>
+        <state name="DISPLAY_WARNING">
+            <transition name="BACK_BUTTON_PRESSED"/>
+            <dataflows>
+                <dataflow name="log.t" type="Sink">
+                    <parameters>
+                        <parameter origin="source">internet</parameter>
+                        <parameter origin="source">enter_value</parameter>
+                    </parameters>
+                </dataflow>
+            </dataflows>
+        </state>
+        <state name="SEND_MESSAGE">
+            <transition name="SEND_MESSAGE_CLICKED"/>
+            <dataflows>
+                <dataflow name="internet" type="Source"/>
+            </dataflows>
+        </state>
+        <state name="SENDER">
+            <transition name="GOOD_MESSAGE"/>
+            <dataflows>
+                <dataflow name="enter_value" type="Input"/>
+            </dataflows>
+        </state>
+        <state name="SHOW_ANSWER">
+            <transition name="SUCCESS"/>
+        </state>
+        <state name="HANDLE_SUCCESS">
+            <transition name="MESSAGE_PRINTED"/>
+        </state>
+        <state name="HANDLE">
+            <transition name="END_HANDLE"/>
+        </state>
+        <state name="EXIT"/>
+    </TestPath>
+    <TestPath>
+        <state name="START">
+            <transition name="APP_STARTED"/>
+        </state>
+        <state name="SEND_MESSAGE">
+            <transition name="SEND_MESSAGE_CLICKED">
+                <contexts>
+                    <context origin="INTERNET_CONNECTIVITY">high_latency</context>
+                </contexts>
+            </transition>
+            <dataflows>
+                <dataflow name="internet" type="Source"/>
+            </dataflows>
+        </state>
+        <state name="SENDER">
+            <transition name="WRONG"/>
+            <dataflows>
+                <dataflow name="enter_value" type="Input"/>
+            </dataflows>
+        </state>
+        <state name="DISPLAY_WARNING">
+            <transition name="BACK_BUTTON_PRESSED"/>
+            <dataflows>
+                <dataflow name="log.t" type="Sink">
+                    <parameters>
+                        <parameter origin="source">internet</parameter>
+                        <parameter origin="source">enter_value</parameter>
+                    </parameters>
+                </dataflow>
+            </dataflows>
+        </state>
+        <state name="SEND_MESSAGE">
+            <transition name="SEND_MESSAGE_CLICKED"/>
+            <dataflows>
+                <dataflow name="internet" type="Source"/>
+            </dataflows>
+        </state>
+        <state name="SENDER">
+            <transition name="GOOD_MESSAGE"/>
+            <dataflows>
+                <dataflow name="enter_value" type="Input"/>
+            </dataflows>
+        </state>
+        <state name="SHOW_ANSWER">
+            <transition name="SUCCESS"/>
+        </state>
+        <state name="HANDLE_SUCCESS">
+            <transition name="MESSAGE_PRINTED"/>
+        </state>
+        <state name="HANDLE">
+            <transition name="END_HANDLE"/>
+        </state>
+        <state name="EXIT"/>
+    </TestPath>
+    <TestPath>
+        <state name="START">
+            <transition name="APP_STARTED"/>
+        </state>
+        <state name="SEND_MESSAGE">
+            <transition name="SEND_MESSAGE_CLICKED">
+                <contexts>
+                    <context origin="INTERNET_CONNECTIVITY">_4g</context>
+                </contexts>
+            </transition>
+            <dataflows>
+                <dataflow name="internet" type="Source"/>
+            </dataflows>
+        </state>
+        <state name="SENDER">
+            <transition name="WRONG"/>
+            <dataflows>
+                <dataflow name="enter_value" type="Input"/>
+            </dataflows>
+        </state>
+        <state name="DISPLAY_WARNING">
+            <transition name="BACK_BUTTON_PRESSED"/>
+            <dataflows>
+                <dataflow name="log.t" type="Sink">
+                    <parameters>
+                        <parameter origin="source">internet</parameter>
+                        <parameter origin="source">enter_value</parameter>
+                    </parameters>
+                </dataflow>
+            </dataflows>
+        </state>
+        <state name="SEND_MESSAGE">
+            <transition name="SEND_MESSAGE_CLICKED"/>
+            <dataflows>
+                <dataflow name="internet" type="Source"/>
+            </dataflows>
+        </state>
+        <state name="SENDER">
+            <transition name="GOOD_MESSAGE"/>
+            <dataflows>
+                <dataflow name="enter_value" type="Input"/>
+            </dataflows>
+        </state>
+        <state name="SHOW_ANSWER">
+            <transition name="SUCCESS"/>
+        </state>
+        <state name="HANDLE_SUCCESS">
+            <transition name="TIME_ELAPSED"/>
+        </state>
+        <state name="HANDLE_TIMEOUT">
+            <transition name="END_TIMEOUT"/>
+        </state>
+        <state name="HANDLE">
+            <transition name="END_HANDLE"/>
+        </state>
+        <state name="EXIT"/>
+    </TestPath>
+    <TestPath>
+        <state name="START">
+            <transition name="APP_STARTED"/>
+        </state>
+        <state name="SEND_MESSAGE">
+            <transition name="SEND_MESSAGE_CLICKED">
+                <contexts>
+                    <context origin="INTERNET_CONNECTIVITY">wifi</context>
+                </contexts>
+            </transition>
+            <dataflows>
+                <dataflow name="internet" type="Source"/>
+            </dataflows>
+        </state>
+        <state name="SENDER">
+            <transition name="WRONG"/>
+            <dataflows>
+                <dataflow name="enter_value" type="Input"/>
+            </dataflows>
+        </state>
+        <state name="DISPLAY_WARNING">
+            <transition name="BACK_BUTTON_PRESSED"/>
+            <dataflows>
+                <dataflow name="log.t" type="Sink">
+                    <parameters>
+                        <parameter origin="source">internet</parameter>
+                        <parameter origin="source">enter_value</parameter>
+                    </parameters>
+                </dataflow>
+            </dataflows>
+        </state>
+        <state name="SEND_MESSAGE">
+            <transition name="SEND_MESSAGE_CLICKED"/>
+            <dataflows>
+                <dataflow name="internet" type="Source"/>
+            </dataflows>
+        </state>
+        <state name="SENDER">
+            <transition name="GOOD_MESSAGE"/>
+            <dataflows>
+                <dataflow name="enter_value" type="Input"/>
+            </dataflows>
+        </state>
+        <state name="SHOW_ANSWER">
+            <transition name="SUCCESS"/>
+        </state>
+        <state name="HANDLE_SUCCESS">
+            <transition name="MESSAGE_PRINTED"/>
+        </state>
+        <state name="HANDLE">
+            <transition name="END_HANDLE"/>
+        </state>
+        <state name="EXIT"/>
+    </TestPath>
+    <TestPath>
+        <state name="START">
+            <transition name="APP_STARTED"/>
+        </state>
+        <state name="SEND_MESSAGE">
+            <transition name="NONE">
+                <contexts>
+                    <context origin="INTERNET_CONNECTIVITY">slow3G</context>
+                </contexts>
+                <situations>
+                    <situation origin="DEFAULT_ORIGIN">INTERNET_SLOW</situation>
+                </situations>
+            </transition>
+            <dataflows>
+                <dataflow name="internet" type="Source"/>
+            </dataflows>
+        </state>
+        <state name="HANDLE_SLOW_INTERNET">
+            <transition name="NONE"/>
+            <dataflows>
+                <dataflow name="log.d" type="Sink">
+                    <parameters>
+                        <parameter origin="source">internet</parameter>
+                    </parameters>
+                </dataflow>
+            </dataflows>
+        </state>
+        <state name="SENDER">
+            <transition name="WRONG"/>
+            <dataflows>
+                <dataflow name="enter_value" type="Input"/>
+            </dataflows>
+        </state>
+        <state name="DISPLAY_WARNING">
+            <transition name="BACK_BUTTON_PRESSED"/>
+            <dataflows>
+                <dataflow name="log.t" type="Sink">
+                    <parameters>
+                        <parameter origin="source">internet</parameter>
+                        <parameter origin="source">enter_value</parameter>
+                    </parameters>
+                </dataflow>
+            </dataflows>
+        </state>
+        <state name="SEND_MESSAGE">
+            <transition name="SEND_MESSAGE_CLICKED"/>
+            <dataflows>
+                <dataflow name="internet" type="Source"/>
+            </dataflows>
+        </state>
+        <state name="SENDER">
+            <transition name="GOOD_MESSAGE"/>
+            <dataflows>
+                <dataflow name="enter_value" type="Input"/>
+            </dataflows>
+        </state>
+        <state name="SHOW_ANSWER">
+            <transition name="SUCCESS"/>
+        </state>
+        <state name="HANDLE_SUCCESS">
+            <transition name="MESSAGE_PRINTED"/>
+        </state>
+        <state name="HANDLE">
+            <transition name="END_HANDLE"/>
+        </state>
+        <state name="EXIT"/>
+    </TestPath>
+    <TestPath>
+        <state name="START">
+            <transition name="APP_STARTED"/>
+        </state>
+        <state name="SEND_MESSAGE">
+            <transition name="NONE">
+                <contexts>
+                    <context origin="INTERNET_CONNECTIVITY">slow3G</context>
+                </contexts>
+                <situations>
+                    <situation origin="DEFAULT_ORIGIN">INTERNET_SLOW</situation>
+                </situations>
+            </transition>
+            <dataflows>
+                <dataflow name="internet" type="Source"/>
+            </dataflows>
+        </state>
+        <state name="HANDLE_SLOW_INTERNET">
+            <transition name="NONE"/>
+            <dataflows>
+                <dataflow name="log.d" type="Sink">
+                    <parameters>
+                        <parameter origin="source">internet</parameter>
+                    </parameters>
+                </dataflow>
+            </dataflows>
+        </state>
+        <state name="SENDER">
+            <transition name="GOOD_MESSAGE"/>
+            <dataflows>
+                <dataflow name="enter_value" type="Input"/>
+            </dataflows>
+        </state>
+        <state name="SHOW_ANSWER">
+            <transition name="SUCCESS"/>
+        </state>
+        <state name="HANDLE_SUCCESS">
+            <transition name="MESSAGE_PRINTED"/>
+        </state>
+        <state name="HANDLE">
+            <transition name="END_HANDLE"/>
+        </state>
+        <state name="EXIT"/>
+    </TestPath>
+    <TestPath>
+        <state name="START">
+            <transition name="APP_STARTED"/>
+        </state>
+        <state name="SEND_MESSAGE">
+            <transition name="SEND_MESSAGE_CLICKED">
+                <contexts>
+                    <context origin="INTERNET_CONNECTIVITY">wifi</context>
+                </contexts>
+            </transition>
+            <dataflows>
+                <dataflow name="internet" type="Source"/>
+            </dataflows>
+        </state>
+        <state name="SENDER">
+            <transition name="WRONG"/>
+            <dataflows>
+                <dataflow name="enter_value" type="Input"/>
+            </dataflows>
+        </state>
+        <state name="DISPLAY_WARNING">
+            <transition name="BACK_BUTTON_PRESSED"/>
+            <dataflows>
+                <dataflow name="log.t" type="Sink">
+                    <parameters>
+                        <parameter origin="source">internet</parameter>
+                        <parameter origin="source">enter_value</parameter>
+                    </parameters>
+                </dataflow>
+            </dataflows>
+        </state>
+        <state name="SEND_MESSAGE">
+            <transition name="SEND_MESSAGE_CLICKED"/>
+            <dataflows>
+                <dataflow name="internet" type="Source"/>
+            </dataflows>
+        </state>
+        <state name="SENDER">
+            <transition name="GOOD_MESSAGE"/>
+            <dataflows>
+                <dataflow name="enter_value" type="Input"/>
+            </dataflows>
+        </state>
+        <state name="SHOW_ANSWER">
+            <transition name="SUCCESS"/>
+        </state>
+        <state name="HANDLE_SUCCESS">
+            <transition name="TIME_ELAPSED"/>
+        </state>
+        <state name="HANDLE_TIMEOUT">
+            <transition name="END_TIMEOUT"/>
+        </state>
+        <state name="HANDLE">
+            <transition name="END_HANDLE"/>
+        </state>
+        <state name="EXIT"/>
+    </TestPath>
+    <TestPath>
+        <state name="START">
+            <transition name="APP_STARTED"/>
+        </state>
+        <state name="SEND_MESSAGE">
+            <transition name="SEND_MESSAGE_CLICKED">
+                <contexts>
+                    <context origin="INTERNET_CONNECTIVITY">wifi</context>
+                </contexts>
+            </transition>
+            <dataflows>
+                <dataflow name="internet" type="Source"/>
+            </dataflows>
+        </state>
+        <state name="SENDER">
+            <transition name="WRONG"/>
+            <dataflows>
+                <dataflow name="enter_value" type="Input"/>
+            </dataflows>
+        </state>
+        <state name="DISPLAY_WARNING">
+            <transition name="BACK_BUTTON_PRESSED"/>
+            <dataflows>
+                <dataflow name="log.t" type="Sink">
+                    <parameters>
+                        <parameter origin="source">internet</parameter>
+                        <parameter origin="source">enter_value</parameter>
+                    </parameters>
+                </dataflow>
+            </dataflows>
+        </state>
+        <state name="SEND_MESSAGE">
+            <transition name="SEND_MESSAGE_CLICKED"/>
+            <dataflows>
+                <dataflow name="internet" type="Source"/>
+            </dataflows>
+        </state>
+        <state name="SENDER">
+            <transition name="GOOD_MESSAGE"/>
+            <dataflows>
+                <dataflow name="enter_value" type="Input"/>
+            </dataflows>
+        </state>
+        <state name="SHOW_ANSWER">
+            <transition name="SUCCESS"/>
+        </state>
+        <state name="HANDLE_SUCCESS">
+            <transition name="MESSAGE_PRINTED"/>
+        </state>
+        <state name="HANDLE">
+            <transition name="END_HANDLE"/>
+        </state>
+        <state name="EXIT"/>
+    </TestPath>
+    <TestPath>
+        <state name="START">
+            <transition name="APP_STARTED"/>
+        </state>
+        <state name="SEND_MESSAGE">
+            <transition name="NONE">
+                <contexts>
+                    <context origin="INTERNET_CONNECTIVITY">slow3G</context>
+                </contexts>
+                <situations>
+                    <situation origin="DEFAULT_ORIGIN">INTERNET_SLOW</situation>
+                </situations>
+            </transition>
+            <dataflows>
+                <dataflow name="internet" type="Source"/>
+            </dataflows>
+        </state>
+        <state name="HANDLE_SLOW_INTERNET">
+            <transition name="NONE"/>
+            <dataflows>
+                <dataflow name="log.d" type="Sink">
+                    <parameters>
+                        <parameter origin="source">internet</parameter>
+                    </parameters>
+                </dataflow>
+            </dataflows>
+        </state>
+        <state name="SENDER">
+            <transition name="WRONG"/>
+            <dataflows>
+                <dataflow name="enter_value" type="Input"/>
+            </dataflows>
+        </state>
+        <state name="DISPLAY_WARNING">
+            <transition name="BACK_BUTTON_PRESSED"/>
+            <dataflows>
+                <dataflow name="log.t" type="Sink">
+                    <parameters>
+                        <parameter origin="source">internet</parameter>
+                        <parameter origin="source">enter_value</parameter>
+                    </parameters>
+                </dataflow>
+            </dataflows>
+        </state>
+        <state name="SEND_MESSAGE">
+            <transition name="SEND_MESSAGE_CLICKED"/>
+            <dataflows>
+                <dataflow name="internet" type="Source"/>
+            </dataflows>
+        </state>
+        <state name="SENDER">
+            <transition name="GOOD_MESSAGE"/>
+            <dataflows>
+                <dataflow name="enter_value" type="Input"/>
+            </dataflows>
+        </state>
+        <state name="SHOW_ANSWER">
+            <transition name="SUCCESS"/>
+        </state>
+        <state name="HANDLE_SUCCESS">
+            <transition name="MESSAGE_PRINTED"/>
+        </state>
+        <state name="HANDLE">
+            <transition name="END_HANDLE"/>
+        </state>
+        <state name="EXIT"/>
+    </TestPath>
+    <TestPath>
+        <state name="START">
+            <transition name="APP_STARTED"/>
+        </state>
+        <state name="SEND_MESSAGE">
+            <transition name="SEND_MESSAGE_CLICKED">
+                <contexts>
+                    <context origin="INTERNET_CONNECTIVITY">fast3G</context>
+                </contexts>
+            </transition>
+            <dataflows>
+                <dataflow name="internet" type="Source"/>
+            </dataflows>
+        </state>
+        <state name="SENDER">
+            <transition name="WRONG"/>
+            <dataflows>
+                <dataflow name="enter_value" type="Input"/>
+            </dataflows>
+        </state>
+        <state name="DISPLAY_WARNING">
+            <transition name="BACK_BUTTON_PRESSED"/>
+            <dataflows>
+                <dataflow name="log.t" type="Sink">
+                    <parameters>
+                        <parameter origin="source">internet</parameter>
+                        <parameter origin="source">enter_value</parameter>
+                    </parameters>
+                </dataflow>
+            </dataflows>
+        </state>
+        <state name="SEND_MESSAGE">
+            <transition name="SEND_MESSAGE_CLICKED"/>
+            <dataflows>
+                <dataflow name="internet" type="Source"/>
+            </dataflows>
+        </state>
+        <state name="SENDER">
+            <transition name="GOOD_MESSAGE"/>
+            <dataflows>
+                <dataflow name="enter_value" type="Input"/>
+            </dataflows>
+        </state>
+        <state name="SHOW_ANSWER">
+            <transition name="SUCCESS"/>
+        </state>
+        <state name="HANDLE_SUCCESS">
+            <transition name="MESSAGE_PRINTED"/>
+        </state>
+        <state name="HANDLE">
+            <transition name="END_HANDLE"/>
+        </state>
+        <state name="EXIT"/>
+    </TestPath>
+    <TestPath>
+        <state name="START">
+            <transition name="APP_STARTED"/>
+        </state>
+        <state name="SEND_MESSAGE">
+            <transition name="NONE">
+                <contexts>
+                    <context origin="INTERNET_CONNECTIVITY">slow3G</context>
+                </contexts>
+                <situations>
+                    <situation origin="DEFAULT_ORIGIN">INTERNET_SLOW</situation>
+                </situations>
+            </transition>
+            <dataflows>
+                <dataflow name="internet" type="Source"/>
+            </dataflows>
+        </state>
+        <state name="HANDLE_SLOW_INTERNET">
+            <transition name="NONE"/>
+            <dataflows>
+                <dataflow name="log.d" type="Sink">
+                    <parameters>
+                        <parameter origin="source">internet</parameter>
+                    </parameters>
+                </dataflow>
+            </dataflows>
+        </state>
+        <state name="SENDER">
+            <transition name="GOOD_MESSAGE"/>
+            <dataflows>
+                <dataflow name="enter_value" type="Input"/>
+            </dataflows>
+        </state>
+        <state name="SHOW_ANSWER">
+            <transition name="SUCCESS"/>
+        </state>
+        <state name="HANDLE_SUCCESS">
+            <transition name="TIME_ELAPSED"/>
+        </state>
+        <state name="HANDLE_TIMEOUT">
+            <transition name="END_TIMEOUT"/>
+        </state>
+        <state name="HANDLE">
+            <transition name="END_HANDLE"/>
+        </state>
+        <state name="EXIT"/>
+    </TestPath>
+    <TestPath>
+        <state name="START">
+            <transition name="APP_STARTED"/>
+        </state>
+        <state name="SEND_MESSAGE">
+            <transition name="NONE">
+                <contexts>
+                    <context origin="INTERNET_CONNECTIVITY">slow3G</context>
+                </contexts>
+                <situations>
+                    <situation origin="DEFAULT_ORIGIN">INTERNET_SLOW</situation>
+                </situations>
+            </transition>
+            <dataflows>
+                <dataflow name="internet" type="Source"/>
+            </dataflows>
+        </state>
+        <state name="HANDLE_SLOW_INTERNET">
+            <transition name="NONE"/>
+            <dataflows>
+                <dataflow name="log.d" type="Sink">
+                    <parameters>
+                        <parameter origin="source">internet</parameter>
+                    </parameters>
+                </dataflow>
+            </dataflows>
+        </state>
+        <state name="SENDER">
+            <transition name="WRONG"/>
+            <dataflows>
+                <dataflow name="enter_value" type="Input"/>
+            </dataflows>
+        </state>
+        <state name="DISPLAY_WARNING">
+            <transition name="BACK_BUTTON_PRESSED"/>
+            <dataflows>
+                <dataflow name="log.t" type="Sink">
+                    <parameters>
+                        <parameter origin="source">internet</parameter>
+                        <parameter origin="source">enter_value</parameter>
+                    </parameters>
+                </dataflow>
+            </dataflows>
+        </state>
+        <state name="SEND_MESSAGE">
+            <transition name="SEND_MESSAGE_CLICKED"/>
+            <dataflows>
+                <dataflow name="internet" type="Source"/>
+            </dataflows>
+        </state>
+        <state name="SENDER">
+            <transition name="GOOD_MESSAGE"/>
+            <dataflows>
+                <dataflow name="enter_value" type="Input"/>
+            </dataflows>
+        </state>
+        <state name="SHOW_ANSWER">
+            <transition name="SUCCESS"/>
+        </state>
+        <state name="HANDLE_SUCCESS">
+            <transition name="TIME_ELAPSED"/>
+        </state>
+        <state name="HANDLE_TIMEOUT">
+            <transition name="END_TIMEOUT"/>
+        </state>
+        <state name="HANDLE">
+            <transition name="END_HANDLE"/>
+        </state>
+        <state name="EXIT"/>
+    </TestPath>
+    <TestPath>
+        <state name="START">
+            <transition name="APP_STARTED"/>
+        </state>
+        <state name="SEND_MESSAGE">
+            <transition name="SEND_MESSAGE_CLICKED">
+                <contexts>
+                    <context origin="INTERNET_CONNECTIVITY">high_latency</context>
+                </contexts>
+            </transition>
+            <dataflows>
+                <dataflow name="internet" type="Source"/>
+            </dataflows>
+        </state>
+        <state name="SENDER">
+            <transition name="WRONG"/>
+            <dataflows>
+                <dataflow name="enter_value" type="Input"/>
+            </dataflows>
+        </state>
+        <state name="DISPLAY_WARNING">
+            <transition name="BACK_BUTTON_PRESSED"/>
+            <dataflows>
+                <dataflow name="log.t" type="Sink">
+                    <parameters>
+                        <parameter origin="source">internet</parameter>
+                        <parameter origin="source">enter_value</parameter>
+                    </parameters>
+                </dataflow>
+            </dataflows>
+        </state>
+        <state name="SEND_MESSAGE">
+            <transition name="SEND_MESSAGE_CLICKED"/>
+            <dataflows>
+                <dataflow name="internet" type="Source"/>
+            </dataflows>
+        </state>
+        <state name="SENDER">
+            <transition name="GOOD_MESSAGE"/>
+            <dataflows>
+                <dataflow name="enter_value" type="Input"/>
+            </dataflows>
+        </state>
+        <state name="SHOW_ANSWER">
+            <transition name="SUCCESS"/>
+        </state>
+        <state name="HANDLE_SUCCESS">
+            <transition name="MESSAGE_PRINTED"/>
+        </state>
+        <state name="HANDLE">
+            <transition name="END_HANDLE"/>
+        </state>
+        <state name="EXIT"/>
+    </TestPath>
+    <TestPath>
+        <state name="START">
+            <transition name="APP_STARTED"/>
+        </state>
+        <state name="SEND_MESSAGE">
+            <transition name="NONE">
+                <contexts>
+                    <context origin="INTERNET_CONNECTIVITY">slow3G</context>
+                </contexts>
+                <situations>
+                    <situation origin="DEFAULT_ORIGIN">INTERNET_SLOW</situation>
+                </situations>
+            </transition>
+            <dataflows>
+                <dataflow name="internet" type="Source"/>
+            </dataflows>
+        </state>
+        <state name="HANDLE_SLOW_INTERNET">
+            <transition name="NONE"/>
+            <dataflows>
+                <dataflow name="log.d" type="Sink">
+                    <parameters>
+                        <parameter origin="source">internet</parameter>
+                    </parameters>
+                </dataflow>
+            </dataflows>
+        </state>
+        <state name="SENDER">
+            <transition name="GOOD_MESSAGE"/>
+            <dataflows>
+                <dataflow name="enter_value" type="Input"/>
+            </dataflows>
+        </state>
+        <state name="SHOW_ANSWER">
+            <transition name="SUCCESS"/>
+        </state>
+        <state name="HANDLE_SUCCESS">
+            <transition name="TIME_ELAPSED"/>
+        </state>
+        <state name="HANDLE_TIMEOUT">
+            <transition name="END_TIMEOUT"/>
+        </state>
+        <state name="HANDLE">
+            <transition name="END_HANDLE"/>
+        </state>
+        <state name="EXIT"/>
+    </TestPath>
+    <TestPath>
+        <state name="START">
+            <transition name="APP_STARTED"/>
+        </state>
+        <state name="SEND_MESSAGE">
+            <transition name="SEND_MESSAGE_CLICKED">
+                <contexts>
+                    <context origin="INTERNET_CONNECTIVITY">fast3G</context>
+                </contexts>
+            </transition>
+            <dataflows>
+                <dataflow name="internet" type="Source"/>
+            </dataflows>
+        </state>
+        <state name="SENDER">
+            <transition name="WRONG"/>
+            <dataflows>
+                <dataflow name="enter_value" type="Input"/>
+            </dataflows>
+        </state>
+        <state name="DISPLAY_WARNING">
+            <transition name="BACK_BUTTON_PRESSED"/>
+            <dataflows>
+                <dataflow name="log.t" type="Sink">
+                    <parameters>
+                        <parameter origin="source">internet</parameter>
+                        <parameter origin="source">enter_value</parameter>
+                    </parameters>
+                </dataflow>
+            </dataflows>
+        </state>
+        <state name="SEND_MESSAGE">
+            <transition name="SEND_MESSAGE_CLICKED"/>
+            <dataflows>
+                <dataflow name="internet" type="Source"/>
+            </dataflows>
+        </state>
+        <state name="SENDER">
+            <transition name="GOOD_MESSAGE"/>
+            <dataflows>
+                <dataflow name="enter_value" type="Input"/>
+            </dataflows>
+        </state>
+        <state name="SHOW_ANSWER">
+            <transition name="TERMINATE_BUTTON_CLICKED"/>
+        </state>
+        <state name="EXIT"/>
+    </TestPath>
+    <TestPath>
+        <state name="START">
+            <transition name="APP_STARTED"/>
+        </state>
+        <state name="SEND_MESSAGE">
+            <transition name="NONE">
+                <contexts>
+                    <context origin="INTERNET_CONNECTIVITY">slow3G</context>
+                </contexts>
+                <situations>
+                    <situation origin="DEFAULT_ORIGIN">INTERNET_SLOW</situation>
+                </situations>
+            </transition>
+            <dataflows>
+                <dataflow name="internet" type="Source"/>
+            </dataflows>
+        </state>
+        <state name="HANDLE_SLOW_INTERNET">
+            <transition name="NONE"/>
+            <dataflows>
+                <dataflow name="log.d" type="Sink">
+                    <parameters>
+                        <parameter origin="source">internet</parameter>
+                    </parameters>
+                </dataflow>
+            </dataflows>
+        </state>
+        <state name="SENDER">
+            <transition name="GOOD_MESSAGE"/>
+            <dataflows>
+                <dataflow name="enter_value" type="Input"/>
+            </dataflows>
+        </state>
+        <state name="SHOW_ANSWER">
+            <transition name="TERMINATE_BUTTON_CLICKED"/>
+        </state>
+        <state name="EXIT"/>
+    </TestPath>
+    <TestPath>
+        <state name="START">
+            <transition name="APP_STARTED"/>
+        </state>
+        <state name="SEND_MESSAGE">
+            <transition name="SEND_MESSAGE_CLICKED">
+                <contexts>
+                    <context origin="INTERNET_CONNECTIVITY">high_latency</context>
+                </contexts>
+            </transition>
+            <dataflows>
+                <dataflow name="internet" type="Source"/>
+            </dataflows>
+        </state>
+        <state name="SENDER">
+            <transition name="WRONG"/>
+            <dataflows>
+                <dataflow name="enter_value" type="Input"/>
+            </dataflows>
+        </state>
+        <state name="DISPLAY_WARNING">
+            <transition name="BACK_BUTTON_PRESSED"/>
+            <dataflows>
+                <dataflow name="log.t" type="Sink">
+                    <parameters>
+                        <parameter origin="source">internet</parameter>
+                        <parameter origin="source">enter_value</parameter>
+                    </parameters>
+                </dataflow>
+            </dataflows>
+        </state>
+        <state name="SEND_MESSAGE">
+            <transition name="SEND_MESSAGE_CLICKED"/>
+            <dataflows>
+                <dataflow name="internet" type="Source"/>
+            </dataflows>
+        </state>
+        <state name="SENDER">
+            <transition name="GOOD_MESSAGE"/>
+            <dataflows>
+                <dataflow name="enter_value" type="Input"/>
+            </dataflows>
+        </state>
+        <state name="SHOW_ANSWER">
+            <transition name="SUCCESS"/>
+        </state>
+        <state name="HANDLE_SUCCESS">
+            <transition name="TIME_ELAPSED"/>
+        </state>
+        <state name="HANDLE_TIMEOUT">
+            <transition name="END_TIMEOUT"/>
+        </state>
+        <state name="HANDLE">
+            <transition name="END_HANDLE"/>
+        </state>
+        <state name="EXIT"/>
+    </TestPath>
+    <TestPath>
+        <state name="START">
+            <transition name="APP_STARTED"/>
+        </state>
+        <state name="SEND_MESSAGE">
+            <transition name="SEND_MESSAGE_CLICKED">
+                <contexts>
+                    <context origin="INTERNET_CONNECTIVITY">_4g</context>
+                </contexts>
+            </transition>
+            <dataflows>
+                <dataflow name="internet" type="Source"/>
+            </dataflows>
+        </state>
+        <state name="SENDER">
+            <transition name="WRONG"/>
+            <dataflows>
+                <dataflow name="enter_value" type="Input"/>
+            </dataflows>
+        </state>
+        <state name="DISPLAY_WARNING">
+            <transition name="BACK_BUTTON_PRESSED"/>
+            <dataflows>
+                <dataflow name="log.t" type="Sink">
+                    <parameters>
+                        <parameter origin="source">internet</parameter>
+                        <parameter origin="source">enter_value</parameter>
+                    </parameters>
+                </dataflow>
+            </dataflows>
+        </state>
+        <state name="SEND_MESSAGE">
+            <transition name="SEND_MESSAGE_CLICKED"/>
+            <dataflows>
+                <dataflow name="internet" type="Source"/>
+            </dataflows>
+        </state>
+        <state name="SENDER">
+            <transition name="GOOD_MESSAGE"/>
+            <dataflows>
+                <dataflow name="enter_value" type="Input"/>
+            </dataflows>
+        </state>
+        <state name="SHOW_ANSWER">
+            <transition name="SUCCESS"/>
+        </state>
+        <state name="HANDLE_SUCCESS">
+            <transition name="MESSAGE_PRINTED"/>
+        </state>
+        <state name="HANDLE">
+            <transition name="END_HANDLE"/>
+        </state>
+        <state name="EXIT"/>
+    </TestPath>
+    <TestPath>
+        <state name="START">
+            <transition name="APP_STARTED"/>
+        </state>
+        <state name="SEND_MESSAGE">
+            <transition name="SEND_MESSAGE_CLICKED">
+                <contexts>
+                    <context origin="INTERNET_CONNECTIVITY">offline</context>
+                </contexts>
+            </transition>
+            <dataflows>
+                <dataflow name="internet" type="Source"/>
+            </dataflows>
+        </state>
+        <state name="SENDER">
+            <transition name="WRONG"/>
+            <dataflows>
+                <dataflow name="enter_value" type="Input"/>
+            </dataflows>
+        </state>
+        <state name="DISPLAY_WARNING">
+            <transition name="BACK_BUTTON_PRESSED"/>
+            <dataflows>
+                <dataflow name="log.t" type="Sink">
+                    <parameters>
+                        <parameter origin="source">internet</parameter>
+                        <parameter origin="source">enter_value</parameter>
+                    </parameters>
+                </dataflow>
+            </dataflows>
+        </state>
+        <state name="SEND_MESSAGE">
+            <transition name="SEND_MESSAGE_CLICKED"/>
+            <dataflows>
+                <dataflow name="internet" type="Source"/>
+            </dataflows>
+        </state>
+        <state name="SENDER">
+            <transition name="GOOD_MESSAGE"/>
+            <dataflows>
+                <dataflow name="enter_value" type="Input"/>
+            </dataflows>
+        </state>
+        <state name="SHOW_ANSWER">
+            <transition name="TERMINATE_BUTTON_CLICKED"/>
+        </state>
+        <state name="EXIT"/>
+    </TestPath>
+    <TestPath>
+        <state name="START">
+            <transition name="APP_STARTED"/>
+        </state>
+        <state name="SEND_MESSAGE">
+            <transition name="SEND_MESSAGE_CLICKED">
+                <contexts>
+                    <context origin="INTERNET_CONNECTIVITY">_4g</context>
+                </contexts>
+            </transition>
+            <dataflows>
+                <dataflow name="internet" type="Source"/>
+            </dataflows>
+        </state>
+        <state name="SENDER">
+            <transition name="WRONG"/>
+            <dataflows>
+                <dataflow name="enter_value" type="Input"/>
+            </dataflows>
+        </state>
+        <state name="DISPLAY_WARNING">
+            <transition name="BACK_BUTTON_PRESSED"/>
+            <dataflows>
+                <dataflow name="log.t" type="Sink">
+                    <parameters>
+                        <parameter origin="source">internet</parameter>
+                        <parameter origin="source">enter_value</parameter>
+                    </parameters>
+                </dataflow>
+            </dataflows>
+        </state>
+        <state name="SEND_MESSAGE">
+            <transition name="SEND_MESSAGE_CLICKED"/>
+            <dataflows>
+                <dataflow name="internet" type="Source"/>
+            </dataflows>
+        </state>
+        <state name="SENDER">
+            <transition name="GOOD_MESSAGE"/>
+            <dataflows>
+                <dataflow name="enter_value" type="Input"/>
+            </dataflows>
+        </state>
+        <state name="SHOW_ANSWER">
+            <transition name="SUCCESS"/>
+        </state>
+        <state name="HANDLE_SUCCESS">
+            <transition name="MESSAGE_PRINTED"/>
+        </state>
+        <state name="HANDLE">
+            <transition name="END_HANDLE"/>
+        </state>
+        <state name="EXIT"/>
+    </TestPath>
+    <TestPath>
+        <state name="START">
+            <transition name="APP_STARTED"/>
+        </state>
+        <state name="SEND_MESSAGE">
+            <transition name="NONE">
+                <contexts>
+                    <context origin="INTERNET_CONNECTIVITY">slow3G</context>
+                </contexts>
+                <situations>
+                    <situation origin="DEFAULT_ORIGIN">INTERNET_SLOW</situation>
+                </situations>
+            </transition>
+            <dataflows>
+                <dataflow name="internet" type="Source"/>
+            </dataflows>
+        </state>
+        <state name="HANDLE_SLOW_INTERNET">
+            <transition name="NONE"/>
+            <dataflows>
+                <dataflow name="log.d" type="Sink">
+                    <parameters>
+                        <parameter origin="source">internet</parameter>
+                    </parameters>
+                </dataflow>
+            </dataflows>
+        </state>
+        <state name="SENDER">
+            <transition name="GOOD_MESSAGE"/>
+            <dataflows>
+                <dataflow name="enter_value" type="Input"/>
+            </dataflows>
+        </state>
+        <state name="SHOW_ANSWER">
+            <transition name="SUCCESS"/>
+        </state>
+        <state name="HANDLE_SUCCESS">
+            <transition name="MESSAGE_PRINTED"/>
+        </state>
+        <state name="HANDLE">
+            <transition name="END_HANDLE"/>
+        </state>
+        <state name="EXIT"/>
+    </TestPath>
+    <TestPath>
+        <state name="START">
+            <transition name="APP_STARTED"/>
+        </state>
+        <state name="SEND_MESSAGE">
+            <transition name="SEND_MESSAGE_CLICKED">
+                <contexts>
+                    <context origin="INTERNET_CONNECTIVITY">wifi</context>
+                </contexts>
+            </transition>
+            <dataflows>
+                <dataflow name="internet" type="Source"/>
+            </dataflows>
+        </state>
+        <state name="SENDER">
+            <transition name="WRONG"/>
+            <dataflows>
+                <dataflow name="enter_value" type="Input"/>
+            </dataflows>
+        </state>
+        <state name="DISPLAY_WARNING">
+            <transition name="BACK_BUTTON_PRESSED"/>
+            <dataflows>
+                <dataflow name="log.t" type="Sink">
+                    <parameters>
+                        <parameter origin="source">internet</parameter>
+                        <parameter origin="source">enter_value</parameter>
+                    </parameters>
+                </dataflow>
+            </dataflows>
+        </state>
+        <state name="SEND_MESSAGE">
+            <transition name="SEND_MESSAGE_CLICKED"/>
+            <dataflows>
+                <dataflow name="internet" type="Source"/>
+            </dataflows>
+        </state>
+        <state name="SENDER">
+            <transition name="GOOD_MESSAGE"/>
+            <dataflows>
+                <dataflow name="enter_value" type="Input"/>
+            </dataflows>
+        </state>
+        <state name="SHOW_ANSWER">
+            <transition name="TERMINATE_BUTTON_CLICKED"/>
+        </state>
+        <state name="EXIT"/>
+    </TestPath>
+</TestPaths>

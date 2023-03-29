@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config>
+	<models>
+		<dev>/home/baheuxbi/Documents/repo/project/ConTest/generator/src/main/resources/DevModelStatic1.cdml</dev>
+		<context>/home/baheuxbi/Documents/repo/project/ConTest/generator/src/main/resources/ContextModel.cdl</context>
+	</models>
+	
+	<testCoverage>
+		<contextCriteria></contextCriteria>
+		<graphCriteria></graphCriteria>
+	</testCoverage>
+</config>

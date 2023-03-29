@@ -1,0 +1,17 @@
+Vulnerability "log.t API 26" {
+	description "log.t can be exploited by giving his first argument 'OUTPUsT'"
+		
+	context {
+		apiversion "26"
+	}	
+		
+	function {
+		main Sink "log.t" {
+			parameter {
+				private,
+				static "OUTPUsT"
+			}
+		},
+		Source private *
+	}
+}

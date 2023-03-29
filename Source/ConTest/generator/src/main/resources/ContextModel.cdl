@@ -1,0 +1,70 @@
+contextModel TranslationApp {	
+	
+	// Mark: context declaration 
+	
+	context INTERNET_CONNECTIVITY {
+		providers: [WIFI_ADAPTER, CELL_ADAPTER],
+		properties: [connectivity: Connectivity]
+	}
+	
+	context LOCATION {
+		providers: [GPS_SENSOR, CELL_ADAPTER],
+		properties: [availability: Availability, longitude: double, latitude: double]
+	}
+	
+	context COUNTRY derives LOCATION {
+		properties: [country: Country],
+		mappings: {
+			Country.france -> LOCATION.longitude == "x" and LOCATION.latitude == "y", // a specific value or range of values 
+			Country.germany -> LOCATION.longitude == "x" and LOCATION.latitude == "y",
+			Country.spain -> LOCATION.longitude == "x" and LOCATION.latitude == "y"
+		}
+	}
+	
+	// While interesting, OS is not necessary for Ivan's project as it's Android focused
+	//static context OS {
+	//	providers: [DEVICE_API],
+	//	properties: [os: OS]
+	//}
+	
+	static context OS_VERSION {
+		providers: [DEVICE_API],
+		properties: [version: integer]
+	}
+	
+	// Mark: context providers declaration
+	
+	providers {
+		WIFI_ADAPTER,
+		CELL_ADAPTER,
+		GPS_SENSOR,
+		DEVICE_API
+	}	
+	
+	// Mark: situations declaration
+	
+	
+	situation INTERNET_DISCONNECTED {
+		INTERNET_CONNECTIVITY.connectivity == offline
+	}
+	
+	situation INTERNET_SLOW {
+		INTERNET_CONNECTIVITY.connectivity == slow3G
+	}
+	
+	
+	situation LOCATION_UNAVAILABLE {
+		LOCATION.availability == unavailable
+	}
+	
+	// Mark: context data types declaration
+	
+	type Connectivity {offline, wifi, slow3G, fast3G, _4g, high_latency}
+	
+	//type OS {android, ios}
+				
+	type Country {france, germany, spain, uk}
+	
+	type Availability {available, unavailable}
+	
+}

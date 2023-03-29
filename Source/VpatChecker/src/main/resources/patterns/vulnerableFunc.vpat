@@ -1,0 +1,13 @@
+Vulnerability "vulnerableFunc" {
+	description "vulnerableFunc can be exploited by giving his first argument 'evilPayload'"
+		
+	function {
+		main Sink "log.t" {
+			parameter {
+				private,
+				static "OUTPUsT"
+			}
+		},
+		Source private *
+	}
+}

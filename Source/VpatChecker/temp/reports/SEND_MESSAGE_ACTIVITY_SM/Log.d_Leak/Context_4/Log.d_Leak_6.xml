@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<TestPath>
+    <staticContext APIVersion="26"/>
+    <state name="SEND_MESSAGE">
+        <transition name="NONE">
+            <contexts>
+                <context origin="INTERNET_CONNECTIVITY">slow3G</context>
+            </contexts>
+            <situations>
+                <situation origin="DEFAULT_ORIGIN">INTERNET_SLOW</situation>
+            </situations>
+        </transition>
+        <dataflows>
+            <dataflow name="internet" type="Source"/>
+        </dataflows>
+    </state>
+    <state name="HANDLE_SLOW_INTERNET">
+        <transition name="NONE"/>
+        <dataflows>
+            <dataflow name="log.d" type="Sink">
+                <parameters>
+                    <parameter origin="source">internet</parameter>
+                </parameters>
+            </dataflow>
+        </dataflows>
+    </state>
+    <state name="SENDER">
+        <transition name="WRONG"/>
+        <dataflows>
+            <dataflow name="enter_value" type="Input"/>
+        </dataflows>
+    </state>
+    <state name="DISPLAY_WARNING">
+        <transition name="BACK_BUTTON_PRESSED"/>
+        <dataflows>
+            <dataflow name="log.t" type="Sink">
+                <parameters>
+                    <parameter origin="source">internet</parameter>
+                    <parameter origin="source">enter_value</parameter>
+                </parameters>
+            </dataflow>
+        </dataflows>
+    </state>
+    <state name="SEND_MESSAGE">
+        <transition name="SEND_MESSAGE_CLICKED"/>
+        <dataflows>
+            <dataflow name="internet" type="Source"/>
+        </dataflows>
+    </state>
+    <state name="SENDER">
+        <transition name="GOOD_MESSAGE"/>
+        <dataflows>
+            <dataflow name="enter_value" type="Input"/>
+        </dataflows>
+    </state>
+    <state name="SHOW_ANSWER"/>
+</TestPath>

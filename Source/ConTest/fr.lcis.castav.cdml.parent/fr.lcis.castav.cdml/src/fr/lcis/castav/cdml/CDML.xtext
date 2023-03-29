@@ -1,0 +1,145 @@
+grammar fr.lcis.castav.cdml.CDML with org.eclipse.xtext.common.Terminals
+
+generate cDML "http://www.lcis.fr/castav/cdml/CDML"
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+
+Cdml:
+	'model' name=EString '{'
+		((contexts+=Contexts)?) &
+		((staticContexts+=StaticContexts)?) &
+		((situations+=Situations)?) &
+		(statemachines+=Statemachine+) &
+		(adaptations+=Adaptation*)
+	'}'
+;
+
+/*
+ * Dynamic context whose applications depend on
+ */
+Contexts:
+	'contexts' '{'
+		contexts+=Context (',' contexts+=Context)*
+	'}'
+;
+
+Context:
+	name=EString
+;
+
+/*
+ * Static Context that define the application 
+ */
+StaticContexts:
+	'static' 'contexts' '{'
+		staticContexts+=StaticContext (',' staticContexts+=StaticContext)*
+	'}'
+;
+
+StaticContext:
+	name=EString '=' value=STRING
+;
+
+/*
+ * Situations that exist in the context of the application. 
+ * Each situation links to which context changes said situation
+ */
+Situations:
+	'situations' '{'
+		situations+=Situation (',' situations+=Situation)*
+	'}'
+;
+
+Situation:
+	name=EString ":" context=[Context|ID]
+;
+
+/*
+ * FSM defining a specific component
+ */
+Statemachine:
+	'statemachine' name=EString (exported?='exported' (permission=Permission)?)?'{'
+		states+=State*
+	'}'
+;
+
+State:
+	(AtomicState | SuperState) 
+	(
+		'{' 
+			transitions+=Transition*			
+			('dataflows' '{' dataflows+=DataFlow (',' dataflows+=DataFlow)* '}')?
+		'}'
+	)?
+;
+
+AtomicState:
+	'state' name=EString (contextAware?='awareof' contexts+=[Context] (',' contexts+=[Context])*)?
+;
+
+SuperState:
+	'super' 'state' name=EString 'abstracts' abstracts=[Statemachine]
+;
+
+//External transition: source and target states do not belong to the same statemachine
+Transition:
+	{Transition} 'transition' ('on' on=Event)? '->' ((external?='external'  target=[State|FQN] )? | target=[State]) 
+;
+
+Event:
+	name=EString
+;
+
+/**
+ * Permission defining what we need to start said component/FSM
+ */
+Permission:
+	(
+		normal?='normal' 		permissionValues+=PermissionValue (',' permissionValues+=PermissionValue)* | 
+		dangerous?='dangerous'  permissionValues+=PermissionValue (',' permissionValues+=PermissionValue)* | 
+		signature?='signature' | 
+		signatureOrSystem?='signatureOrSystem'
+	)
+;
+
+PermissionValue:
+	name=EString
+;
+
+/*
+ * Enriched model part: Contains information on source/sink inside the model
+ */
+
+DataFlow:
+	(Source | Sink)
+;
+
+Sink:
+	'sink' name=EString '(' (parameters+=Parameter (',' parameters+=Parameter)*)? ')'
+;
+
+Parameter:
+	(wildcard?='*') | value=ID | (source?='source') origin=[Source|FQN]
+;
+
+Source:
+	(input?='input')? 'source' name=EString
+;
+
+/**
+ * Defines states that happen in specific situations only
+ */
+Adaptation:
+	'adaptation' 'for' situations+=[Situation] (',' situations+=[Situation])* 'at' state=[State] 
+	'{'
+		states+=State*
+	'}'
+;
+
+FQN hidden(): EString('.' EString)*;
+
+EString returns ecore::EString:
+	STRING | ID;
+
+
+
+	

@@ -1,0 +1,12 @@
+Vulnerability "Log.d Leak" {
+	description "Log.d kept in code makes it vulnerable to leakage of data"
+		
+	function {
+		main Sink "log.d" {
+			parameter {
+				private
+			}
+		} ,
+		Source private *
+	}
+}

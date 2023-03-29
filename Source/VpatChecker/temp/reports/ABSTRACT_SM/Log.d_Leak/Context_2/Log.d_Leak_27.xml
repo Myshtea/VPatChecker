@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<TestPath>
+    <staticContext APIVersion="30"/>
+    <state name="START">
+        <transition name="APP_STARTED"/>
+    </state>
+    <state name="SEND_MESSAGE">
+        <transition name="NONE">
+            <contexts>
+                <context origin="INTERNET_CONNECTIVITY">slow3G</context>
+            </contexts>
+            <situations>
+                <situation origin="DEFAULT_ORIGIN">INTERNET_SLOW</situation>
+            </situations>
+        </transition>
+        <dataflows>
+            <dataflow name="internet" type="Source"/>
+        </dataflows>
+    </state>
+    <state name="HANDLE_SLOW_INTERNET">
+        <transition name="NONE"/>
+        <dataflows>
+            <dataflow name="log.d" type="Sink">
+                <parameters>
+                    <parameter origin="source">internet</parameter>
+                </parameters>
+            </dataflow>
+        </dataflows>
+    </state>
+    <state name="SENDER">
+        <transition name="GOOD_MESSAGE"/>
+        <dataflows>
+            <dataflow name="enter_value" type="Input"/>
+        </dataflows>
+    </state>
+    <state name="SHOW_ANSWER">
+        <transition name="TERMINATE_BUTTON_CLICKED"/>
+    </state>
+    <state name="EXIT"/>
+</TestPath>

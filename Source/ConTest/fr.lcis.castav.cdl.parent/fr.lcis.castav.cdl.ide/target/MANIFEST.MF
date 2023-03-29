@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: fr.lcis.castav.cdl.ide
+Bundle-ManifestVersion: 2
+Bundle-Name: fr.lcis.castav.cdl.ide
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.202301181530
+Bundle-SymbolicName: fr.lcis.castav.cdl.ide; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: fr.lcis.castav.cdl,org.eclipse.xtext.ide,org.eclipse.xte
+ xt.xbase.ide,org.antlr.runtime;bundle-version="[3.2.0,3.2.1)"
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Export-Package: fr.lcis.castav.cdl.ide.contentassist.antlr,fr.lcis.casta
+ v.cdl.ide.contentassist.antlr.internal
+
