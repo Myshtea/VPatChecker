@@ -29,7 +29,7 @@
 
 #### Install VPAT
 VPAT - (DSL for pattern definition) - Depends on : Nothing outside of eclipse for DSL developers
-- Right click fr.lcis.castav.cdl.parent -> run as.. -> maven build -> goals=clean install
+- Right click fr.lcis.castav.vpat.parent -> run as.. -> maven build -> goals=clean install
 - Note : Sometimes eclipse doesn't update itself when building the jar file and thus will not be detected by generator. When this happens just righ click -> refresh the dsl's target folder (fr.lcis.castav.vpat/target)
 - To check install : No errors; Right click fr.lcis.castav.vpat -> run as ... -> Eclipse application
 - Here you should be able to create a .vpat file and have a parser following the language
