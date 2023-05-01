@@ -1,0 +1,52 @@
+model WeakPermission {
+	
+	static contexts {
+		minSdk = "22",
+		maxSdk = "",
+		targetSdk = "27"
+	}
+	
+	statemachine MainActivity_SM {
+		state onCreate {
+		}
+	}
+	
+	statemachine MyContentProvider_SM exported normal "edu.ksu.cs.benign.MYCP_ACCESS_PERM"{
+		state receiveIntent {
+			transition on DELETE_INTENT -> delete
+			transition on GETTYPE_INTENT -> getType
+			transition on INSERT_INTENT -> insert
+			transition on QUERY_INTENT -> query
+			transition on UPDATE_INTENT -> update
+			transition on ONCREATE_INTENT -> onCreate
+			
+		}
+		
+		state delete {
+			
+		}
+		
+		state getType {
+			
+		}
+		
+		state insert {
+			
+		}
+		
+		state query {
+			dataflows { 
+				source NetworkInfo,
+				sink "log.d" ( source MyContentProvider_SM.query.NetworkInfo )
+			}
+		}
+		
+		state update {
+			
+		}
+		
+		state onCreate {
+			
+		}
+	}
+}
