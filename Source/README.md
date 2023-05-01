@@ -24,7 +24,7 @@
 
 - Clone the repository (Rest of installation will be on "main" branch)
 - Install eclipse for java and DSL developers : https://www.eclipse.org/downloads/packages/installer
-- Import main repository folder in eclipse (or import each part separately)
+- Import main repository folder in eclipse (or import each part separately) (To import : Use "General/Projects from Folder or Archive" from eclipse)
 
 
 #### Install VPAT
