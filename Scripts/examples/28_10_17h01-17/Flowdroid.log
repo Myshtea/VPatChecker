@@ -1,0 +1,1221 @@
+[main] INFO soot.jimple.infoflow.cmd.MainClass - Analyzing app /home/baheuxbi/Documents/repo/sources/scripts/app-debug.apk (1 of 1)...
+[main] INFO soot.jimple.infoflow.android.SetupApplication - Initializing Soot...
+[main] INFO soot.jimple.infoflow.android.SetupApplication - Loading dex files...
+[main] INFO soot.jimple.infoflow.android.SetupApplication - ARSC file parsing took 0.035498502 seconds
+[main] INFO soot.jimple.infoflow.memory.MemoryWarningSystem - Registered a memory warning system for 9 000 MiB
+[main] INFO soot.jimple.infoflow.android.entryPointCreators.AndroidEntryPointCreator - Creating Android entry point for 2 components...
+[main] WARN soot.jimple.infoflow.android.entryPointCreators.AndroidEntryPointCreator - Cannot generate constructor for phantom class androidx.startup.InitializationProvider
+[main] INFO soot.jimple.infoflow.android.SetupApplication - Constructing the callgraph...
+[main] INFO soot.jimple.infoflow.android.callbacks.DefaultCallbackAnalyzer - Collecting callbacks in DEFAULT mode...
+[main] INFO soot.jimple.infoflow.android.callbacks.DefaultCallbackAnalyzer - Callback analysis done.
+[main] INFO soot.jimple.infoflow.android.entryPointCreators.AndroidEntryPointCreator - Creating Android entry point for 2 components...
+[main] ERROR soot.jimple.infoflow.android.entryPointCreators.components.ActivityEntryPointCreator - Assign Intent for <androidx.fragment.app.FragmentActivity: void onActivityResult(int,int,android.content.Intent)> fails.
+java.lang.RuntimeException: This operation requires resolving level BODIES but androidx.fragment.app.FragmentActivity is at resolving level SIGNATURES
+If you are extending Soot, try to add the following call before calling soot.Main.main(..):
+Scene.v().addBasicClass(androidx.fragment.app.FragmentActivity,BODIES);
+Otherwise, try whole-program mode (-w).
+	at soot.SootClass.checkLevelIgnoreResolving(SootClass.java:209)
+	at soot.SootClass.checkLevel(SootClass.java:191)
+	at soot.SootMethod.retrieveActiveBody(SootMethod.java:436)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.assignIntent(AbstractComponentEntryPointCreator.java:260)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.instrumentDummyMainMethod(AbstractComponentEntryPointCreator.java:244)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.createDummyMainInternal(AbstractComponentEntryPointCreator.java:212)
+	at soot.jimple.infoflow.entryPointCreators.BaseEntryPointCreator.createDummyMain(BaseEntryPointCreator.java:154)
+	at soot.jimple.infoflow.android.entryPointCreators.AbstractAndroidEntryPointCreator.createDummyMain(AbstractAndroidEntryPointCreator.java:32)
+	at soot.jimple.infoflow.android.entryPointCreators.AndroidEntryPointCreator.createDummyMainInternal(AndroidEntryPointCreator.java:285)
+	at soot.jimple.infoflow.entryPointCreators.BaseEntryPointCreator.createDummyMain(BaseEntryPointCreator.java:154)
+	at soot.jimple.infoflow.android.entryPointCreators.AbstractAndroidEntryPointCreator.createDummyMain(AbstractAndroidEntryPointCreator.java:32)
+	at soot.jimple.infoflow.android.SetupApplication.createMainMethod(SetupApplication.java:1124)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbackMethods(SetupApplication.java:716)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbacks(SetupApplication.java:525)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbacks(SetupApplication.java:472)
+	at soot.jimple.infoflow.android.SetupApplication.processEntryPoint(SetupApplication.java:1563)
+	at soot.jimple.infoflow.android.SetupApplication.runInfoflow(SetupApplication.java:1529)
+	at soot.jimple.infoflow.android.SetupApplication.runInfoflow(SetupApplication.java:1476)
+	at soot.jimple.infoflow.cmd.MainClass.run(MainClass.java:363)
+	at soot.jimple.infoflow.cmd.MainClass.main(MainClass.java:257)
+[main] ERROR soot.jimple.infoflow.android.entryPointCreators.components.ActivityEntryPointCreator - Assign Intent for <androidx.fragment.app.FragmentActivity: void onNewIntent(android.content.Intent)> fails.
+java.lang.RuntimeException: This operation requires resolving level BODIES but androidx.fragment.app.FragmentActivity is at resolving level SIGNATURES
+If you are extending Soot, try to add the following call before calling soot.Main.main(..):
+Scene.v().addBasicClass(androidx.fragment.app.FragmentActivity,BODIES);
+Otherwise, try whole-program mode (-w).
+	at soot.SootClass.checkLevelIgnoreResolving(SootClass.java:209)
+	at soot.SootClass.checkLevel(SootClass.java:191)
+	at soot.SootMethod.retrieveActiveBody(SootMethod.java:436)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.assignIntent(AbstractComponentEntryPointCreator.java:260)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.instrumentDummyMainMethod(AbstractComponentEntryPointCreator.java:244)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.createDummyMainInternal(AbstractComponentEntryPointCreator.java:212)
+	at soot.jimple.infoflow.entryPointCreators.BaseEntryPointCreator.createDummyMain(BaseEntryPointCreator.java:154)
+	at soot.jimple.infoflow.android.entryPointCreators.AbstractAndroidEntryPointCreator.createDummyMain(AbstractAndroidEntryPointCreator.java:32)
+	at soot.jimple.infoflow.android.entryPointCreators.AndroidEntryPointCreator.createDummyMainInternal(AndroidEntryPointCreator.java:285)
+	at soot.jimple.infoflow.entryPointCreators.BaseEntryPointCreator.createDummyMain(BaseEntryPointCreator.java:154)
+	at soot.jimple.infoflow.android.entryPointCreators.AbstractAndroidEntryPointCreator.createDummyMain(AbstractAndroidEntryPointCreator.java:32)
+	at soot.jimple.infoflow.android.SetupApplication.createMainMethod(SetupApplication.java:1124)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbackMethods(SetupApplication.java:716)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbacks(SetupApplication.java:525)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbacks(SetupApplication.java:472)
+	at soot.jimple.infoflow.android.SetupApplication.processEntryPoint(SetupApplication.java:1563)
+	at soot.jimple.infoflow.android.SetupApplication.runInfoflow(SetupApplication.java:1529)
+	at soot.jimple.infoflow.android.SetupApplication.runInfoflow(SetupApplication.java:1476)
+	at soot.jimple.infoflow.cmd.MainClass.run(MainClass.java:363)
+	at soot.jimple.infoflow.cmd.MainClass.main(MainClass.java:257)
+[main] ERROR soot.jimple.infoflow.android.entryPointCreators.components.ActivityEntryPointCreator - Assign Intent for <androidx.activity.ComponentActivity: void startIntentSenderForResult(android.content.IntentSender,int,android.content.Intent,int,int,int,android.os.Bundle)> fails.
+java.lang.RuntimeException: This operation requires resolving level BODIES but androidx.activity.ComponentActivity is at resolving level SIGNATURES
+If you are extending Soot, try to add the following call before calling soot.Main.main(..):
+Scene.v().addBasicClass(androidx.activity.ComponentActivity,BODIES);
+Otherwise, try whole-program mode (-w).
+	at soot.SootClass.checkLevelIgnoreResolving(SootClass.java:209)
+	at soot.SootClass.checkLevel(SootClass.java:191)
+	at soot.SootMethod.retrieveActiveBody(SootMethod.java:436)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.assignIntent(AbstractComponentEntryPointCreator.java:260)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.instrumentDummyMainMethod(AbstractComponentEntryPointCreator.java:244)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.createDummyMainInternal(AbstractComponentEntryPointCreator.java:212)
+	at soot.jimple.infoflow.entryPointCreators.BaseEntryPointCreator.createDummyMain(BaseEntryPointCreator.java:154)
+	at soot.jimple.infoflow.android.entryPointCreators.AbstractAndroidEntryPointCreator.createDummyMain(AbstractAndroidEntryPointCreator.java:32)
+	at soot.jimple.infoflow.android.entryPointCreators.AndroidEntryPointCreator.createDummyMainInternal(AndroidEntryPointCreator.java:285)
+	at soot.jimple.infoflow.entryPointCreators.BaseEntryPointCreator.createDummyMain(BaseEntryPointCreator.java:154)
+	at soot.jimple.infoflow.android.entryPointCreators.AbstractAndroidEntryPointCreator.createDummyMain(AbstractAndroidEntryPointCreator.java:32)
+	at soot.jimple.infoflow.android.SetupApplication.createMainMethod(SetupApplication.java:1124)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbackMethods(SetupApplication.java:716)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbacks(SetupApplication.java:525)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbacks(SetupApplication.java:472)
+	at soot.jimple.infoflow.android.SetupApplication.processEntryPoint(SetupApplication.java:1563)
+	at soot.jimple.infoflow.android.SetupApplication.runInfoflow(SetupApplication.java:1529)
+	at soot.jimple.infoflow.android.SetupApplication.runInfoflow(SetupApplication.java:1476)
+	at soot.jimple.infoflow.cmd.MainClass.run(MainClass.java:363)
+	at soot.jimple.infoflow.cmd.MainClass.main(MainClass.java:257)
+[main] ERROR soot.jimple.infoflow.android.entryPointCreators.components.ActivityEntryPointCreator - Assign Intent for <androidx.activity.ComponentActivity: void startActivityForResult(android.content.Intent,int,android.os.Bundle)> fails.
+java.lang.RuntimeException: This operation requires resolving level BODIES but androidx.activity.ComponentActivity is at resolving level SIGNATURES
+If you are extending Soot, try to add the following call before calling soot.Main.main(..):
+Scene.v().addBasicClass(androidx.activity.ComponentActivity,BODIES);
+Otherwise, try whole-program mode (-w).
+	at soot.SootClass.checkLevelIgnoreResolving(SootClass.java:209)
+	at soot.SootClass.checkLevel(SootClass.java:191)
+	at soot.SootMethod.retrieveActiveBody(SootMethod.java:436)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.assignIntent(AbstractComponentEntryPointCreator.java:260)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.instrumentDummyMainMethod(AbstractComponentEntryPointCreator.java:244)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.createDummyMainInternal(AbstractComponentEntryPointCreator.java:212)
+	at soot.jimple.infoflow.entryPointCreators.BaseEntryPointCreator.createDummyMain(BaseEntryPointCreator.java:154)
+	at soot.jimple.infoflow.android.entryPointCreators.AbstractAndroidEntryPointCreator.createDummyMain(AbstractAndroidEntryPointCreator.java:32)
+	at soot.jimple.infoflow.android.entryPointCreators.AndroidEntryPointCreator.createDummyMainInternal(AndroidEntryPointCreator.java:285)
+	at soot.jimple.infoflow.entryPointCreators.BaseEntryPointCreator.createDummyMain(BaseEntryPointCreator.java:154)
+	at soot.jimple.infoflow.android.entryPointCreators.AbstractAndroidEntryPointCreator.createDummyMain(AbstractAndroidEntryPointCreator.java:32)
+	at soot.jimple.infoflow.android.SetupApplication.createMainMethod(SetupApplication.java:1124)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbackMethods(SetupApplication.java:716)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbacks(SetupApplication.java:525)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbacks(SetupApplication.java:472)
+	at soot.jimple.infoflow.android.SetupApplication.processEntryPoint(SetupApplication.java:1563)
+	at soot.jimple.infoflow.android.SetupApplication.runInfoflow(SetupApplication.java:1529)
+	at soot.jimple.infoflow.android.SetupApplication.runInfoflow(SetupApplication.java:1476)
+	at soot.jimple.infoflow.cmd.MainClass.run(MainClass.java:363)
+	at soot.jimple.infoflow.cmd.MainClass.main(MainClass.java:257)
+[main] ERROR soot.jimple.infoflow.android.entryPointCreators.components.ActivityEntryPointCreator - Assign Intent for <androidx.activity.ComponentActivity: void startIntentSenderForResult(android.content.IntentSender,int,android.content.Intent,int,int,int)> fails.
+java.lang.RuntimeException: This operation requires resolving level BODIES but androidx.activity.ComponentActivity is at resolving level SIGNATURES
+If you are extending Soot, try to add the following call before calling soot.Main.main(..):
+Scene.v().addBasicClass(androidx.activity.ComponentActivity,BODIES);
+Otherwise, try whole-program mode (-w).
+	at soot.SootClass.checkLevelIgnoreResolving(SootClass.java:209)
+	at soot.SootClass.checkLevel(SootClass.java:191)
+	at soot.SootMethod.retrieveActiveBody(SootMethod.java:436)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.assignIntent(AbstractComponentEntryPointCreator.java:260)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.instrumentDummyMainMethod(AbstractComponentEntryPointCreator.java:244)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.createDummyMainInternal(AbstractComponentEntryPointCreator.java:212)
+	at soot.jimple.infoflow.entryPointCreators.BaseEntryPointCreator.createDummyMain(BaseEntryPointCreator.java:154)
+	at soot.jimple.infoflow.android.entryPointCreators.AbstractAndroidEntryPointCreator.createDummyMain(AbstractAndroidEntryPointCreator.java:32)
+	at soot.jimple.infoflow.android.entryPointCreators.AndroidEntryPointCreator.createDummyMainInternal(AndroidEntryPointCreator.java:285)
+	at soot.jimple.infoflow.entryPointCreators.BaseEntryPointCreator.createDummyMain(BaseEntryPointCreator.java:154)
+	at soot.jimple.infoflow.android.entryPointCreators.AbstractAndroidEntryPointCreator.createDummyMain(AbstractAndroidEntryPointCreator.java:32)
+	at soot.jimple.infoflow.android.SetupApplication.createMainMethod(SetupApplication.java:1124)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbackMethods(SetupApplication.java:716)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbacks(SetupApplication.java:525)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbacks(SetupApplication.java:472)
+	at soot.jimple.infoflow.android.SetupApplication.processEntryPoint(SetupApplication.java:1563)
+	at soot.jimple.infoflow.android.SetupApplication.runInfoflow(SetupApplication.java:1529)
+	at soot.jimple.infoflow.android.SetupApplication.runInfoflow(SetupApplication.java:1476)
+	at soot.jimple.infoflow.cmd.MainClass.run(MainClass.java:363)
+	at soot.jimple.infoflow.cmd.MainClass.main(MainClass.java:257)
+[main] ERROR soot.jimple.infoflow.android.entryPointCreators.components.ActivityEntryPointCreator - Assign Intent for <androidx.activity.ComponentActivity: void startActivityForResult(android.content.Intent,int)> fails.
+java.lang.RuntimeException: This operation requires resolving level BODIES but androidx.activity.ComponentActivity is at resolving level SIGNATURES
+If you are extending Soot, try to add the following call before calling soot.Main.main(..):
+Scene.v().addBasicClass(androidx.activity.ComponentActivity,BODIES);
+Otherwise, try whole-program mode (-w).
+	at soot.SootClass.checkLevelIgnoreResolving(SootClass.java:209)
+	at soot.SootClass.checkLevel(SootClass.java:191)
+	at soot.SootMethod.retrieveActiveBody(SootMethod.java:436)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.assignIntent(AbstractComponentEntryPointCreator.java:260)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.instrumentDummyMainMethod(AbstractComponentEntryPointCreator.java:244)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.createDummyMainInternal(AbstractComponentEntryPointCreator.java:212)
+	at soot.jimple.infoflow.entryPointCreators.BaseEntryPointCreator.createDummyMain(BaseEntryPointCreator.java:154)
+	at soot.jimple.infoflow.android.entryPointCreators.AbstractAndroidEntryPointCreator.createDummyMain(AbstractAndroidEntryPointCreator.java:32)
+	at soot.jimple.infoflow.android.entryPointCreators.AndroidEntryPointCreator.createDummyMainInternal(AndroidEntryPointCreator.java:285)
+	at soot.jimple.infoflow.entryPointCreators.BaseEntryPointCreator.createDummyMain(BaseEntryPointCreator.java:154)
+	at soot.jimple.infoflow.android.entryPointCreators.AbstractAndroidEntryPointCreator.createDummyMain(AbstractAndroidEntryPointCreator.java:32)
+	at soot.jimple.infoflow.android.SetupApplication.createMainMethod(SetupApplication.java:1124)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbackMethods(SetupApplication.java:716)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbacks(SetupApplication.java:525)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbacks(SetupApplication.java:472)
+	at soot.jimple.infoflow.android.SetupApplication.processEntryPoint(SetupApplication.java:1563)
+	at soot.jimple.infoflow.android.SetupApplication.runInfoflow(SetupApplication.java:1529)
+	at soot.jimple.infoflow.android.SetupApplication.runInfoflow(SetupApplication.java:1476)
+	at soot.jimple.infoflow.cmd.MainClass.run(MainClass.java:363)
+	at soot.jimple.infoflow.cmd.MainClass.main(MainClass.java:257)
+[main] INFO soot.jimple.infoflow.android.SetupApplication - Constructing the callgraph...
+[main] INFO soot.jimple.infoflow.android.callbacks.DefaultCallbackAnalyzer - Running incremental callback analysis for 2 components...
+[main] INFO soot.jimple.infoflow.android.callbacks.DefaultCallbackAnalyzer - Incremental callback analysis done.
+[main] INFO soot.jimple.infoflow.android.entryPointCreators.AndroidEntryPointCreator - Creating Android entry point for 2 components...
+[main] ERROR soot.jimple.infoflow.android.entryPointCreators.components.ActivityEntryPointCreator - Assign Intent for <androidx.fragment.app.FragmentActivity: void onActivityResult(int,int,android.content.Intent)> fails.
+java.lang.RuntimeException: This operation requires resolving level BODIES but androidx.fragment.app.FragmentActivity is at resolving level SIGNATURES
+If you are extending Soot, try to add the following call before calling soot.Main.main(..):
+Scene.v().addBasicClass(androidx.fragment.app.FragmentActivity,BODIES);
+Otherwise, try whole-program mode (-w).
+	at soot.SootClass.checkLevelIgnoreResolving(SootClass.java:209)
+	at soot.SootClass.checkLevel(SootClass.java:191)
+	at soot.SootMethod.retrieveActiveBody(SootMethod.java:436)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.assignIntent(AbstractComponentEntryPointCreator.java:260)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.instrumentDummyMainMethod(AbstractComponentEntryPointCreator.java:244)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.createDummyMainInternal(AbstractComponentEntryPointCreator.java:212)
+	at soot.jimple.infoflow.entryPointCreators.BaseEntryPointCreator.createDummyMain(BaseEntryPointCreator.java:154)
+	at soot.jimple.infoflow.android.entryPointCreators.AbstractAndroidEntryPointCreator.createDummyMain(AbstractAndroidEntryPointCreator.java:32)
+	at soot.jimple.infoflow.android.entryPointCreators.AndroidEntryPointCreator.createDummyMainInternal(AndroidEntryPointCreator.java:285)
+	at soot.jimple.infoflow.entryPointCreators.BaseEntryPointCreator.createDummyMain(BaseEntryPointCreator.java:154)
+	at soot.jimple.infoflow.android.entryPointCreators.AbstractAndroidEntryPointCreator.createDummyMain(AbstractAndroidEntryPointCreator.java:32)
+	at soot.jimple.infoflow.android.SetupApplication.createMainMethod(SetupApplication.java:1124)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbackMethods(SetupApplication.java:716)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbacks(SetupApplication.java:525)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbacks(SetupApplication.java:472)
+	at soot.jimple.infoflow.android.SetupApplication.processEntryPoint(SetupApplication.java:1563)
+	at soot.jimple.infoflow.android.SetupApplication.runInfoflow(SetupApplication.java:1529)
+	at soot.jimple.infoflow.android.SetupApplication.runInfoflow(SetupApplication.java:1476)
+	at soot.jimple.infoflow.cmd.MainClass.run(MainClass.java:363)
+	at soot.jimple.infoflow.cmd.MainClass.main(MainClass.java:257)
+[main] ERROR soot.jimple.infoflow.android.entryPointCreators.components.ActivityEntryPointCreator - Assign Intent for <androidx.fragment.app.FragmentActivity: void onNewIntent(android.content.Intent)> fails.
+java.lang.RuntimeException: This operation requires resolving level BODIES but androidx.fragment.app.FragmentActivity is at resolving level SIGNATURES
+If you are extending Soot, try to add the following call before calling soot.Main.main(..):
+Scene.v().addBasicClass(androidx.fragment.app.FragmentActivity,BODIES);
+Otherwise, try whole-program mode (-w).
+	at soot.SootClass.checkLevelIgnoreResolving(SootClass.java:209)
+	at soot.SootClass.checkLevel(SootClass.java:191)
+	at soot.SootMethod.retrieveActiveBody(SootMethod.java:436)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.assignIntent(AbstractComponentEntryPointCreator.java:260)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.instrumentDummyMainMethod(AbstractComponentEntryPointCreator.java:244)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.createDummyMainInternal(AbstractComponentEntryPointCreator.java:212)
+	at soot.jimple.infoflow.entryPointCreators.BaseEntryPointCreator.createDummyMain(BaseEntryPointCreator.java:154)
+	at soot.jimple.infoflow.android.entryPointCreators.AbstractAndroidEntryPointCreator.createDummyMain(AbstractAndroidEntryPointCreator.java:32)
+	at soot.jimple.infoflow.android.entryPointCreators.AndroidEntryPointCreator.createDummyMainInternal(AndroidEntryPointCreator.java:285)
+	at soot.jimple.infoflow.entryPointCreators.BaseEntryPointCreator.createDummyMain(BaseEntryPointCreator.java:154)
+	at soot.jimple.infoflow.android.entryPointCreators.AbstractAndroidEntryPointCreator.createDummyMain(AbstractAndroidEntryPointCreator.java:32)
+	at soot.jimple.infoflow.android.SetupApplication.createMainMethod(SetupApplication.java:1124)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbackMethods(SetupApplication.java:716)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbacks(SetupApplication.java:525)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbacks(SetupApplication.java:472)
+	at soot.jimple.infoflow.android.SetupApplication.processEntryPoint(SetupApplication.java:1563)
+	at soot.jimple.infoflow.android.SetupApplication.runInfoflow(SetupApplication.java:1529)
+	at soot.jimple.infoflow.android.SetupApplication.runInfoflow(SetupApplication.java:1476)
+	at soot.jimple.infoflow.cmd.MainClass.run(MainClass.java:363)
+	at soot.jimple.infoflow.cmd.MainClass.main(MainClass.java:257)
+[main] ERROR soot.jimple.infoflow.android.entryPointCreators.components.ActivityEntryPointCreator - Assign Intent for <androidx.activity.ComponentActivity: void startIntentSenderForResult(android.content.IntentSender,int,android.content.Intent,int,int,int,android.os.Bundle)> fails.
+java.lang.RuntimeException: This operation requires resolving level BODIES but androidx.activity.ComponentActivity is at resolving level SIGNATURES
+If you are extending Soot, try to add the following call before calling soot.Main.main(..):
+Scene.v().addBasicClass(androidx.activity.ComponentActivity,BODIES);
+Otherwise, try whole-program mode (-w).
+	at soot.SootClass.checkLevelIgnoreResolving(SootClass.java:209)
+	at soot.SootClass.checkLevel(SootClass.java:191)
+	at soot.SootMethod.retrieveActiveBody(SootMethod.java:436)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.assignIntent(AbstractComponentEntryPointCreator.java:260)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.instrumentDummyMainMethod(AbstractComponentEntryPointCreator.java:244)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.createDummyMainInternal(AbstractComponentEntryPointCreator.java:212)
+	at soot.jimple.infoflow.entryPointCreators.BaseEntryPointCreator.createDummyMain(BaseEntryPointCreator.java:154)
+	at soot.jimple.infoflow.android.entryPointCreators.AbstractAndroidEntryPointCreator.createDummyMain(AbstractAndroidEntryPointCreator.java:32)
+	at soot.jimple.infoflow.android.entryPointCreators.AndroidEntryPointCreator.createDummyMainInternal(AndroidEntryPointCreator.java:285)
+	at soot.jimple.infoflow.entryPointCreators.BaseEntryPointCreator.createDummyMain(BaseEntryPointCreator.java:154)
+	at soot.jimple.infoflow.android.entryPointCreators.AbstractAndroidEntryPointCreator.createDummyMain(AbstractAndroidEntryPointCreator.java:32)
+	at soot.jimple.infoflow.android.SetupApplication.createMainMethod(SetupApplication.java:1124)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbackMethods(SetupApplication.java:716)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbacks(SetupApplication.java:525)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbacks(SetupApplication.java:472)
+	at soot.jimple.infoflow.android.SetupApplication.processEntryPoint(SetupApplication.java:1563)
+	at soot.jimple.infoflow.android.SetupApplication.runInfoflow(SetupApplication.java:1529)
+	at soot.jimple.infoflow.android.SetupApplication.runInfoflow(SetupApplication.java:1476)
+	at soot.jimple.infoflow.cmd.MainClass.run(MainClass.java:363)
+	at soot.jimple.infoflow.cmd.MainClass.main(MainClass.java:257)
+[main] ERROR soot.jimple.infoflow.android.entryPointCreators.components.ActivityEntryPointCreator - Assign Intent for <androidx.activity.ComponentActivity: void startActivityForResult(android.content.Intent,int,android.os.Bundle)> fails.
+java.lang.RuntimeException: This operation requires resolving level BODIES but androidx.activity.ComponentActivity is at resolving level SIGNATURES
+If you are extending Soot, try to add the following call before calling soot.Main.main(..):
+Scene.v().addBasicClass(androidx.activity.ComponentActivity,BODIES);
+Otherwise, try whole-program mode (-w).
+	at soot.SootClass.checkLevelIgnoreResolving(SootClass.java:209)
+	at soot.SootClass.checkLevel(SootClass.java:191)
+	at soot.SootMethod.retrieveActiveBody(SootMethod.java:436)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.assignIntent(AbstractComponentEntryPointCreator.java:260)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.instrumentDummyMainMethod(AbstractComponentEntryPointCreator.java:244)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.createDummyMainInternal(AbstractComponentEntryPointCreator.java:212)
+	at soot.jimple.infoflow.entryPointCreators.BaseEntryPointCreator.createDummyMain(BaseEntryPointCreator.java:154)
+	at soot.jimple.infoflow.android.entryPointCreators.AbstractAndroidEntryPointCreator.createDummyMain(AbstractAndroidEntryPointCreator.java:32)
+	at soot.jimple.infoflow.android.entryPointCreators.AndroidEntryPointCreator.createDummyMainInternal(AndroidEntryPointCreator.java:285)
+	at soot.jimple.infoflow.entryPointCreators.BaseEntryPointCreator.createDummyMain(BaseEntryPointCreator.java:154)
+	at soot.jimple.infoflow.android.entryPointCreators.AbstractAndroidEntryPointCreator.createDummyMain(AbstractAndroidEntryPointCreator.java:32)
+	at soot.jimple.infoflow.android.SetupApplication.createMainMethod(SetupApplication.java:1124)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbackMethods(SetupApplication.java:716)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbacks(SetupApplication.java:525)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbacks(SetupApplication.java:472)
+	at soot.jimple.infoflow.android.SetupApplication.processEntryPoint(SetupApplication.java:1563)
+	at soot.jimple.infoflow.android.SetupApplication.runInfoflow(SetupApplication.java:1529)
+	at soot.jimple.infoflow.android.SetupApplication.runInfoflow(SetupApplication.java:1476)
+	at soot.jimple.infoflow.cmd.MainClass.run(MainClass.java:363)
+	at soot.jimple.infoflow.cmd.MainClass.main(MainClass.java:257)
+[main] ERROR soot.jimple.infoflow.android.entryPointCreators.components.ActivityEntryPointCreator - Assign Intent for <androidx.activity.ComponentActivity: void onNewIntent(android.content.Intent)> fails.
+java.lang.RuntimeException: This operation requires resolving level BODIES but androidx.activity.ComponentActivity is at resolving level SIGNATURES
+If you are extending Soot, try to add the following call before calling soot.Main.main(..):
+Scene.v().addBasicClass(androidx.activity.ComponentActivity,BODIES);
+Otherwise, try whole-program mode (-w).
+	at soot.SootClass.checkLevelIgnoreResolving(SootClass.java:209)
+	at soot.SootClass.checkLevel(SootClass.java:191)
+	at soot.SootMethod.retrieveActiveBody(SootMethod.java:436)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.assignIntent(AbstractComponentEntryPointCreator.java:260)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.instrumentDummyMainMethod(AbstractComponentEntryPointCreator.java:244)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.createDummyMainInternal(AbstractComponentEntryPointCreator.java:212)
+	at soot.jimple.infoflow.entryPointCreators.BaseEntryPointCreator.createDummyMain(BaseEntryPointCreator.java:154)
+	at soot.jimple.infoflow.android.entryPointCreators.AbstractAndroidEntryPointCreator.createDummyMain(AbstractAndroidEntryPointCreator.java:32)
+	at soot.jimple.infoflow.android.entryPointCreators.AndroidEntryPointCreator.createDummyMainInternal(AndroidEntryPointCreator.java:285)
+	at soot.jimple.infoflow.entryPointCreators.BaseEntryPointCreator.createDummyMain(BaseEntryPointCreator.java:154)
+	at soot.jimple.infoflow.android.entryPointCreators.AbstractAndroidEntryPointCreator.createDummyMain(AbstractAndroidEntryPointCreator.java:32)
+	at soot.jimple.infoflow.android.SetupApplication.createMainMethod(SetupApplication.java:1124)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbackMethods(SetupApplication.java:716)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbacks(SetupApplication.java:525)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbacks(SetupApplication.java:472)
+	at soot.jimple.infoflow.android.SetupApplication.processEntryPoint(SetupApplication.java:1563)
+	at soot.jimple.infoflow.android.SetupApplication.runInfoflow(SetupApplication.java:1529)
+	at soot.jimple.infoflow.android.SetupApplication.runInfoflow(SetupApplication.java:1476)
+	at soot.jimple.infoflow.cmd.MainClass.run(MainClass.java:363)
+	at soot.jimple.infoflow.cmd.MainClass.main(MainClass.java:257)
+[main] ERROR soot.jimple.infoflow.android.entryPointCreators.components.ActivityEntryPointCreator - Assign Intent for <androidx.activity.ComponentActivity: void startActivityForResult(android.content.Intent,int)> fails.
+java.lang.RuntimeException: This operation requires resolving level BODIES but androidx.activity.ComponentActivity is at resolving level SIGNATURES
+If you are extending Soot, try to add the following call before calling soot.Main.main(..):
+Scene.v().addBasicClass(androidx.activity.ComponentActivity,BODIES);
+Otherwise, try whole-program mode (-w).
+	at soot.SootClass.checkLevelIgnoreResolving(SootClass.java:209)
+	at soot.SootClass.checkLevel(SootClass.java:191)
+	at soot.SootMethod.retrieveActiveBody(SootMethod.java:436)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.assignIntent(AbstractComponentEntryPointCreator.java:260)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.instrumentDummyMainMethod(AbstractComponentEntryPointCreator.java:244)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.createDummyMainInternal(AbstractComponentEntryPointCreator.java:212)
+	at soot.jimple.infoflow.entryPointCreators.BaseEntryPointCreator.createDummyMain(BaseEntryPointCreator.java:154)
+	at soot.jimple.infoflow.android.entryPointCreators.AbstractAndroidEntryPointCreator.createDummyMain(AbstractAndroidEntryPointCreator.java:32)
+	at soot.jimple.infoflow.android.entryPointCreators.AndroidEntryPointCreator.createDummyMainInternal(AndroidEntryPointCreator.java:285)
+	at soot.jimple.infoflow.entryPointCreators.BaseEntryPointCreator.createDummyMain(BaseEntryPointCreator.java:154)
+	at soot.jimple.infoflow.android.entryPointCreators.AbstractAndroidEntryPointCreator.createDummyMain(AbstractAndroidEntryPointCreator.java:32)
+	at soot.jimple.infoflow.android.SetupApplication.createMainMethod(SetupApplication.java:1124)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbackMethods(SetupApplication.java:716)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbacks(SetupApplication.java:525)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbacks(SetupApplication.java:472)
+	at soot.jimple.infoflow.android.SetupApplication.processEntryPoint(SetupApplication.java:1563)
+	at soot.jimple.infoflow.android.SetupApplication.runInfoflow(SetupApplication.java:1529)
+	at soot.jimple.infoflow.android.SetupApplication.runInfoflow(SetupApplication.java:1476)
+	at soot.jimple.infoflow.cmd.MainClass.run(MainClass.java:363)
+	at soot.jimple.infoflow.cmd.MainClass.main(MainClass.java:257)
+[main] ERROR soot.jimple.infoflow.android.entryPointCreators.components.ActivityEntryPointCreator - Assign Intent for <androidx.activity.ComponentActivity: void onActivityResult(int,int,android.content.Intent)> fails.
+java.lang.RuntimeException: This operation requires resolving level BODIES but androidx.activity.ComponentActivity is at resolving level SIGNATURES
+If you are extending Soot, try to add the following call before calling soot.Main.main(..):
+Scene.v().addBasicClass(androidx.activity.ComponentActivity,BODIES);
+Otherwise, try whole-program mode (-w).
+	at soot.SootClass.checkLevelIgnoreResolving(SootClass.java:209)
+	at soot.SootClass.checkLevel(SootClass.java:191)
+	at soot.SootMethod.retrieveActiveBody(SootMethod.java:436)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.assignIntent(AbstractComponentEntryPointCreator.java:260)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.instrumentDummyMainMethod(AbstractComponentEntryPointCreator.java:244)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.createDummyMainInternal(AbstractComponentEntryPointCreator.java:212)
+	at soot.jimple.infoflow.entryPointCreators.BaseEntryPointCreator.createDummyMain(BaseEntryPointCreator.java:154)
+	at soot.jimple.infoflow.android.entryPointCreators.AbstractAndroidEntryPointCreator.createDummyMain(AbstractAndroidEntryPointCreator.java:32)
+	at soot.jimple.infoflow.android.entryPointCreators.AndroidEntryPointCreator.createDummyMainInternal(AndroidEntryPointCreator.java:285)
+	at soot.jimple.infoflow.entryPointCreators.BaseEntryPointCreator.createDummyMain(BaseEntryPointCreator.java:154)
+	at soot.jimple.infoflow.android.entryPointCreators.AbstractAndroidEntryPointCreator.createDummyMain(AbstractAndroidEntryPointCreator.java:32)
+	at soot.jimple.infoflow.android.SetupApplication.createMainMethod(SetupApplication.java:1124)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbackMethods(SetupApplication.java:716)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbacks(SetupApplication.java:525)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbacks(SetupApplication.java:472)
+	at soot.jimple.infoflow.android.SetupApplication.processEntryPoint(SetupApplication.java:1563)
+	at soot.jimple.infoflow.android.SetupApplication.runInfoflow(SetupApplication.java:1529)
+	at soot.jimple.infoflow.android.SetupApplication.runInfoflow(SetupApplication.java:1476)
+	at soot.jimple.infoflow.cmd.MainClass.run(MainClass.java:363)
+	at soot.jimple.infoflow.cmd.MainClass.main(MainClass.java:257)
+[main] ERROR soot.jimple.infoflow.android.entryPointCreators.components.ActivityEntryPointCreator - Assign Intent for <androidx.activity.ComponentActivity: void startIntentSenderForResult(android.content.IntentSender,int,android.content.Intent,int,int,int)> fails.
+java.lang.RuntimeException: This operation requires resolving level BODIES but androidx.activity.ComponentActivity is at resolving level SIGNATURES
+If you are extending Soot, try to add the following call before calling soot.Main.main(..):
+Scene.v().addBasicClass(androidx.activity.ComponentActivity,BODIES);
+Otherwise, try whole-program mode (-w).
+	at soot.SootClass.checkLevelIgnoreResolving(SootClass.java:209)
+	at soot.SootClass.checkLevel(SootClass.java:191)
+	at soot.SootMethod.retrieveActiveBody(SootMethod.java:436)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.assignIntent(AbstractComponentEntryPointCreator.java:260)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.instrumentDummyMainMethod(AbstractComponentEntryPointCreator.java:244)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.createDummyMainInternal(AbstractComponentEntryPointCreator.java:212)
+	at soot.jimple.infoflow.entryPointCreators.BaseEntryPointCreator.createDummyMain(BaseEntryPointCreator.java:154)
+	at soot.jimple.infoflow.android.entryPointCreators.AbstractAndroidEntryPointCreator.createDummyMain(AbstractAndroidEntryPointCreator.java:32)
+	at soot.jimple.infoflow.android.entryPointCreators.AndroidEntryPointCreator.createDummyMainInternal(AndroidEntryPointCreator.java:285)
+	at soot.jimple.infoflow.entryPointCreators.BaseEntryPointCreator.createDummyMain(BaseEntryPointCreator.java:154)
+	at soot.jimple.infoflow.android.entryPointCreators.AbstractAndroidEntryPointCreator.createDummyMain(AbstractAndroidEntryPointCreator.java:32)
+	at soot.jimple.infoflow.android.SetupApplication.createMainMethod(SetupApplication.java:1124)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbackMethods(SetupApplication.java:716)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbacks(SetupApplication.java:525)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbacks(SetupApplication.java:472)
+	at soot.jimple.infoflow.android.SetupApplication.processEntryPoint(SetupApplication.java:1563)
+	at soot.jimple.infoflow.android.SetupApplication.runInfoflow(SetupApplication.java:1529)
+	at soot.jimple.infoflow.android.SetupApplication.runInfoflow(SetupApplication.java:1476)
+	at soot.jimple.infoflow.cmd.MainClass.run(MainClass.java:363)
+	at soot.jimple.infoflow.cmd.MainClass.main(MainClass.java:257)
+[main] INFO soot.jimple.infoflow.android.SetupApplication - Constructing the callgraph...
+[main] INFO soot.jimple.infoflow.android.callbacks.DefaultCallbackAnalyzer - Running incremental callback analysis for 1 components...
+[main] INFO soot.jimple.infoflow.android.callbacks.DefaultCallbackAnalyzer - Incremental callback analysis done.
+[main] INFO soot.jimple.infoflow.android.entryPointCreators.AndroidEntryPointCreator - Creating Android entry point for 2 components...
+[main] ERROR soot.jimple.infoflow.android.entryPointCreators.components.ActivityEntryPointCreator - Assign Intent for <androidx.fragment.app.FragmentActivity: void onActivityResult(int,int,android.content.Intent)> fails.
+java.lang.RuntimeException: This operation requires resolving level BODIES but androidx.fragment.app.FragmentActivity is at resolving level SIGNATURES
+If you are extending Soot, try to add the following call before calling soot.Main.main(..):
+Scene.v().addBasicClass(androidx.fragment.app.FragmentActivity,BODIES);
+Otherwise, try whole-program mode (-w).
+	at soot.SootClass.checkLevelIgnoreResolving(SootClass.java:209)
+	at soot.SootClass.checkLevel(SootClass.java:191)
+	at soot.SootMethod.retrieveActiveBody(SootMethod.java:436)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.assignIntent(AbstractComponentEntryPointCreator.java:260)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.instrumentDummyMainMethod(AbstractComponentEntryPointCreator.java:244)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.createDummyMainInternal(AbstractComponentEntryPointCreator.java:212)
+	at soot.jimple.infoflow.entryPointCreators.BaseEntryPointCreator.createDummyMain(BaseEntryPointCreator.java:154)
+	at soot.jimple.infoflow.android.entryPointCreators.AbstractAndroidEntryPointCreator.createDummyMain(AbstractAndroidEntryPointCreator.java:32)
+	at soot.jimple.infoflow.android.entryPointCreators.AndroidEntryPointCreator.createDummyMainInternal(AndroidEntryPointCreator.java:285)
+	at soot.jimple.infoflow.entryPointCreators.BaseEntryPointCreator.createDummyMain(BaseEntryPointCreator.java:154)
+	at soot.jimple.infoflow.android.entryPointCreators.AbstractAndroidEntryPointCreator.createDummyMain(AbstractAndroidEntryPointCreator.java:32)
+	at soot.jimple.infoflow.android.SetupApplication.createMainMethod(SetupApplication.java:1124)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbackMethods(SetupApplication.java:716)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbacks(SetupApplication.java:525)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbacks(SetupApplication.java:472)
+	at soot.jimple.infoflow.android.SetupApplication.processEntryPoint(SetupApplication.java:1563)
+	at soot.jimple.infoflow.android.SetupApplication.runInfoflow(SetupApplication.java:1529)
+	at soot.jimple.infoflow.android.SetupApplication.runInfoflow(SetupApplication.java:1476)
+	at soot.jimple.infoflow.cmd.MainClass.run(MainClass.java:363)
+	at soot.jimple.infoflow.cmd.MainClass.main(MainClass.java:257)
+[main] ERROR soot.jimple.infoflow.android.entryPointCreators.components.ActivityEntryPointCreator - Assign Intent for <androidx.fragment.app.FragmentActivity: void onNewIntent(android.content.Intent)> fails.
+java.lang.RuntimeException: This operation requires resolving level BODIES but androidx.fragment.app.FragmentActivity is at resolving level SIGNATURES
+If you are extending Soot, try to add the following call before calling soot.Main.main(..):
+Scene.v().addBasicClass(androidx.fragment.app.FragmentActivity,BODIES);
+Otherwise, try whole-program mode (-w).
+	at soot.SootClass.checkLevelIgnoreResolving(SootClass.java:209)
+	at soot.SootClass.checkLevel(SootClass.java:191)
+	at soot.SootMethod.retrieveActiveBody(SootMethod.java:436)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.assignIntent(AbstractComponentEntryPointCreator.java:260)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.instrumentDummyMainMethod(AbstractComponentEntryPointCreator.java:244)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.createDummyMainInternal(AbstractComponentEntryPointCreator.java:212)
+	at soot.jimple.infoflow.entryPointCreators.BaseEntryPointCreator.createDummyMain(BaseEntryPointCreator.java:154)
+	at soot.jimple.infoflow.android.entryPointCreators.AbstractAndroidEntryPointCreator.createDummyMain(AbstractAndroidEntryPointCreator.java:32)
+	at soot.jimple.infoflow.android.entryPointCreators.AndroidEntryPointCreator.createDummyMainInternal(AndroidEntryPointCreator.java:285)
+	at soot.jimple.infoflow.entryPointCreators.BaseEntryPointCreator.createDummyMain(BaseEntryPointCreator.java:154)
+	at soot.jimple.infoflow.android.entryPointCreators.AbstractAndroidEntryPointCreator.createDummyMain(AbstractAndroidEntryPointCreator.java:32)
+	at soot.jimple.infoflow.android.SetupApplication.createMainMethod(SetupApplication.java:1124)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbackMethods(SetupApplication.java:716)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbacks(SetupApplication.java:525)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbacks(SetupApplication.java:472)
+	at soot.jimple.infoflow.android.SetupApplication.processEntryPoint(SetupApplication.java:1563)
+	at soot.jimple.infoflow.android.SetupApplication.runInfoflow(SetupApplication.java:1529)
+	at soot.jimple.infoflow.android.SetupApplication.runInfoflow(SetupApplication.java:1476)
+	at soot.jimple.infoflow.cmd.MainClass.run(MainClass.java:363)
+	at soot.jimple.infoflow.cmd.MainClass.main(MainClass.java:257)
+[main] ERROR soot.jimple.infoflow.android.entryPointCreators.components.ActivityEntryPointCreator - Assign Intent for <androidx.activity.ComponentActivity: void startIntentSenderForResult(android.content.IntentSender,int,android.content.Intent,int,int,int,android.os.Bundle)> fails.
+java.lang.RuntimeException: This operation requires resolving level BODIES but androidx.activity.ComponentActivity is at resolving level SIGNATURES
+If you are extending Soot, try to add the following call before calling soot.Main.main(..):
+Scene.v().addBasicClass(androidx.activity.ComponentActivity,BODIES);
+Otherwise, try whole-program mode (-w).
+	at soot.SootClass.checkLevelIgnoreResolving(SootClass.java:209)
+	at soot.SootClass.checkLevel(SootClass.java:191)
+	at soot.SootMethod.retrieveActiveBody(SootMethod.java:436)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.assignIntent(AbstractComponentEntryPointCreator.java:260)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.instrumentDummyMainMethod(AbstractComponentEntryPointCreator.java:244)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.createDummyMainInternal(AbstractComponentEntryPointCreator.java:212)
+	at soot.jimple.infoflow.entryPointCreators.BaseEntryPointCreator.createDummyMain(BaseEntryPointCreator.java:154)
+	at soot.jimple.infoflow.android.entryPointCreators.AbstractAndroidEntryPointCreator.createDummyMain(AbstractAndroidEntryPointCreator.java:32)
+	at soot.jimple.infoflow.android.entryPointCreators.AndroidEntryPointCreator.createDummyMainInternal(AndroidEntryPointCreator.java:285)
+	at soot.jimple.infoflow.entryPointCreators.BaseEntryPointCreator.createDummyMain(BaseEntryPointCreator.java:154)
+	at soot.jimple.infoflow.android.entryPointCreators.AbstractAndroidEntryPointCreator.createDummyMain(AbstractAndroidEntryPointCreator.java:32)
+	at soot.jimple.infoflow.android.SetupApplication.createMainMethod(SetupApplication.java:1124)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbackMethods(SetupApplication.java:716)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbacks(SetupApplication.java:525)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbacks(SetupApplication.java:472)
+	at soot.jimple.infoflow.android.SetupApplication.processEntryPoint(SetupApplication.java:1563)
+	at soot.jimple.infoflow.android.SetupApplication.runInfoflow(SetupApplication.java:1529)
+	at soot.jimple.infoflow.android.SetupApplication.runInfoflow(SetupApplication.java:1476)
+	at soot.jimple.infoflow.cmd.MainClass.run(MainClass.java:363)
+	at soot.jimple.infoflow.cmd.MainClass.main(MainClass.java:257)
+[main] ERROR soot.jimple.infoflow.android.entryPointCreators.components.ActivityEntryPointCreator - Assign Intent for <androidx.activity.ComponentActivity: void startActivityForResult(android.content.Intent,int,android.os.Bundle)> fails.
+java.lang.RuntimeException: This operation requires resolving level BODIES but androidx.activity.ComponentActivity is at resolving level SIGNATURES
+If you are extending Soot, try to add the following call before calling soot.Main.main(..):
+Scene.v().addBasicClass(androidx.activity.ComponentActivity,BODIES);
+Otherwise, try whole-program mode (-w).
+	at soot.SootClass.checkLevelIgnoreResolving(SootClass.java:209)
+	at soot.SootClass.checkLevel(SootClass.java:191)
+	at soot.SootMethod.retrieveActiveBody(SootMethod.java:436)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.assignIntent(AbstractComponentEntryPointCreator.java:260)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.instrumentDummyMainMethod(AbstractComponentEntryPointCreator.java:244)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.createDummyMainInternal(AbstractComponentEntryPointCreator.java:212)
+	at soot.jimple.infoflow.entryPointCreators.BaseEntryPointCreator.createDummyMain(BaseEntryPointCreator.java:154)
+	at soot.jimple.infoflow.android.entryPointCreators.AbstractAndroidEntryPointCreator.createDummyMain(AbstractAndroidEntryPointCreator.java:32)
+	at soot.jimple.infoflow.android.entryPointCreators.AndroidEntryPointCreator.createDummyMainInternal(AndroidEntryPointCreator.java:285)
+	at soot.jimple.infoflow.entryPointCreators.BaseEntryPointCreator.createDummyMain(BaseEntryPointCreator.java:154)
+	at soot.jimple.infoflow.android.entryPointCreators.AbstractAndroidEntryPointCreator.createDummyMain(AbstractAndroidEntryPointCreator.java:32)
+	at soot.jimple.infoflow.android.SetupApplication.createMainMethod(SetupApplication.java:1124)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbackMethods(SetupApplication.java:716)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbacks(SetupApplication.java:525)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbacks(SetupApplication.java:472)
+	at soot.jimple.infoflow.android.SetupApplication.processEntryPoint(SetupApplication.java:1563)
+	at soot.jimple.infoflow.android.SetupApplication.runInfoflow(SetupApplication.java:1529)
+	at soot.jimple.infoflow.android.SetupApplication.runInfoflow(SetupApplication.java:1476)
+	at soot.jimple.infoflow.cmd.MainClass.run(MainClass.java:363)
+	at soot.jimple.infoflow.cmd.MainClass.main(MainClass.java:257)
+[main] ERROR soot.jimple.infoflow.android.entryPointCreators.components.ActivityEntryPointCreator - Assign Intent for <androidx.activity.ComponentActivity: void onNewIntent(android.content.Intent)> fails.
+java.lang.RuntimeException: This operation requires resolving level BODIES but androidx.activity.ComponentActivity is at resolving level SIGNATURES
+If you are extending Soot, try to add the following call before calling soot.Main.main(..):
+Scene.v().addBasicClass(androidx.activity.ComponentActivity,BODIES);
+Otherwise, try whole-program mode (-w).
+	at soot.SootClass.checkLevelIgnoreResolving(SootClass.java:209)
+	at soot.SootClass.checkLevel(SootClass.java:191)
+	at soot.SootMethod.retrieveActiveBody(SootMethod.java:436)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.assignIntent(AbstractComponentEntryPointCreator.java:260)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.instrumentDummyMainMethod(AbstractComponentEntryPointCreator.java:244)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.createDummyMainInternal(AbstractComponentEntryPointCreator.java:212)
+	at soot.jimple.infoflow.entryPointCreators.BaseEntryPointCreator.createDummyMain(BaseEntryPointCreator.java:154)
+	at soot.jimple.infoflow.android.entryPointCreators.AbstractAndroidEntryPointCreator.createDummyMain(AbstractAndroidEntryPointCreator.java:32)
+	at soot.jimple.infoflow.android.entryPointCreators.AndroidEntryPointCreator.createDummyMainInternal(AndroidEntryPointCreator.java:285)
+	at soot.jimple.infoflow.entryPointCreators.BaseEntryPointCreator.createDummyMain(BaseEntryPointCreator.java:154)
+	at soot.jimple.infoflow.android.entryPointCreators.AbstractAndroidEntryPointCreator.createDummyMain(AbstractAndroidEntryPointCreator.java:32)
+	at soot.jimple.infoflow.android.SetupApplication.createMainMethod(SetupApplication.java:1124)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbackMethods(SetupApplication.java:716)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbacks(SetupApplication.java:525)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbacks(SetupApplication.java:472)
+	at soot.jimple.infoflow.android.SetupApplication.processEntryPoint(SetupApplication.java:1563)
+	at soot.jimple.infoflow.android.SetupApplication.runInfoflow(SetupApplication.java:1529)
+	at soot.jimple.infoflow.android.SetupApplication.runInfoflow(SetupApplication.java:1476)
+	at soot.jimple.infoflow.cmd.MainClass.run(MainClass.java:363)
+	at soot.jimple.infoflow.cmd.MainClass.main(MainClass.java:257)
+[main] ERROR soot.jimple.infoflow.android.entryPointCreators.components.ActivityEntryPointCreator - Assign Intent for <androidx.activity.ComponentActivity: void startActivityForResult(android.content.Intent,int)> fails.
+java.lang.RuntimeException: This operation requires resolving level BODIES but androidx.activity.ComponentActivity is at resolving level SIGNATURES
+If you are extending Soot, try to add the following call before calling soot.Main.main(..):
+Scene.v().addBasicClass(androidx.activity.ComponentActivity,BODIES);
+Otherwise, try whole-program mode (-w).
+	at soot.SootClass.checkLevelIgnoreResolving(SootClass.java:209)
+	at soot.SootClass.checkLevel(SootClass.java:191)
+	at soot.SootMethod.retrieveActiveBody(SootMethod.java:436)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.assignIntent(AbstractComponentEntryPointCreator.java:260)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.instrumentDummyMainMethod(AbstractComponentEntryPointCreator.java:244)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.createDummyMainInternal(AbstractComponentEntryPointCreator.java:212)
+	at soot.jimple.infoflow.entryPointCreators.BaseEntryPointCreator.createDummyMain(BaseEntryPointCreator.java:154)
+	at soot.jimple.infoflow.android.entryPointCreators.AbstractAndroidEntryPointCreator.createDummyMain(AbstractAndroidEntryPointCreator.java:32)
+	at soot.jimple.infoflow.android.entryPointCreators.AndroidEntryPointCreator.createDummyMainInternal(AndroidEntryPointCreator.java:285)
+	at soot.jimple.infoflow.entryPointCreators.BaseEntryPointCreator.createDummyMain(BaseEntryPointCreator.java:154)
+	at soot.jimple.infoflow.android.entryPointCreators.AbstractAndroidEntryPointCreator.createDummyMain(AbstractAndroidEntryPointCreator.java:32)
+	at soot.jimple.infoflow.android.SetupApplication.createMainMethod(SetupApplication.java:1124)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbackMethods(SetupApplication.java:716)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbacks(SetupApplication.java:525)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbacks(SetupApplication.java:472)
+	at soot.jimple.infoflow.android.SetupApplication.processEntryPoint(SetupApplication.java:1563)
+	at soot.jimple.infoflow.android.SetupApplication.runInfoflow(SetupApplication.java:1529)
+	at soot.jimple.infoflow.android.SetupApplication.runInfoflow(SetupApplication.java:1476)
+	at soot.jimple.infoflow.cmd.MainClass.run(MainClass.java:363)
+	at soot.jimple.infoflow.cmd.MainClass.main(MainClass.java:257)
+[main] ERROR soot.jimple.infoflow.android.entryPointCreators.components.ActivityEntryPointCreator - Assign Intent for <androidx.activity.ComponentActivity: void onActivityResult(int,int,android.content.Intent)> fails.
+java.lang.RuntimeException: This operation requires resolving level BODIES but androidx.activity.ComponentActivity is at resolving level SIGNATURES
+If you are extending Soot, try to add the following call before calling soot.Main.main(..):
+Scene.v().addBasicClass(androidx.activity.ComponentActivity,BODIES);
+Otherwise, try whole-program mode (-w).
+	at soot.SootClass.checkLevelIgnoreResolving(SootClass.java:209)
+	at soot.SootClass.checkLevel(SootClass.java:191)
+	at soot.SootMethod.retrieveActiveBody(SootMethod.java:436)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.assignIntent(AbstractComponentEntryPointCreator.java:260)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.instrumentDummyMainMethod(AbstractComponentEntryPointCreator.java:244)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.createDummyMainInternal(AbstractComponentEntryPointCreator.java:212)
+	at soot.jimple.infoflow.entryPointCreators.BaseEntryPointCreator.createDummyMain(BaseEntryPointCreator.java:154)
+	at soot.jimple.infoflow.android.entryPointCreators.AbstractAndroidEntryPointCreator.createDummyMain(AbstractAndroidEntryPointCreator.java:32)
+	at soot.jimple.infoflow.android.entryPointCreators.AndroidEntryPointCreator.createDummyMainInternal(AndroidEntryPointCreator.java:285)
+	at soot.jimple.infoflow.entryPointCreators.BaseEntryPointCreator.createDummyMain(BaseEntryPointCreator.java:154)
+	at soot.jimple.infoflow.android.entryPointCreators.AbstractAndroidEntryPointCreator.createDummyMain(AbstractAndroidEntryPointCreator.java:32)
+	at soot.jimple.infoflow.android.SetupApplication.createMainMethod(SetupApplication.java:1124)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbackMethods(SetupApplication.java:716)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbacks(SetupApplication.java:525)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbacks(SetupApplication.java:472)
+	at soot.jimple.infoflow.android.SetupApplication.processEntryPoint(SetupApplication.java:1563)
+	at soot.jimple.infoflow.android.SetupApplication.runInfoflow(SetupApplication.java:1529)
+	at soot.jimple.infoflow.android.SetupApplication.runInfoflow(SetupApplication.java:1476)
+	at soot.jimple.infoflow.cmd.MainClass.run(MainClass.java:363)
+	at soot.jimple.infoflow.cmd.MainClass.main(MainClass.java:257)
+[main] ERROR soot.jimple.infoflow.android.entryPointCreators.components.ActivityEntryPointCreator - Assign Intent for <androidx.activity.ComponentActivity: void startIntentSenderForResult(android.content.IntentSender,int,android.content.Intent,int,int,int)> fails.
+java.lang.RuntimeException: This operation requires resolving level BODIES but androidx.activity.ComponentActivity is at resolving level SIGNATURES
+If you are extending Soot, try to add the following call before calling soot.Main.main(..):
+Scene.v().addBasicClass(androidx.activity.ComponentActivity,BODIES);
+Otherwise, try whole-program mode (-w).
+	at soot.SootClass.checkLevelIgnoreResolving(SootClass.java:209)
+	at soot.SootClass.checkLevel(SootClass.java:191)
+	at soot.SootMethod.retrieveActiveBody(SootMethod.java:436)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.assignIntent(AbstractComponentEntryPointCreator.java:260)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.instrumentDummyMainMethod(AbstractComponentEntryPointCreator.java:244)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.createDummyMainInternal(AbstractComponentEntryPointCreator.java:212)
+	at soot.jimple.infoflow.entryPointCreators.BaseEntryPointCreator.createDummyMain(BaseEntryPointCreator.java:154)
+	at soot.jimple.infoflow.android.entryPointCreators.AbstractAndroidEntryPointCreator.createDummyMain(AbstractAndroidEntryPointCreator.java:32)
+	at soot.jimple.infoflow.android.entryPointCreators.AndroidEntryPointCreator.createDummyMainInternal(AndroidEntryPointCreator.java:285)
+	at soot.jimple.infoflow.entryPointCreators.BaseEntryPointCreator.createDummyMain(BaseEntryPointCreator.java:154)
+	at soot.jimple.infoflow.android.entryPointCreators.AbstractAndroidEntryPointCreator.createDummyMain(AbstractAndroidEntryPointCreator.java:32)
+	at soot.jimple.infoflow.android.SetupApplication.createMainMethod(SetupApplication.java:1124)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbackMethods(SetupApplication.java:716)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbacks(SetupApplication.java:525)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbacks(SetupApplication.java:472)
+	at soot.jimple.infoflow.android.SetupApplication.processEntryPoint(SetupApplication.java:1563)
+	at soot.jimple.infoflow.android.SetupApplication.runInfoflow(SetupApplication.java:1529)
+	at soot.jimple.infoflow.android.SetupApplication.runInfoflow(SetupApplication.java:1476)
+	at soot.jimple.infoflow.cmd.MainClass.run(MainClass.java:363)
+	at soot.jimple.infoflow.cmd.MainClass.main(MainClass.java:257)
+[main] INFO soot.jimple.infoflow.android.SetupApplication - Constructing the callgraph...
+[main] INFO soot.jimple.infoflow.android.callbacks.DefaultCallbackAnalyzer - Running incremental callback analysis for 1 components...
+[main] INFO soot.jimple.infoflow.android.callbacks.DefaultCallbackAnalyzer - Incremental callback analysis done.
+[main] INFO soot.jimple.infoflow.android.entryPointCreators.AndroidEntryPointCreator - Creating Android entry point for 2 components...
+[main] ERROR soot.jimple.infoflow.android.entryPointCreators.components.ActivityEntryPointCreator - Assign Intent for <androidx.fragment.app.FragmentActivity: void onActivityResult(int,int,android.content.Intent)> fails.
+java.lang.RuntimeException: This operation requires resolving level BODIES but androidx.fragment.app.FragmentActivity is at resolving level SIGNATURES
+If you are extending Soot, try to add the following call before calling soot.Main.main(..):
+Scene.v().addBasicClass(androidx.fragment.app.FragmentActivity,BODIES);
+Otherwise, try whole-program mode (-w).
+	at soot.SootClass.checkLevelIgnoreResolving(SootClass.java:209)
+	at soot.SootClass.checkLevel(SootClass.java:191)
+	at soot.SootMethod.retrieveActiveBody(SootMethod.java:436)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.assignIntent(AbstractComponentEntryPointCreator.java:260)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.instrumentDummyMainMethod(AbstractComponentEntryPointCreator.java:244)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.createDummyMainInternal(AbstractComponentEntryPointCreator.java:212)
+	at soot.jimple.infoflow.entryPointCreators.BaseEntryPointCreator.createDummyMain(BaseEntryPointCreator.java:154)
+	at soot.jimple.infoflow.android.entryPointCreators.AbstractAndroidEntryPointCreator.createDummyMain(AbstractAndroidEntryPointCreator.java:32)
+	at soot.jimple.infoflow.android.entryPointCreators.AndroidEntryPointCreator.createDummyMainInternal(AndroidEntryPointCreator.java:285)
+	at soot.jimple.infoflow.entryPointCreators.BaseEntryPointCreator.createDummyMain(BaseEntryPointCreator.java:154)
+	at soot.jimple.infoflow.android.entryPointCreators.AbstractAndroidEntryPointCreator.createDummyMain(AbstractAndroidEntryPointCreator.java:32)
+	at soot.jimple.infoflow.android.SetupApplication.createMainMethod(SetupApplication.java:1124)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbackMethods(SetupApplication.java:716)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbacks(SetupApplication.java:525)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbacks(SetupApplication.java:472)
+	at soot.jimple.infoflow.android.SetupApplication.processEntryPoint(SetupApplication.java:1563)
+	at soot.jimple.infoflow.android.SetupApplication.runInfoflow(SetupApplication.java:1529)
+	at soot.jimple.infoflow.android.SetupApplication.runInfoflow(SetupApplication.java:1476)
+	at soot.jimple.infoflow.cmd.MainClass.run(MainClass.java:363)
+	at soot.jimple.infoflow.cmd.MainClass.main(MainClass.java:257)
+[main] ERROR soot.jimple.infoflow.android.entryPointCreators.components.ActivityEntryPointCreator - Assign Intent for <androidx.fragment.app.FragmentActivity: void onNewIntent(android.content.Intent)> fails.
+java.lang.RuntimeException: This operation requires resolving level BODIES but androidx.fragment.app.FragmentActivity is at resolving level SIGNATURES
+If you are extending Soot, try to add the following call before calling soot.Main.main(..):
+Scene.v().addBasicClass(androidx.fragment.app.FragmentActivity,BODIES);
+Otherwise, try whole-program mode (-w).
+	at soot.SootClass.checkLevelIgnoreResolving(SootClass.java:209)
+	at soot.SootClass.checkLevel(SootClass.java:191)
+	at soot.SootMethod.retrieveActiveBody(SootMethod.java:436)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.assignIntent(AbstractComponentEntryPointCreator.java:260)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.instrumentDummyMainMethod(AbstractComponentEntryPointCreator.java:244)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.createDummyMainInternal(AbstractComponentEntryPointCreator.java:212)
+	at soot.jimple.infoflow.entryPointCreators.BaseEntryPointCreator.createDummyMain(BaseEntryPointCreator.java:154)
+	at soot.jimple.infoflow.android.entryPointCreators.AbstractAndroidEntryPointCreator.createDummyMain(AbstractAndroidEntryPointCreator.java:32)
+	at soot.jimple.infoflow.android.entryPointCreators.AndroidEntryPointCreator.createDummyMainInternal(AndroidEntryPointCreator.java:285)
+	at soot.jimple.infoflow.entryPointCreators.BaseEntryPointCreator.createDummyMain(BaseEntryPointCreator.java:154)
+	at soot.jimple.infoflow.android.entryPointCreators.AbstractAndroidEntryPointCreator.createDummyMain(AbstractAndroidEntryPointCreator.java:32)
+	at soot.jimple.infoflow.android.SetupApplication.createMainMethod(SetupApplication.java:1124)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbackMethods(SetupApplication.java:716)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbacks(SetupApplication.java:525)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbacks(SetupApplication.java:472)
+	at soot.jimple.infoflow.android.SetupApplication.processEntryPoint(SetupApplication.java:1563)
+	at soot.jimple.infoflow.android.SetupApplication.runInfoflow(SetupApplication.java:1529)
+	at soot.jimple.infoflow.android.SetupApplication.runInfoflow(SetupApplication.java:1476)
+	at soot.jimple.infoflow.cmd.MainClass.run(MainClass.java:363)
+	at soot.jimple.infoflow.cmd.MainClass.main(MainClass.java:257)
+[main] ERROR soot.jimple.infoflow.android.entryPointCreators.components.ActivityEntryPointCreator - Assign Intent for <androidx.activity.ComponentActivity: void startIntentSenderForResult(android.content.IntentSender,int,android.content.Intent,int,int,int,android.os.Bundle)> fails.
+java.lang.RuntimeException: This operation requires resolving level BODIES but androidx.activity.ComponentActivity is at resolving level SIGNATURES
+If you are extending Soot, try to add the following call before calling soot.Main.main(..):
+Scene.v().addBasicClass(androidx.activity.ComponentActivity,BODIES);
+Otherwise, try whole-program mode (-w).
+	at soot.SootClass.checkLevelIgnoreResolving(SootClass.java:209)
+	at soot.SootClass.checkLevel(SootClass.java:191)
+	at soot.SootMethod.retrieveActiveBody(SootMethod.java:436)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.assignIntent(AbstractComponentEntryPointCreator.java:260)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.instrumentDummyMainMethod(AbstractComponentEntryPointCreator.java:244)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.createDummyMainInternal(AbstractComponentEntryPointCreator.java:212)
+	at soot.jimple.infoflow.entryPointCreators.BaseEntryPointCreator.createDummyMain(BaseEntryPointCreator.java:154)
+	at soot.jimple.infoflow.android.entryPointCreators.AbstractAndroidEntryPointCreator.createDummyMain(AbstractAndroidEntryPointCreator.java:32)
+	at soot.jimple.infoflow.android.entryPointCreators.AndroidEntryPointCreator.createDummyMainInternal(AndroidEntryPointCreator.java:285)
+	at soot.jimple.infoflow.entryPointCreators.BaseEntryPointCreator.createDummyMain(BaseEntryPointCreator.java:154)
+	at soot.jimple.infoflow.android.entryPointCreators.AbstractAndroidEntryPointCreator.createDummyMain(AbstractAndroidEntryPointCreator.java:32)
+	at soot.jimple.infoflow.android.SetupApplication.createMainMethod(SetupApplication.java:1124)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbackMethods(SetupApplication.java:716)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbacks(SetupApplication.java:525)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbacks(SetupApplication.java:472)
+	at soot.jimple.infoflow.android.SetupApplication.processEntryPoint(SetupApplication.java:1563)
+	at soot.jimple.infoflow.android.SetupApplication.runInfoflow(SetupApplication.java:1529)
+	at soot.jimple.infoflow.android.SetupApplication.runInfoflow(SetupApplication.java:1476)
+	at soot.jimple.infoflow.cmd.MainClass.run(MainClass.java:363)
+	at soot.jimple.infoflow.cmd.MainClass.main(MainClass.java:257)
+[main] ERROR soot.jimple.infoflow.android.entryPointCreators.components.ActivityEntryPointCreator - Assign Intent for <androidx.activity.ComponentActivity: void startActivityForResult(android.content.Intent,int,android.os.Bundle)> fails.
+java.lang.RuntimeException: This operation requires resolving level BODIES but androidx.activity.ComponentActivity is at resolving level SIGNATURES
+If you are extending Soot, try to add the following call before calling soot.Main.main(..):
+Scene.v().addBasicClass(androidx.activity.ComponentActivity,BODIES);
+Otherwise, try whole-program mode (-w).
+	at soot.SootClass.checkLevelIgnoreResolving(SootClass.java:209)
+	at soot.SootClass.checkLevel(SootClass.java:191)
+	at soot.SootMethod.retrieveActiveBody(SootMethod.java:436)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.assignIntent(AbstractComponentEntryPointCreator.java:260)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.instrumentDummyMainMethod(AbstractComponentEntryPointCreator.java:244)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.createDummyMainInternal(AbstractComponentEntryPointCreator.java:212)
+	at soot.jimple.infoflow.entryPointCreators.BaseEntryPointCreator.createDummyMain(BaseEntryPointCreator.java:154)
+	at soot.jimple.infoflow.android.entryPointCreators.AbstractAndroidEntryPointCreator.createDummyMain(AbstractAndroidEntryPointCreator.java:32)
+	at soot.jimple.infoflow.android.entryPointCreators.AndroidEntryPointCreator.createDummyMainInternal(AndroidEntryPointCreator.java:285)
+	at soot.jimple.infoflow.entryPointCreators.BaseEntryPointCreator.createDummyMain(BaseEntryPointCreator.java:154)
+	at soot.jimple.infoflow.android.entryPointCreators.AbstractAndroidEntryPointCreator.createDummyMain(AbstractAndroidEntryPointCreator.java:32)
+	at soot.jimple.infoflow.android.SetupApplication.createMainMethod(SetupApplication.java:1124)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbackMethods(SetupApplication.java:716)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbacks(SetupApplication.java:525)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbacks(SetupApplication.java:472)
+	at soot.jimple.infoflow.android.SetupApplication.processEntryPoint(SetupApplication.java:1563)
+	at soot.jimple.infoflow.android.SetupApplication.runInfoflow(SetupApplication.java:1529)
+	at soot.jimple.infoflow.android.SetupApplication.runInfoflow(SetupApplication.java:1476)
+	at soot.jimple.infoflow.cmd.MainClass.run(MainClass.java:363)
+	at soot.jimple.infoflow.cmd.MainClass.main(MainClass.java:257)
+[main] ERROR soot.jimple.infoflow.android.entryPointCreators.components.ActivityEntryPointCreator - Assign Intent for <androidx.activity.ComponentActivity: void onNewIntent(android.content.Intent)> fails.
+java.lang.RuntimeException: This operation requires resolving level BODIES but androidx.activity.ComponentActivity is at resolving level SIGNATURES
+If you are extending Soot, try to add the following call before calling soot.Main.main(..):
+Scene.v().addBasicClass(androidx.activity.ComponentActivity,BODIES);
+Otherwise, try whole-program mode (-w).
+	at soot.SootClass.checkLevelIgnoreResolving(SootClass.java:209)
+	at soot.SootClass.checkLevel(SootClass.java:191)
+	at soot.SootMethod.retrieveActiveBody(SootMethod.java:436)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.assignIntent(AbstractComponentEntryPointCreator.java:260)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.instrumentDummyMainMethod(AbstractComponentEntryPointCreator.java:244)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.createDummyMainInternal(AbstractComponentEntryPointCreator.java:212)
+	at soot.jimple.infoflow.entryPointCreators.BaseEntryPointCreator.createDummyMain(BaseEntryPointCreator.java:154)
+	at soot.jimple.infoflow.android.entryPointCreators.AbstractAndroidEntryPointCreator.createDummyMain(AbstractAndroidEntryPointCreator.java:32)
+	at soot.jimple.infoflow.android.entryPointCreators.AndroidEntryPointCreator.createDummyMainInternal(AndroidEntryPointCreator.java:285)
+	at soot.jimple.infoflow.entryPointCreators.BaseEntryPointCreator.createDummyMain(BaseEntryPointCreator.java:154)
+	at soot.jimple.infoflow.android.entryPointCreators.AbstractAndroidEntryPointCreator.createDummyMain(AbstractAndroidEntryPointCreator.java:32)
+	at soot.jimple.infoflow.android.SetupApplication.createMainMethod(SetupApplication.java:1124)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbackMethods(SetupApplication.java:716)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbacks(SetupApplication.java:525)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbacks(SetupApplication.java:472)
+	at soot.jimple.infoflow.android.SetupApplication.processEntryPoint(SetupApplication.java:1563)
+	at soot.jimple.infoflow.android.SetupApplication.runInfoflow(SetupApplication.java:1529)
+	at soot.jimple.infoflow.android.SetupApplication.runInfoflow(SetupApplication.java:1476)
+	at soot.jimple.infoflow.cmd.MainClass.run(MainClass.java:363)
+	at soot.jimple.infoflow.cmd.MainClass.main(MainClass.java:257)
+[main] ERROR soot.jimple.infoflow.android.entryPointCreators.components.ActivityEntryPointCreator - Assign Intent for <androidx.activity.ComponentActivity: void startActivityForResult(android.content.Intent,int)> fails.
+java.lang.RuntimeException: This operation requires resolving level BODIES but androidx.activity.ComponentActivity is at resolving level SIGNATURES
+If you are extending Soot, try to add the following call before calling soot.Main.main(..):
+Scene.v().addBasicClass(androidx.activity.ComponentActivity,BODIES);
+Otherwise, try whole-program mode (-w).
+	at soot.SootClass.checkLevelIgnoreResolving(SootClass.java:209)
+	at soot.SootClass.checkLevel(SootClass.java:191)
+	at soot.SootMethod.retrieveActiveBody(SootMethod.java:436)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.assignIntent(AbstractComponentEntryPointCreator.java:260)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.instrumentDummyMainMethod(AbstractComponentEntryPointCreator.java:244)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.createDummyMainInternal(AbstractComponentEntryPointCreator.java:212)
+	at soot.jimple.infoflow.entryPointCreators.BaseEntryPointCreator.createDummyMain(BaseEntryPointCreator.java:154)
+	at soot.jimple.infoflow.android.entryPointCreators.AbstractAndroidEntryPointCreator.createDummyMain(AbstractAndroidEntryPointCreator.java:32)
+	at soot.jimple.infoflow.android.entryPointCreators.AndroidEntryPointCreator.createDummyMainInternal(AndroidEntryPointCreator.java:285)
+	at soot.jimple.infoflow.entryPointCreators.BaseEntryPointCreator.createDummyMain(BaseEntryPointCreator.java:154)
+	at soot.jimple.infoflow.android.entryPointCreators.AbstractAndroidEntryPointCreator.createDummyMain(AbstractAndroidEntryPointCreator.java:32)
+	at soot.jimple.infoflow.android.SetupApplication.createMainMethod(SetupApplication.java:1124)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbackMethods(SetupApplication.java:716)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbacks(SetupApplication.java:525)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbacks(SetupApplication.java:472)
+	at soot.jimple.infoflow.android.SetupApplication.processEntryPoint(SetupApplication.java:1563)
+	at soot.jimple.infoflow.android.SetupApplication.runInfoflow(SetupApplication.java:1529)
+	at soot.jimple.infoflow.android.SetupApplication.runInfoflow(SetupApplication.java:1476)
+	at soot.jimple.infoflow.cmd.MainClass.run(MainClass.java:363)
+	at soot.jimple.infoflow.cmd.MainClass.main(MainClass.java:257)
+[main] ERROR soot.jimple.infoflow.android.entryPointCreators.components.ActivityEntryPointCreator - Assign Intent for <androidx.activity.ComponentActivity: void onActivityResult(int,int,android.content.Intent)> fails.
+java.lang.RuntimeException: This operation requires resolving level BODIES but androidx.activity.ComponentActivity is at resolving level SIGNATURES
+If you are extending Soot, try to add the following call before calling soot.Main.main(..):
+Scene.v().addBasicClass(androidx.activity.ComponentActivity,BODIES);
+Otherwise, try whole-program mode (-w).
+	at soot.SootClass.checkLevelIgnoreResolving(SootClass.java:209)
+	at soot.SootClass.checkLevel(SootClass.java:191)
+	at soot.SootMethod.retrieveActiveBody(SootMethod.java:436)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.assignIntent(AbstractComponentEntryPointCreator.java:260)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.instrumentDummyMainMethod(AbstractComponentEntryPointCreator.java:244)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.createDummyMainInternal(AbstractComponentEntryPointCreator.java:212)
+	at soot.jimple.infoflow.entryPointCreators.BaseEntryPointCreator.createDummyMain(BaseEntryPointCreator.java:154)
+	at soot.jimple.infoflow.android.entryPointCreators.AbstractAndroidEntryPointCreator.createDummyMain(AbstractAndroidEntryPointCreator.java:32)
+	at soot.jimple.infoflow.android.entryPointCreators.AndroidEntryPointCreator.createDummyMainInternal(AndroidEntryPointCreator.java:285)
+	at soot.jimple.infoflow.entryPointCreators.BaseEntryPointCreator.createDummyMain(BaseEntryPointCreator.java:154)
+	at soot.jimple.infoflow.android.entryPointCreators.AbstractAndroidEntryPointCreator.createDummyMain(AbstractAndroidEntryPointCreator.java:32)
+	at soot.jimple.infoflow.android.SetupApplication.createMainMethod(SetupApplication.java:1124)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbackMethods(SetupApplication.java:716)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbacks(SetupApplication.java:525)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbacks(SetupApplication.java:472)
+	at soot.jimple.infoflow.android.SetupApplication.processEntryPoint(SetupApplication.java:1563)
+	at soot.jimple.infoflow.android.SetupApplication.runInfoflow(SetupApplication.java:1529)
+	at soot.jimple.infoflow.android.SetupApplication.runInfoflow(SetupApplication.java:1476)
+	at soot.jimple.infoflow.cmd.MainClass.run(MainClass.java:363)
+	at soot.jimple.infoflow.cmd.MainClass.main(MainClass.java:257)
+[main] ERROR soot.jimple.infoflow.android.entryPointCreators.components.ActivityEntryPointCreator - Assign Intent for <androidx.activity.ComponentActivity: void startIntentSenderForResult(android.content.IntentSender,int,android.content.Intent,int,int,int)> fails.
+java.lang.RuntimeException: This operation requires resolving level BODIES but androidx.activity.ComponentActivity is at resolving level SIGNATURES
+If you are extending Soot, try to add the following call before calling soot.Main.main(..):
+Scene.v().addBasicClass(androidx.activity.ComponentActivity,BODIES);
+Otherwise, try whole-program mode (-w).
+	at soot.SootClass.checkLevelIgnoreResolving(SootClass.java:209)
+	at soot.SootClass.checkLevel(SootClass.java:191)
+	at soot.SootMethod.retrieveActiveBody(SootMethod.java:436)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.assignIntent(AbstractComponentEntryPointCreator.java:260)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.instrumentDummyMainMethod(AbstractComponentEntryPointCreator.java:244)
+	at soot.jimple.infoflow.android.entryPointCreators.components.AbstractComponentEntryPointCreator.createDummyMainInternal(AbstractComponentEntryPointCreator.java:212)
+	at soot.jimple.infoflow.entryPointCreators.BaseEntryPointCreator.createDummyMain(BaseEntryPointCreator.java:154)
+	at soot.jimple.infoflow.android.entryPointCreators.AbstractAndroidEntryPointCreator.createDummyMain(AbstractAndroidEntryPointCreator.java:32)
+	at soot.jimple.infoflow.android.entryPointCreators.AndroidEntryPointCreator.createDummyMainInternal(AndroidEntryPointCreator.java:285)
+	at soot.jimple.infoflow.entryPointCreators.BaseEntryPointCreator.createDummyMain(BaseEntryPointCreator.java:154)
+	at soot.jimple.infoflow.android.entryPointCreators.AbstractAndroidEntryPointCreator.createDummyMain(AbstractAndroidEntryPointCreator.java:32)
+	at soot.jimple.infoflow.android.SetupApplication.createMainMethod(SetupApplication.java:1124)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbackMethods(SetupApplication.java:716)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbacks(SetupApplication.java:525)
+	at soot.jimple.infoflow.android.SetupApplication.calculateCallbacks(SetupApplication.java:472)
+	at soot.jimple.infoflow.android.SetupApplication.processEntryPoint(SetupApplication.java:1563)
+	at soot.jimple.infoflow.android.SetupApplication.runInfoflow(SetupApplication.java:1529)
+	at soot.jimple.infoflow.android.SetupApplication.runInfoflow(SetupApplication.java:1476)
+	at soot.jimple.infoflow.cmd.MainClass.run(MainClass.java:363)
+	at soot.jimple.infoflow.cmd.MainClass.main(MainClass.java:257)
+[main] INFO soot.jimple.infoflow.android.SetupApplication - Constructing the callgraph...
+[main] INFO soot.jimple.infoflow.android.callbacks.DefaultCallbackAnalyzer - Running incremental callback analysis for 1 components...
+[main] INFO soot.jimple.infoflow.android.callbacks.DefaultCallbackAnalyzer - Incremental callback analysis done.
+[main] INFO soot.jimple.infoflow.memory.MemoryWarningSystem - Shutting down the memory warning system...
+[main] INFO soot.jimple.infoflow.android.SetupApplication - Callback analysis terminated normally
+[main] INFO soot.jimple.infoflow.android.SetupApplication - Entry point calculation done.
+[main] INFO soot.jimple.infoflow.android.source.AccessPathBasedSourceSinkManager - Created a SourceSinkManager with 1 sources, 2 sinks, and 85 callback methods.
+[main] INFO soot.jimple.infoflow.android.SetupApplication - Collecting callbacks and building a callgraph took 4 seconds
+[main] INFO soot.jimple.infoflow.android.SetupApplication - Running data flow analysis on /home/baheuxbi/Documents/repo/sources/scripts/app-debug.apk with 1 sources and 2 sinks...
+[main] INFO soot.jimple.infoflow.InfoflowConfiguration - Implicit flow tracking is enabled
+[main] INFO soot.jimple.infoflow.InfoflowConfiguration - Exceptional flow tracking is enabled
+[main] INFO soot.jimple.infoflow.InfoflowConfiguration - Running with a maximum access path length of 5
+[main] INFO soot.jimple.infoflow.InfoflowConfiguration - Using path-agnostic result collection
+[main] INFO soot.jimple.infoflow.InfoflowConfiguration - Recursive access path shortening is enabled
+[main] INFO soot.jimple.infoflow.InfoflowConfiguration - Taint analysis enabled: true
+[main] INFO soot.jimple.infoflow.InfoflowConfiguration - Using alias algorithm FlowSensitive
+[main] INFO soot.jimple.infoflow.memory.MemoryWarningSystem - Registered a memory warning system for 9 000 MiB
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - Callgraph construction took 0 seconds
+[main] INFO soot.jimple.infoflow.codeOptimization.InterproceduralConstantValuePropagator - Removing side-effect free methods is disabled
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - Dead code elimination took 0.10917648 seconds
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - Callgraph has 2790 edges
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - Starting Taint Analysis
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - Using context- and flow-sensitive solver
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - Using context- and flow-sensitive solver
+[main] WARN soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - Running with limited join point abstractions can break context-sensitive path builders
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - Looking for sources and sinks...
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - Source lookup done, found 4 sources and 3 sinks.
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - Taint wrapper hits: 340462
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - Taint wrapper misses: 965360
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - IFDS problem with 1885938 forward and 2905168 backward edges solved in 19 seconds, processing 17 results...
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - Current memory consumption: 1147 MB
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - Memory consumption after cleanup: 166 MB
+[main] INFO soot.jimple.infoflow.data.pathBuilders.DefaultPathBuilderFactory$ShutdownBatchPathBuilder - Running path reconstruction batch 1 with 5 elements
+[main] INFO soot.jimple.infoflow.data.pathBuilders.DefaultPathBuilderFactory$RepeatableContextSensitivePathBuilder - Obtainted 5 connections between sources and sinks
+[main] INFO soot.jimple.infoflow.data.pathBuilders.DefaultPathBuilderFactory$RepeatableContextSensitivePathBuilder - Building path 1...
+[main] INFO soot.jimple.infoflow.data.pathBuilders.DefaultPathBuilderFactory$RepeatableContextSensitivePathBuilder - Building path 2...
+[main] INFO soot.jimple.infoflow.data.pathBuilders.DefaultPathBuilderFactory$RepeatableContextSensitivePathBuilder - Building path 3...
+[main] INFO soot.jimple.infoflow.data.pathBuilders.DefaultPathBuilderFactory$RepeatableContextSensitivePathBuilder - Building path 4...
+[main] INFO soot.jimple.infoflow.data.pathBuilders.DefaultPathBuilderFactory$RepeatableContextSensitivePathBuilder - Building path 5...
+[main] INFO soot.jimple.infoflow.data.pathBuilders.DefaultPathBuilderFactory$ShutdownBatchPathBuilder - Running path reconstruction batch 2 with 5 elements
+[main] INFO soot.jimple.infoflow.data.pathBuilders.DefaultPathBuilderFactory$RepeatableContextSensitivePathBuilder - Obtainted 5 connections between sources and sinks
+[main] INFO soot.jimple.infoflow.data.pathBuilders.DefaultPathBuilderFactory$RepeatableContextSensitivePathBuilder - Building path 1...
+[main] INFO soot.jimple.infoflow.data.pathBuilders.DefaultPathBuilderFactory$RepeatableContextSensitivePathBuilder - Building path 2...
+[main] INFO soot.jimple.infoflow.data.pathBuilders.DefaultPathBuilderFactory$RepeatableContextSensitivePathBuilder - Building path 3...
+[main] INFO soot.jimple.infoflow.data.pathBuilders.DefaultPathBuilderFactory$RepeatableContextSensitivePathBuilder - Building path 4...
+[main] INFO soot.jimple.infoflow.data.pathBuilders.DefaultPathBuilderFactory$RepeatableContextSensitivePathBuilder - Building path 5...
+[main] INFO soot.jimple.infoflow.data.pathBuilders.DefaultPathBuilderFactory$ShutdownBatchPathBuilder - Running path reconstruction batch 3 with 5 elements
+[main] INFO soot.jimple.infoflow.data.pathBuilders.DefaultPathBuilderFactory$RepeatableContextSensitivePathBuilder - Obtainted 5 connections between sources and sinks
+[main] INFO soot.jimple.infoflow.data.pathBuilders.DefaultPathBuilderFactory$RepeatableContextSensitivePathBuilder - Building path 1...
+[main] INFO soot.jimple.infoflow.data.pathBuilders.DefaultPathBuilderFactory$RepeatableContextSensitivePathBuilder - Building path 2...
+[main] INFO soot.jimple.infoflow.data.pathBuilders.DefaultPathBuilderFactory$RepeatableContextSensitivePathBuilder - Building path 3...
+[main] INFO soot.jimple.infoflow.data.pathBuilders.DefaultPathBuilderFactory$RepeatableContextSensitivePathBuilder - Building path 4...
+[main] INFO soot.jimple.infoflow.data.pathBuilders.DefaultPathBuilderFactory$RepeatableContextSensitivePathBuilder - Building path 5...
+[main] INFO soot.jimple.infoflow.data.pathBuilders.DefaultPathBuilderFactory$ShutdownBatchPathBuilder - Running path reconstruction batch 4 with 2 elements
+[main] INFO soot.jimple.infoflow.data.pathBuilders.DefaultPathBuilderFactory$RepeatableContextSensitivePathBuilder - Obtainted 2 connections between sources and sinks
+[main] INFO soot.jimple.infoflow.data.pathBuilders.DefaultPathBuilderFactory$RepeatableContextSensitivePathBuilder - Building path 1...
+[main] INFO soot.jimple.infoflow.data.pathBuilders.DefaultPathBuilderFactory$RepeatableContextSensitivePathBuilder - Building path 2...
+[main] INFO soot.jimple.infoflow.memory.MemoryWarningSystem - Shutting down the memory warning system...
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - Memory consumption after path building: 194 MB
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - Path reconstruction took 1 seconds
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - The sink $u-1#11 = virtualinvoke e#10.<okhttp3.OkHttpClient: okhttp3.Call newCall(okhttp3.Request)>($u-1) on line 55 in method <com.example.examplevulnerability.MainActivity: java.lang.String sendGetRequest(java.lang.String)> was called with values from the following sources:
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - - $u7 = virtualinvoke $u4.<com.example.examplevulnerability.MainActivity: android.view.View findViewById(int)>(2131230899) on line 101 in method <com.example.examplevulnerability.MainActivity: void onCreate$lambda$0(kotlin.jvm.internal.Ref$ObjectRef,com.example.examplevulnerability.MainActivity,android.widget.TextView,kotlin.jvm.internal.Ref$ObjectRef,android.view.View)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	on Path: 
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <com.example.examplevulnerability.MainActivity: void onCreate$lambda$0(kotlin.jvm.internal.Ref$ObjectRef,com.example.examplevulnerability.MainActivity,android.widget.TextView,kotlin.jvm.internal.Ref$ObjectRef,android.view.View)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u7 = virtualinvoke $u4.<com.example.examplevulnerability.MainActivity: android.view.View findViewById(int)>(2131230899)
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <com.example.examplevulnerability.MainActivity: void onCreate$lambda$0(kotlin.jvm.internal.Ref$ObjectRef,com.example.examplevulnerability.MainActivity,android.widget.TextView,kotlin.jvm.internal.Ref$ObjectRef,android.view.View)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u2 = (android.widget.EditText) $u7
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <com.example.examplevulnerability.MainActivity: void onCreate$lambda$0(kotlin.jvm.internal.Ref$ObjectRef,com.example.examplevulnerability.MainActivity,android.widget.TextView,kotlin.jvm.internal.Ref$ObjectRef,android.view.View)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u6.<kotlin.jvm.internal.Ref$ObjectRef: java.lang.Object element> = $u2
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <com.example.examplevulnerability.MainActivity: void onCreate$lambda$0(kotlin.jvm.internal.Ref$ObjectRef,com.example.examplevulnerability.MainActivity,android.widget.TextView,kotlin.jvm.internal.Ref$ObjectRef,android.view.View)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u2#9 = $u6.<kotlin.jvm.internal.Ref$ObjectRef: java.lang.Object element>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <com.example.examplevulnerability.MainActivity: void onCreate$lambda$0(kotlin.jvm.internal.Ref$ObjectRef,com.example.examplevulnerability.MainActivity,android.widget.TextView,kotlin.jvm.internal.Ref$ObjectRef,android.view.View)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u2 = (android.widget.EditText) $u2#9
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <com.example.examplevulnerability.MainActivity: void onCreate$lambda$0(kotlin.jvm.internal.Ref$ObjectRef,com.example.examplevulnerability.MainActivity,android.widget.TextView,kotlin.jvm.internal.Ref$ObjectRef,android.view.View)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u-1 = virtualinvoke $u2.<android.widget.EditText: android.text.Editable getText()>()
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <com.example.examplevulnerability.MainActivity: void onCreate$lambda$0(kotlin.jvm.internal.Ref$ObjectRef,com.example.examplevulnerability.MainActivity,android.widget.TextView,kotlin.jvm.internal.Ref$ObjectRef,android.view.View)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u-1#13 = virtualinvoke $u-1.<java.lang.Object: java.lang.String toString()>()
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <com.example.examplevulnerability.MainActivity: void onCreate$lambda$0(kotlin.jvm.internal.Ref$ObjectRef,com.example.examplevulnerability.MainActivity,android.widget.TextView,kotlin.jvm.internal.Ref$ObjectRef,android.view.View)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u-1#13 = virtualinvoke $u4.<com.example.examplevulnerability.MainActivity: java.lang.String uselessFunction(java.lang.String)>($u-1#13)
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <com.example.examplevulnerability.MainActivity: java.lang.String uselessFunction(java.lang.String)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u3 = virtualinvoke $u3.<java.lang.String: java.lang.String toLowerCase(java.util.Locale)>($u0)
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <com.example.examplevulnerability.MainActivity: java.lang.String uselessFunction(java.lang.String)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> return $u3
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <com.example.examplevulnerability.MainActivity: void onCreate$lambda$0(kotlin.jvm.internal.Ref$ObjectRef,com.example.examplevulnerability.MainActivity,android.widget.TextView,kotlin.jvm.internal.Ref$ObjectRef,android.view.View)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u-1#13 = virtualinvoke $u4.<com.example.examplevulnerability.MainActivity: java.lang.String sendGetRequest(java.lang.String)>($u-1#13)
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <com.example.examplevulnerability.MainActivity: java.lang.String sendGetRequest(java.lang.String)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> e = virtualinvoke e.<okhttp3.Request$Builder: okhttp3.Request$Builder url(java.lang.String)>($u6)
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.Request$Builder: okhttp3.Request$Builder url(java.lang.String)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u-1#21 = virtualinvoke $u1.<okhttp3.HttpUrl$Companion: okhttp3.HttpUrl get(java.lang.String)>($u4)
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl$Companion: okhttp3.HttpUrl get(java.lang.String)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u0 = virtualinvoke $u0.<okhttp3.HttpUrl$Builder: okhttp3.HttpUrl$Builder parse$okhttp(okhttp3.HttpUrl,java.lang.String)>(null, $u3)
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl$Builder: okhttp3.HttpUrl$Builder parse$okhttp(okhttp3.HttpUrl,java.lang.String)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u-1 = virtualinvoke $u33.<java.lang.String: char charAt(int)>(pos)
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl$Builder: okhttp3.HttpUrl$Builder parse$okhttp(okhttp3.HttpUrl,java.lang.String)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> lookupswitch($u-1) {     case -1: goto passwordColonOffset = <okhttp3.HttpUrl$Builder: okhttp3.HttpUrl$Builder$Companion Companion>;     case 35: goto passwordColonOffset = <okhttp3.HttpUrl$Builder: okhttp3.HttpUrl$Builder$Companion Companion>;     case 47: goto passwordColonOffset = <okhttp3.HttpUrl$Builder: okhttp3.HttpUrl$Builder$Companion Companion>;     case 63: goto passwordColonOffset = <okhttp3.HttpUrl$Builder: okhttp3.HttpUrl$Builder$Companion Companion>;     case 64: goto if hasPassword1 != 0 goto $u0 = new java.lang.StringBuilder;     case 92: goto passwordColonOffset = <okhttp3.HttpUrl$Builder: okhttp3.HttpUrl$Builder$Companion Companion>;     default: goto pos = staticinvoke <okhttp3.internal.Util: int delimiterOffset(java.lang.String,java.lang.String,int,int)>($u33, "@/\\?#", $u-1#9, limit1); }
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl$Builder: okhttp3.HttpUrl$Builder parse$okhttp(okhttp3.HttpUrl,java.lang.String)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> hasUsername = staticinvoke <okhttp3.HttpUrl$Companion: java.lang.String canonicalize$okhttp$default(okhttp3.HttpUrl$Companion,java.lang.String,int,int,java.lang.String,boolean,boolean,boolean,boolean,java.nio.charset.Charset,int,java.lang.Object)>(pos#101, $u33, $u-1#9, $u-1, " \"\':;<=>@[]^`{}|/\\?#", 1, 0, 0, 0, null, 240, null)
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl$Builder: okhttp3.HttpUrl$Builder parse$okhttp(okhttp3.HttpUrl,java.lang.String)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> this.<okhttp3.HttpUrl$Builder: java.lang.String encodedUsername> = hasUsername
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl$Builder: okhttp3.HttpUrl$Builder parse$okhttp(okhttp3.HttpUrl,java.lang.String)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> throw $u1
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl$Companion: okhttp3.HttpUrl get(java.lang.String)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u-1 = virtualinvoke $u0.<okhttp3.HttpUrl$Builder: okhttp3.HttpUrl build()>()
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl$Builder: okhttp3.HttpUrl build()>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u-1 = specialinvoke this.<okhttp3.HttpUrl$Builder: int effectivePort()>()
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl$Builder: int effectivePort()>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> return $u-1
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl$Builder: okhttp3.HttpUrl build()>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u-1#89 = virtualinvoke this.<okhttp3.HttpUrl$Builder: java.lang.String toString()>()
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl$Builder: java.lang.String toString()>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u-1 = virtualinvoke this.<okhttp3.HttpUrl$Builder: java.lang.String getScheme$okhttp()>()
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl$Builder: java.lang.String getScheme$okhttp()>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> return ret0
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl$Builder: java.lang.String toString()>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u-1 = virtualinvoke this.<okhttp3.HttpUrl$Builder: java.lang.String getEncodedUsername$okhttp()>()
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl$Builder: java.lang.String getEncodedUsername$okhttp()>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> return ret0
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl$Builder: java.lang.String toString()>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u-1 = virtualinvoke this.<okhttp3.HttpUrl$Builder: java.lang.String getEncodedUsername$okhttp()>()
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl$Builder: java.lang.String getEncodedUsername$okhttp()>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> ret0 = this.<okhttp3.HttpUrl$Builder: java.lang.String encodedUsername>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl$Builder: java.lang.String getEncodedUsername$okhttp()>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> return ret0
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl$Builder: java.lang.String toString()>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> virtualinvoke $u0.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($u-1)
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl$Builder: java.lang.String toString()>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u-1 = virtualinvoke $u0.<java.lang.StringBuilder: java.lang.String toString()>()
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl$Builder: java.lang.String toString()>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> return $u-1
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl$Builder: okhttp3.HttpUrl build()>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> specialinvoke $i$f$mapTo1.<okhttp3.HttpUrl: void <init>(java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.util.List,java.util.List,java.lang.String,java.lang.String)>($u2, $u4, $u5, $u5#18, $u-1, $this$map$iv, $this$map$iv#50, it, $u-1#89)
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl: void <init>(java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.util.List,java.util.List,java.lang.String,java.lang.String)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> this.<okhttp3.HttpUrl: java.lang.String url> = $u10
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl: void <init>(java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.util.List,java.util.List,java.lang.String,java.lang.String)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> return
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl$Builder: okhttp3.HttpUrl build()>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> return $i$f$mapTo1
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl$Companion: okhttp3.HttpUrl get(java.lang.String)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> return $u-1
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.Request$Builder: okhttp3.Request$Builder url(java.lang.String)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> this = virtualinvoke this.<okhttp3.Request$Builder: okhttp3.Request$Builder url(okhttp3.HttpUrl)>($u-1#21)
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.Request$Builder: okhttp3.Request$Builder url(okhttp3.HttpUrl)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> virtualinvoke $this$url_u24lambda_u2d0.<okhttp3.Request$Builder: void setUrl$okhttp(okhttp3.HttpUrl)>($u3)
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.Request$Builder: void setUrl$okhttp(okhttp3.HttpUrl)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> this.<okhttp3.Request$Builder: okhttp3.HttpUrl url> = $u1
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.Request$Builder: void setUrl$okhttp(okhttp3.HttpUrl)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> this := @this: okhttp3.Request$Builder
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.Request$Builder: okhttp3.Request$Builder url(okhttp3.HttpUrl)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $this$url_u24lambda_u2d0 = this
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.Request$Builder: okhttp3.Request$Builder url(okhttp3.HttpUrl)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> return this
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.Request$Builder: okhttp3.Request$Builder url(java.lang.String)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> return this
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <com.example.examplevulnerability.MainActivity: java.lang.String sendGetRequest(java.lang.String)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u-1 = virtualinvoke e.<okhttp3.Request$Builder: okhttp3.Request build()>()
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.Request$Builder: okhttp3.Request build()>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u1 = this.<okhttp3.Request$Builder: okhttp3.HttpUrl url>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.Request$Builder: okhttp3.Request build()>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> specialinvoke $u6.<okhttp3.Request: void <init>(okhttp3.HttpUrl,java.lang.String,okhttp3.Headers,okhttp3.RequestBody,java.util.Map)>($u1, $u2, $u-1, $u4, $i$a$-checkNotNull-Request$Builder$build$1#4)
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.Request: void <init>(okhttp3.HttpUrl,java.lang.String,okhttp3.Headers,okhttp3.RequestBody,java.util.Map)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> this.<okhttp3.Request: okhttp3.HttpUrl url> = $u2
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.Request: void <init>(okhttp3.HttpUrl,java.lang.String,okhttp3.Headers,okhttp3.RequestBody,java.util.Map)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> return
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.Request$Builder: okhttp3.Request build()>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> return $u6
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <com.example.examplevulnerability.MainActivity: java.lang.String sendGetRequest(java.lang.String)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u-1#11 = virtualinvoke e#10.<okhttp3.OkHttpClient: okhttp3.Call newCall(okhttp3.Request)>($u-1)
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - - $u7 = virtualinvoke $u4.<com.example.examplevulnerability.MainActivity: android.view.View findViewById(int)>(2131230899) on line 99 in method <com.example.examplevulnerability.MainActivity: void onCreate$lambda$0(kotlin.jvm.internal.Ref$ObjectRef,com.example.examplevulnerability.MainActivity,android.widget.TextView,kotlin.jvm.internal.Ref$ObjectRef,android.view.View)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	on Path: 
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <com.example.examplevulnerability.MainActivity: void onCreate$lambda$0(kotlin.jvm.internal.Ref$ObjectRef,com.example.examplevulnerability.MainActivity,android.widget.TextView,kotlin.jvm.internal.Ref$ObjectRef,android.view.View)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u7 = virtualinvoke $u4.<com.example.examplevulnerability.MainActivity: android.view.View findViewById(int)>(2131230899)
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <com.example.examplevulnerability.MainActivity: void onCreate$lambda$0(kotlin.jvm.internal.Ref$ObjectRef,com.example.examplevulnerability.MainActivity,android.widget.TextView,kotlin.jvm.internal.Ref$ObjectRef,android.view.View)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u2 = (android.widget.EditText) $u7
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <com.example.examplevulnerability.MainActivity: void onCreate$lambda$0(kotlin.jvm.internal.Ref$ObjectRef,com.example.examplevulnerability.MainActivity,android.widget.TextView,kotlin.jvm.internal.Ref$ObjectRef,android.view.View)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u3.<kotlin.jvm.internal.Ref$ObjectRef: java.lang.Object element> = $u2
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <com.example.examplevulnerability.MainActivity: void onCreate$lambda$0(kotlin.jvm.internal.Ref$ObjectRef,com.example.examplevulnerability.MainActivity,android.widget.TextView,kotlin.jvm.internal.Ref$ObjectRef,android.view.View)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u2#9 = $u3.<kotlin.jvm.internal.Ref$ObjectRef: java.lang.Object element>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <com.example.examplevulnerability.MainActivity: void onCreate$lambda$0(kotlin.jvm.internal.Ref$ObjectRef,com.example.examplevulnerability.MainActivity,android.widget.TextView,kotlin.jvm.internal.Ref$ObjectRef,android.view.View)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u2 = (android.widget.EditText) $u2#9
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <com.example.examplevulnerability.MainActivity: void onCreate$lambda$0(kotlin.jvm.internal.Ref$ObjectRef,com.example.examplevulnerability.MainActivity,android.widget.TextView,kotlin.jvm.internal.Ref$ObjectRef,android.view.View)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u-1 = virtualinvoke $u2.<android.widget.EditText: android.text.Editable getText()>()
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <com.example.examplevulnerability.MainActivity: void onCreate$lambda$0(kotlin.jvm.internal.Ref$ObjectRef,com.example.examplevulnerability.MainActivity,android.widget.TextView,kotlin.jvm.internal.Ref$ObjectRef,android.view.View)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u-1#13 = virtualinvoke $u-1.<java.lang.Object: java.lang.String toString()>()
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <com.example.examplevulnerability.MainActivity: void onCreate$lambda$0(kotlin.jvm.internal.Ref$ObjectRef,com.example.examplevulnerability.MainActivity,android.widget.TextView,kotlin.jvm.internal.Ref$ObjectRef,android.view.View)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u-1#13 = virtualinvoke $u4.<com.example.examplevulnerability.MainActivity: java.lang.String uselessFunction(java.lang.String)>($u-1#13)
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <com.example.examplevulnerability.MainActivity: java.lang.String uselessFunction(java.lang.String)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u3 = virtualinvoke $u3.<java.lang.String: java.lang.String toLowerCase(java.util.Locale)>($u0)
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <com.example.examplevulnerability.MainActivity: java.lang.String uselessFunction(java.lang.String)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> return $u3
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <com.example.examplevulnerability.MainActivity: void onCreate$lambda$0(kotlin.jvm.internal.Ref$ObjectRef,com.example.examplevulnerability.MainActivity,android.widget.TextView,kotlin.jvm.internal.Ref$ObjectRef,android.view.View)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u-1#13 = virtualinvoke $u4.<com.example.examplevulnerability.MainActivity: java.lang.String sendGetRequest(java.lang.String)>($u-1#13)
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <com.example.examplevulnerability.MainActivity: java.lang.String sendGetRequest(java.lang.String)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> e = virtualinvoke e.<okhttp3.Request$Builder: okhttp3.Request$Builder url(java.lang.String)>($u6)
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.Request$Builder: okhttp3.Request$Builder url(java.lang.String)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u-1#21 = virtualinvoke $u1.<okhttp3.HttpUrl$Companion: okhttp3.HttpUrl get(java.lang.String)>($u4)
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl$Companion: okhttp3.HttpUrl get(java.lang.String)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u0 = virtualinvoke $u0.<okhttp3.HttpUrl$Builder: okhttp3.HttpUrl$Builder parse$okhttp(okhttp3.HttpUrl,java.lang.String)>(null, $u3)
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl$Builder: okhttp3.HttpUrl$Builder parse$okhttp(okhttp3.HttpUrl,java.lang.String)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u-1 = virtualinvoke $u33.<java.lang.String: char charAt(int)>(pos)
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl$Builder: okhttp3.HttpUrl$Builder parse$okhttp(okhttp3.HttpUrl,java.lang.String)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> lookupswitch($u-1) {     case -1: goto passwordColonOffset = <okhttp3.HttpUrl$Builder: okhttp3.HttpUrl$Builder$Companion Companion>;     case 35: goto passwordColonOffset = <okhttp3.HttpUrl$Builder: okhttp3.HttpUrl$Builder$Companion Companion>;     case 47: goto passwordColonOffset = <okhttp3.HttpUrl$Builder: okhttp3.HttpUrl$Builder$Companion Companion>;     case 63: goto passwordColonOffset = <okhttp3.HttpUrl$Builder: okhttp3.HttpUrl$Builder$Companion Companion>;     case 64: goto if hasPassword1 != 0 goto $u0 = new java.lang.StringBuilder;     case 92: goto passwordColonOffset = <okhttp3.HttpUrl$Builder: okhttp3.HttpUrl$Builder$Companion Companion>;     default: goto pos = staticinvoke <okhttp3.internal.Util: int delimiterOffset(java.lang.String,java.lang.String,int,int)>($u33, "@/\\?#", $u-1#9, limit1); }
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl$Builder: okhttp3.HttpUrl$Builder parse$okhttp(okhttp3.HttpUrl,java.lang.String)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> hasUsername = staticinvoke <okhttp3.HttpUrl$Companion: java.lang.String canonicalize$okhttp$default(okhttp3.HttpUrl$Companion,java.lang.String,int,int,java.lang.String,boolean,boolean,boolean,boolean,java.nio.charset.Charset,int,java.lang.Object)>(pos#101, $u33, $u-1#9, $u-1, " \"\':;<=>@[]^`{}|/\\?#", 1, 0, 0, 0, null, 240, null)
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl$Builder: okhttp3.HttpUrl$Builder parse$okhttp(okhttp3.HttpUrl,java.lang.String)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> this.<okhttp3.HttpUrl$Builder: java.lang.String encodedUsername> = hasUsername
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl$Builder: okhttp3.HttpUrl$Builder parse$okhttp(okhttp3.HttpUrl,java.lang.String)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> throw $u1
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl$Companion: okhttp3.HttpUrl get(java.lang.String)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u-1 = virtualinvoke $u0.<okhttp3.HttpUrl$Builder: okhttp3.HttpUrl build()>()
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl$Builder: okhttp3.HttpUrl build()>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u-1 = specialinvoke this.<okhttp3.HttpUrl$Builder: int effectivePort()>()
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl$Builder: int effectivePort()>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> return $u-1
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl$Builder: okhttp3.HttpUrl build()>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u-1#89 = virtualinvoke this.<okhttp3.HttpUrl$Builder: java.lang.String toString()>()
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl$Builder: java.lang.String toString()>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u-1 = virtualinvoke this.<okhttp3.HttpUrl$Builder: java.lang.String getScheme$okhttp()>()
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl$Builder: java.lang.String getScheme$okhttp()>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> return ret0
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl$Builder: java.lang.String toString()>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u-1 = virtualinvoke this.<okhttp3.HttpUrl$Builder: java.lang.String getEncodedUsername$okhttp()>()
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl$Builder: java.lang.String getEncodedUsername$okhttp()>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> return ret0
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl$Builder: java.lang.String toString()>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u-1 = virtualinvoke this.<okhttp3.HttpUrl$Builder: java.lang.String getEncodedUsername$okhttp()>()
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl$Builder: java.lang.String getEncodedUsername$okhttp()>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> ret0 = this.<okhttp3.HttpUrl$Builder: java.lang.String encodedUsername>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl$Builder: java.lang.String getEncodedUsername$okhttp()>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> return ret0
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl$Builder: java.lang.String toString()>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> virtualinvoke $u0.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($u-1)
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl$Builder: java.lang.String toString()>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u-1 = virtualinvoke $u0.<java.lang.StringBuilder: java.lang.String toString()>()
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl$Builder: java.lang.String toString()>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> return $u-1
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl$Builder: okhttp3.HttpUrl build()>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> specialinvoke $i$f$mapTo1.<okhttp3.HttpUrl: void <init>(java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.util.List,java.util.List,java.lang.String,java.lang.String)>($u2, $u4, $u5, $u5#18, $u-1, $this$map$iv, $this$map$iv#50, it, $u-1#89)
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl: void <init>(java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.util.List,java.util.List,java.lang.String,java.lang.String)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> this.<okhttp3.HttpUrl: java.lang.String url> = $u10
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl: void <init>(java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.util.List,java.util.List,java.lang.String,java.lang.String)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> return
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl$Builder: okhttp3.HttpUrl build()>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> return $i$f$mapTo1
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl$Companion: okhttp3.HttpUrl get(java.lang.String)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> return $u-1
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.Request$Builder: okhttp3.Request$Builder url(java.lang.String)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> this = virtualinvoke this.<okhttp3.Request$Builder: okhttp3.Request$Builder url(okhttp3.HttpUrl)>($u-1#21)
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.Request$Builder: okhttp3.Request$Builder url(okhttp3.HttpUrl)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> virtualinvoke $this$url_u24lambda_u2d0.<okhttp3.Request$Builder: void setUrl$okhttp(okhttp3.HttpUrl)>($u3)
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.Request$Builder: void setUrl$okhttp(okhttp3.HttpUrl)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> this.<okhttp3.Request$Builder: okhttp3.HttpUrl url> = $u1
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.Request$Builder: void setUrl$okhttp(okhttp3.HttpUrl)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> this := @this: okhttp3.Request$Builder
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.Request$Builder: okhttp3.Request$Builder url(okhttp3.HttpUrl)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $this$url_u24lambda_u2d0 = this
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.Request$Builder: okhttp3.Request$Builder url(okhttp3.HttpUrl)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> return this
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.Request$Builder: okhttp3.Request$Builder url(java.lang.String)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> return this
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <com.example.examplevulnerability.MainActivity: java.lang.String sendGetRequest(java.lang.String)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u-1 = virtualinvoke e.<okhttp3.Request$Builder: okhttp3.Request build()>()
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.Request$Builder: okhttp3.Request build()>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u1 = this.<okhttp3.Request$Builder: okhttp3.HttpUrl url>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.Request$Builder: okhttp3.Request build()>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> specialinvoke $u6.<okhttp3.Request: void <init>(okhttp3.HttpUrl,java.lang.String,okhttp3.Headers,okhttp3.RequestBody,java.util.Map)>($u1, $u2, $u-1, $u4, $i$a$-checkNotNull-Request$Builder$build$1#4)
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.Request: void <init>(okhttp3.HttpUrl,java.lang.String,okhttp3.Headers,okhttp3.RequestBody,java.util.Map)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> this.<okhttp3.Request: okhttp3.HttpUrl url> = $u2
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.Request: void <init>(okhttp3.HttpUrl,java.lang.String,okhttp3.Headers,okhttp3.RequestBody,java.util.Map)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> return
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.Request$Builder: okhttp3.Request build()>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> return $u6
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <com.example.examplevulnerability.MainActivity: java.lang.String sendGetRequest(java.lang.String)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u-1#11 = virtualinvoke e#10.<okhttp3.OkHttpClient: okhttp3.Call newCall(okhttp3.Request)>($u-1)
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - The sink staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("setOnClickListener", $u-1#13) on line 105 in method <com.example.examplevulnerability.MainActivity: void onCreate$lambda$0(kotlin.jvm.internal.Ref$ObjectRef,com.example.examplevulnerability.MainActivity,android.widget.TextView,kotlin.jvm.internal.Ref$ObjectRef,android.view.View)> was called with values from the following sources:
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - - $u7 = virtualinvoke $u4.<com.example.examplevulnerability.MainActivity: android.view.View findViewById(int)>(2131230899) on line 101 in method <com.example.examplevulnerability.MainActivity: void onCreate$lambda$0(kotlin.jvm.internal.Ref$ObjectRef,com.example.examplevulnerability.MainActivity,android.widget.TextView,kotlin.jvm.internal.Ref$ObjectRef,android.view.View)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	on Path: 
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <com.example.examplevulnerability.MainActivity: void onCreate$lambda$0(kotlin.jvm.internal.Ref$ObjectRef,com.example.examplevulnerability.MainActivity,android.widget.TextView,kotlin.jvm.internal.Ref$ObjectRef,android.view.View)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u7 = virtualinvoke $u4.<com.example.examplevulnerability.MainActivity: android.view.View findViewById(int)>(2131230899)
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <com.example.examplevulnerability.MainActivity: void onCreate$lambda$0(kotlin.jvm.internal.Ref$ObjectRef,com.example.examplevulnerability.MainActivity,android.widget.TextView,kotlin.jvm.internal.Ref$ObjectRef,android.view.View)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u2 = (android.widget.EditText) $u7
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <com.example.examplevulnerability.MainActivity: void onCreate$lambda$0(kotlin.jvm.internal.Ref$ObjectRef,com.example.examplevulnerability.MainActivity,android.widget.TextView,kotlin.jvm.internal.Ref$ObjectRef,android.view.View)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u6.<kotlin.jvm.internal.Ref$ObjectRef: java.lang.Object element> = $u2
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <com.example.examplevulnerability.MainActivity: void onCreate$lambda$0(kotlin.jvm.internal.Ref$ObjectRef,com.example.examplevulnerability.MainActivity,android.widget.TextView,kotlin.jvm.internal.Ref$ObjectRef,android.view.View)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u2#9 = $u6.<kotlin.jvm.internal.Ref$ObjectRef: java.lang.Object element>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <com.example.examplevulnerability.MainActivity: void onCreate$lambda$0(kotlin.jvm.internal.Ref$ObjectRef,com.example.examplevulnerability.MainActivity,android.widget.TextView,kotlin.jvm.internal.Ref$ObjectRef,android.view.View)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u2 = (android.widget.EditText) $u2#9
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <com.example.examplevulnerability.MainActivity: void onCreate$lambda$0(kotlin.jvm.internal.Ref$ObjectRef,com.example.examplevulnerability.MainActivity,android.widget.TextView,kotlin.jvm.internal.Ref$ObjectRef,android.view.View)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u-1 = virtualinvoke $u2.<android.widget.EditText: android.text.Editable getText()>()
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <com.example.examplevulnerability.MainActivity: void onCreate$lambda$0(kotlin.jvm.internal.Ref$ObjectRef,com.example.examplevulnerability.MainActivity,android.widget.TextView,kotlin.jvm.internal.Ref$ObjectRef,android.view.View)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u-1#13 = virtualinvoke $u-1.<java.lang.Object: java.lang.String toString()>()
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <com.example.examplevulnerability.MainActivity: void onCreate$lambda$0(kotlin.jvm.internal.Ref$ObjectRef,com.example.examplevulnerability.MainActivity,android.widget.TextView,kotlin.jvm.internal.Ref$ObjectRef,android.view.View)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u-1#13 = virtualinvoke $u4.<com.example.examplevulnerability.MainActivity: java.lang.String uselessFunction(java.lang.String)>($u-1#13)
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <com.example.examplevulnerability.MainActivity: java.lang.String uselessFunction(java.lang.String)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u3 = virtualinvoke $u3.<java.lang.String: java.lang.String toLowerCase(java.util.Locale)>($u0)
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <com.example.examplevulnerability.MainActivity: java.lang.String uselessFunction(java.lang.String)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> return $u3
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <com.example.examplevulnerability.MainActivity: void onCreate$lambda$0(kotlin.jvm.internal.Ref$ObjectRef,com.example.examplevulnerability.MainActivity,android.widget.TextView,kotlin.jvm.internal.Ref$ObjectRef,android.view.View)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u-1#13 = virtualinvoke $u4.<com.example.examplevulnerability.MainActivity: java.lang.String sendGetRequest(java.lang.String)>($u-1#13)
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <com.example.examplevulnerability.MainActivity: java.lang.String sendGetRequest(java.lang.String)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> e = virtualinvoke e.<okhttp3.Request$Builder: okhttp3.Request$Builder url(java.lang.String)>($u6)
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.Request$Builder: okhttp3.Request$Builder url(java.lang.String)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u-1#21 = virtualinvoke $u1.<okhttp3.HttpUrl$Companion: okhttp3.HttpUrl get(java.lang.String)>($u4)
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl$Companion: okhttp3.HttpUrl get(java.lang.String)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u0 = virtualinvoke $u0.<okhttp3.HttpUrl$Builder: okhttp3.HttpUrl$Builder parse$okhttp(okhttp3.HttpUrl,java.lang.String)>(null, $u3)
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl$Builder: okhttp3.HttpUrl$Builder parse$okhttp(okhttp3.HttpUrl,java.lang.String)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u-1 = virtualinvoke $u33.<java.lang.String: char charAt(int)>(pos)
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl$Builder: okhttp3.HttpUrl$Builder parse$okhttp(okhttp3.HttpUrl,java.lang.String)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> lookupswitch($u-1) {     case -1: goto passwordColonOffset = <okhttp3.HttpUrl$Builder: okhttp3.HttpUrl$Builder$Companion Companion>;     case 35: goto passwordColonOffset = <okhttp3.HttpUrl$Builder: okhttp3.HttpUrl$Builder$Companion Companion>;     case 47: goto passwordColonOffset = <okhttp3.HttpUrl$Builder: okhttp3.HttpUrl$Builder$Companion Companion>;     case 63: goto passwordColonOffset = <okhttp3.HttpUrl$Builder: okhttp3.HttpUrl$Builder$Companion Companion>;     case 64: goto if hasPassword1 != 0 goto $u0 = new java.lang.StringBuilder;     case 92: goto passwordColonOffset = <okhttp3.HttpUrl$Builder: okhttp3.HttpUrl$Builder$Companion Companion>;     default: goto pos = staticinvoke <okhttp3.internal.Util: int delimiterOffset(java.lang.String,java.lang.String,int,int)>($u33, "@/\\?#", $u-1#9, limit1); }
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl$Builder: okhttp3.HttpUrl$Builder parse$okhttp(okhttp3.HttpUrl,java.lang.String)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> pos = staticinvoke <okhttp3.internal.Util: int delimiterOffset(java.lang.String,java.lang.String,int,int)>($u33, "@/\\?#", $u-1#9, limit1)
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl$Builder: okhttp3.HttpUrl$Builder parse$okhttp(okhttp3.HttpUrl,java.lang.String)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> if pos#202 >= pos goto pos#101 = <okhttp3.HttpUrl: okhttp3.HttpUrl$Companion Companion>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl$Builder: okhttp3.HttpUrl$Builder parse$okhttp(okhttp3.HttpUrl,java.lang.String)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> this.<okhttp3.HttpUrl$Builder: java.lang.String host> = passwordColonOffset1
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl$Builder: okhttp3.HttpUrl$Builder parse$okhttp(okhttp3.HttpUrl,java.lang.String)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> throw $u1
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl$Companion: okhttp3.HttpUrl get(java.lang.String)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u-1 = virtualinvoke $u0.<okhttp3.HttpUrl$Builder: okhttp3.HttpUrl build()>()
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl$Builder: okhttp3.HttpUrl build()>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u5#18 = this.<okhttp3.HttpUrl$Builder: java.lang.String host>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl$Builder: okhttp3.HttpUrl build()>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> if $u5#18 == null goto $this$map$iv#97 = new java.lang.IllegalStateException
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl$Builder: okhttp3.HttpUrl build()>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $i$f$mapTo1 = new okhttp3.HttpUrl
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl$Builder: okhttp3.HttpUrl build()>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> return $i$f$mapTo1
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl$Companion: okhttp3.HttpUrl get(java.lang.String)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> return $u-1
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.Request$Builder: okhttp3.Request$Builder url(java.lang.String)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> this = virtualinvoke this.<okhttp3.Request$Builder: okhttp3.Request$Builder url(okhttp3.HttpUrl)>($u-1#21)
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.Request$Builder: okhttp3.Request$Builder url(okhttp3.HttpUrl)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> virtualinvoke $this$url_u24lambda_u2d0.<okhttp3.Request$Builder: void setUrl$okhttp(okhttp3.HttpUrl)>($u3)
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.Request$Builder: void setUrl$okhttp(okhttp3.HttpUrl)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> this.<okhttp3.Request$Builder: okhttp3.HttpUrl url> = $u1
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.Request$Builder: void setUrl$okhttp(okhttp3.HttpUrl)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> return
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.Request$Builder: okhttp3.Request$Builder url(okhttp3.HttpUrl)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $this$url_u24lambda_u2d0 = this
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.Request$Builder: okhttp3.Request$Builder url(okhttp3.HttpUrl)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> return this
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.Request$Builder: okhttp3.Request$Builder url(java.lang.String)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> return this
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <com.example.examplevulnerability.MainActivity: java.lang.String sendGetRequest(java.lang.String)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u-1 = virtualinvoke e.<okhttp3.Request$Builder: okhttp3.Request build()>()
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.Request$Builder: okhttp3.Request build()>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u1 = this.<okhttp3.Request$Builder: okhttp3.HttpUrl url>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.Request$Builder: okhttp3.Request build()>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> if $u1 == null goto $i$a$-checkNotNull-Request$Builder$build$1#8 = new java.lang.IllegalStateException
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.Request$Builder: okhttp3.Request build()>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $i$a$-checkNotNull-Request$Builder$build$1#8 = new java.lang.IllegalStateException
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.Request$Builder: okhttp3.Request build()>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> throw $i$a$-checkNotNull-Request$Builder$build$1#8
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <com.example.examplevulnerability.MainActivity: java.lang.String sendGetRequest(java.lang.String)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> throw e#16
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <com.example.examplevulnerability.MainActivity: void onCreate$lambda$0(kotlin.jvm.internal.Ref$ObjectRef,com.example.examplevulnerability.MainActivity,android.widget.TextView,kotlin.jvm.internal.Ref$ObjectRef,android.view.View)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u-1#13 = virtualinvoke e.<java.lang.Exception: java.lang.String toString()>()
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <com.example.examplevulnerability.MainActivity: void onCreate$lambda$0(kotlin.jvm.internal.Ref$ObjectRef,com.example.examplevulnerability.MainActivity,android.widget.TextView,kotlin.jvm.internal.Ref$ObjectRef,android.view.View)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("setOnClickListener", $u-1#13)
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - - $u7 = virtualinvoke $u4.<com.example.examplevulnerability.MainActivity: android.view.View findViewById(int)>(2131230899) on line 99 in method <com.example.examplevulnerability.MainActivity: void onCreate$lambda$0(kotlin.jvm.internal.Ref$ObjectRef,com.example.examplevulnerability.MainActivity,android.widget.TextView,kotlin.jvm.internal.Ref$ObjectRef,android.view.View)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	on Path: 
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <com.example.examplevulnerability.MainActivity: void onCreate$lambda$0(kotlin.jvm.internal.Ref$ObjectRef,com.example.examplevulnerability.MainActivity,android.widget.TextView,kotlin.jvm.internal.Ref$ObjectRef,android.view.View)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u7 = virtualinvoke $u4.<com.example.examplevulnerability.MainActivity: android.view.View findViewById(int)>(2131230899)
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <com.example.examplevulnerability.MainActivity: void onCreate$lambda$0(kotlin.jvm.internal.Ref$ObjectRef,com.example.examplevulnerability.MainActivity,android.widget.TextView,kotlin.jvm.internal.Ref$ObjectRef,android.view.View)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u2 = (android.widget.EditText) $u7
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <com.example.examplevulnerability.MainActivity: void onCreate$lambda$0(kotlin.jvm.internal.Ref$ObjectRef,com.example.examplevulnerability.MainActivity,android.widget.TextView,kotlin.jvm.internal.Ref$ObjectRef,android.view.View)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u3.<kotlin.jvm.internal.Ref$ObjectRef: java.lang.Object element> = $u2
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <com.example.examplevulnerability.MainActivity: void onCreate$lambda$0(kotlin.jvm.internal.Ref$ObjectRef,com.example.examplevulnerability.MainActivity,android.widget.TextView,kotlin.jvm.internal.Ref$ObjectRef,android.view.View)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u2#9 = $u3.<kotlin.jvm.internal.Ref$ObjectRef: java.lang.Object element>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <com.example.examplevulnerability.MainActivity: void onCreate$lambda$0(kotlin.jvm.internal.Ref$ObjectRef,com.example.examplevulnerability.MainActivity,android.widget.TextView,kotlin.jvm.internal.Ref$ObjectRef,android.view.View)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u2 = (android.widget.EditText) $u2#9
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <com.example.examplevulnerability.MainActivity: void onCreate$lambda$0(kotlin.jvm.internal.Ref$ObjectRef,com.example.examplevulnerability.MainActivity,android.widget.TextView,kotlin.jvm.internal.Ref$ObjectRef,android.view.View)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u-1 = virtualinvoke $u2.<android.widget.EditText: android.text.Editable getText()>()
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <com.example.examplevulnerability.MainActivity: void onCreate$lambda$0(kotlin.jvm.internal.Ref$ObjectRef,com.example.examplevulnerability.MainActivity,android.widget.TextView,kotlin.jvm.internal.Ref$ObjectRef,android.view.View)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u-1#13 = virtualinvoke $u-1.<java.lang.Object: java.lang.String toString()>()
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <com.example.examplevulnerability.MainActivity: void onCreate$lambda$0(kotlin.jvm.internal.Ref$ObjectRef,com.example.examplevulnerability.MainActivity,android.widget.TextView,kotlin.jvm.internal.Ref$ObjectRef,android.view.View)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u-1#13 = virtualinvoke $u4.<com.example.examplevulnerability.MainActivity: java.lang.String uselessFunction(java.lang.String)>($u-1#13)
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <com.example.examplevulnerability.MainActivity: java.lang.String uselessFunction(java.lang.String)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u3 = virtualinvoke $u3.<java.lang.String: java.lang.String toLowerCase(java.util.Locale)>($u0)
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <com.example.examplevulnerability.MainActivity: java.lang.String uselessFunction(java.lang.String)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> return $u3
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <com.example.examplevulnerability.MainActivity: void onCreate$lambda$0(kotlin.jvm.internal.Ref$ObjectRef,com.example.examplevulnerability.MainActivity,android.widget.TextView,kotlin.jvm.internal.Ref$ObjectRef,android.view.View)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u-1#13 = virtualinvoke $u4.<com.example.examplevulnerability.MainActivity: java.lang.String sendGetRequest(java.lang.String)>($u-1#13)
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <com.example.examplevulnerability.MainActivity: java.lang.String sendGetRequest(java.lang.String)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> e = virtualinvoke e.<okhttp3.Request$Builder: okhttp3.Request$Builder url(java.lang.String)>($u6)
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.Request$Builder: okhttp3.Request$Builder url(java.lang.String)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u-1#21 = virtualinvoke $u1.<okhttp3.HttpUrl$Companion: okhttp3.HttpUrl get(java.lang.String)>($u4)
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl$Companion: okhttp3.HttpUrl get(java.lang.String)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u0 = virtualinvoke $u0.<okhttp3.HttpUrl$Builder: okhttp3.HttpUrl$Builder parse$okhttp(okhttp3.HttpUrl,java.lang.String)>(null, $u3)
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl$Builder: okhttp3.HttpUrl$Builder parse$okhttp(okhttp3.HttpUrl,java.lang.String)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u-1 = virtualinvoke $u33.<java.lang.String: char charAt(int)>(pos)
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl$Builder: okhttp3.HttpUrl$Builder parse$okhttp(okhttp3.HttpUrl,java.lang.String)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> lookupswitch($u-1) {     case -1: goto passwordColonOffset = <okhttp3.HttpUrl$Builder: okhttp3.HttpUrl$Builder$Companion Companion>;     case 35: goto passwordColonOffset = <okhttp3.HttpUrl$Builder: okhttp3.HttpUrl$Builder$Companion Companion>;     case 47: goto passwordColonOffset = <okhttp3.HttpUrl$Builder: okhttp3.HttpUrl$Builder$Companion Companion>;     case 63: goto passwordColonOffset = <okhttp3.HttpUrl$Builder: okhttp3.HttpUrl$Builder$Companion Companion>;     case 64: goto if hasPassword1 != 0 goto $u0 = new java.lang.StringBuilder;     case 92: goto passwordColonOffset = <okhttp3.HttpUrl$Builder: okhttp3.HttpUrl$Builder$Companion Companion>;     default: goto pos = staticinvoke <okhttp3.internal.Util: int delimiterOffset(java.lang.String,java.lang.String,int,int)>($u33, "@/\\?#", $u-1#9, limit1); }
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl$Builder: okhttp3.HttpUrl$Builder parse$okhttp(okhttp3.HttpUrl,java.lang.String)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u-1 = pos
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl$Builder: okhttp3.HttpUrl$Builder parse$okhttp(okhttp3.HttpUrl,java.lang.String)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> lookupswitch($u-1) {     case -1: goto passwordColonOffset = <okhttp3.HttpUrl$Builder: okhttp3.HttpUrl$Builder$Companion Companion>;     case 35: goto passwordColonOffset = <okhttp3.HttpUrl$Builder: okhttp3.HttpUrl$Builder$Companion Companion>;     case 47: goto passwordColonOffset = <okhttp3.HttpUrl$Builder: okhttp3.HttpUrl$Builder$Companion Companion>;     case 63: goto passwordColonOffset = <okhttp3.HttpUrl$Builder: okhttp3.HttpUrl$Builder$Companion Companion>;     case 64: goto if hasPassword1 != 0 goto $u0 = new java.lang.StringBuilder;     case 92: goto passwordColonOffset = <okhttp3.HttpUrl$Builder: okhttp3.HttpUrl$Builder$Companion Companion>;     default: goto pos = staticinvoke <okhttp3.internal.Util: int delimiterOffset(java.lang.String,java.lang.String,int,int)>($u33, "@/\\?#", $u-1#9, limit1); }
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl$Builder: okhttp3.HttpUrl$Builder parse$okhttp(okhttp3.HttpUrl,java.lang.String)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> pos = staticinvoke <okhttp3.internal.Util: int delimiterOffset(java.lang.String,java.lang.String,int,int)>($u33, "@/\\?#", $u-1#9, limit1)
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl$Builder: okhttp3.HttpUrl$Builder parse$okhttp(okhttp3.HttpUrl,java.lang.String)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> if pos#202 >= pos goto pos#101 = <okhttp3.HttpUrl: okhttp3.HttpUrl$Companion Companion>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl$Builder: okhttp3.HttpUrl$Builder parse$okhttp(okhttp3.HttpUrl,java.lang.String)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> this.<okhttp3.HttpUrl$Builder: java.lang.String host> = passwordColonOffset1
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl$Builder: okhttp3.HttpUrl$Builder parse$okhttp(okhttp3.HttpUrl,java.lang.String)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> throw $u1
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl$Companion: okhttp3.HttpUrl get(java.lang.String)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u-1 = virtualinvoke $u0.<okhttp3.HttpUrl$Builder: okhttp3.HttpUrl build()>()
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl$Builder: okhttp3.HttpUrl build()>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u5#18 = this.<okhttp3.HttpUrl$Builder: java.lang.String host>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl$Builder: okhttp3.HttpUrl build()>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> if $u5#18 == null goto $this$map$iv#97 = new java.lang.IllegalStateException
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl$Builder: okhttp3.HttpUrl build()>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $i$f$mapTo1 = new okhttp3.HttpUrl
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl$Builder: okhttp3.HttpUrl build()>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> return $i$f$mapTo1
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.HttpUrl$Companion: okhttp3.HttpUrl get(java.lang.String)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> return $u-1
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.Request$Builder: okhttp3.Request$Builder url(java.lang.String)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> this = virtualinvoke this.<okhttp3.Request$Builder: okhttp3.Request$Builder url(okhttp3.HttpUrl)>($u-1#21)
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.Request$Builder: okhttp3.Request$Builder url(okhttp3.HttpUrl)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> virtualinvoke $this$url_u24lambda_u2d0.<okhttp3.Request$Builder: void setUrl$okhttp(okhttp3.HttpUrl)>($u3)
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.Request$Builder: void setUrl$okhttp(okhttp3.HttpUrl)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> this.<okhttp3.Request$Builder: okhttp3.HttpUrl url> = $u1
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.Request$Builder: void setUrl$okhttp(okhttp3.HttpUrl)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> return
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.Request$Builder: okhttp3.Request$Builder url(okhttp3.HttpUrl)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $this$url_u24lambda_u2d0 = this
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.Request$Builder: okhttp3.Request$Builder url(okhttp3.HttpUrl)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> return this
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.Request$Builder: okhttp3.Request$Builder url(java.lang.String)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> return this
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <com.example.examplevulnerability.MainActivity: java.lang.String sendGetRequest(java.lang.String)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u-1 = virtualinvoke e.<okhttp3.Request$Builder: okhttp3.Request build()>()
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.Request$Builder: okhttp3.Request build()>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u1 = this.<okhttp3.Request$Builder: okhttp3.HttpUrl url>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.Request$Builder: okhttp3.Request build()>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> if $u1 == null goto $i$a$-checkNotNull-Request$Builder$build$1#8 = new java.lang.IllegalStateException
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.Request$Builder: okhttp3.Request build()>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $i$a$-checkNotNull-Request$Builder$build$1#8 = new java.lang.IllegalStateException
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <okhttp3.Request$Builder: okhttp3.Request build()>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> throw $i$a$-checkNotNull-Request$Builder$build$1#8
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <com.example.examplevulnerability.MainActivity: java.lang.String sendGetRequest(java.lang.String)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> throw e#16
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <com.example.examplevulnerability.MainActivity: void onCreate$lambda$0(kotlin.jvm.internal.Ref$ObjectRef,com.example.examplevulnerability.MainActivity,android.widget.TextView,kotlin.jvm.internal.Ref$ObjectRef,android.view.View)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> $u-1#13 = virtualinvoke e.<java.lang.Exception: java.lang.String toString()>()
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 	 -> <com.example.examplevulnerability.MainActivity: void onCreate$lambda$0(kotlin.jvm.internal.Ref$ObjectRef,com.example.examplevulnerability.MainActivity,android.widget.TextView,kotlin.jvm.internal.Ref$ObjectRef,android.view.View)>
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - 		 -> staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("setOnClickListener", $u-1#13)
+[main] INFO soot.jimple.infoflow.android.SetupApplication$InPlaceInfoflow - Data flow solver took 20 seconds. Maximum memory consumption: 1147 MB
+[main] INFO soot.jimple.infoflow.android.SetupApplication - Found 2 leaks

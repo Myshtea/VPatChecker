@@ -1,0 +1,12 @@
+// int android.util.Log.d("setOnClickListener", $u-1#12)
+digraph {
+	102 [label="Line: 102
+int android.util.Log.d(\"setOnClickListener\", $u-1#12)" color=blue]
+	"0_0" [label="Line: 98
+$u6 = android.view.View $u4.findViewById(2131230899)" color=red shape=box]
+	"0_1" [label="e = (android.widget.EditText) $u6" shape=box]
+	"0_0" -> "0_1" [label=""]
+	"0_2" [label="int android.util.Log.d(\"setOnClickListener\", $u-1#12)" shape=box]
+	"0_1" -> "0_2" [label=""]
+	"0_2" -> 102 [label="sinks through"]
+}
