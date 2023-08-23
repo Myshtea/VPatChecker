@@ -7,4 +7,11 @@ See the [Sources Folder](https://github.com/Myshtea/VPatChecker/blob/main/Source
 
 ## Project reports and linked papers
 
-See the [Reports Folder](https://github.com/Myshtea/VPatChecker/blob/main/Reports/README.md).
+### Master thesis
+
+A master thesis that led to the creation of VPatChecker is available on DiVA : [Link to paper](https://urn.kb.se/resolve?urn=urn:nbn:se:kth:diva-330702)
+
+### Workshop paper
+
+A workshop paper introducing VPatChecker and DroidSecTester is being made, I will update the link here once it is available
+
