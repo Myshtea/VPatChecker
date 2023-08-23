@@ -1,4 +1,4 @@
-# VPatChecker
+# VPatChecker / DroidSecTester
 Two-Step Model-Based Security Testing tool for Android Applications
 
 ## Installation and usage guide
