@@ -13,5 +13,5 @@ A master thesis that led to the creation of VPatChecker is available on DiVA : [
 
 ### Workshop paper
 
-A workshop paper introducing VPatChecker and DroidSecTester is being made, I will update the link here once it is available
+A workshop paper introducing VPatChecker and DroidSecTester is available: DOI [10.1109/ISSREW60843.2023.00063](https://www.doi.org/10.1109/ISSREW60843.2023.00063)
 
